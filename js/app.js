@@ -119,11 +119,19 @@ function llmCompare() {
             if (field === 'provider') return variants[0][field];
             if (field === 'mode') return variants[0][field];
             
-            // For price fields, return the lowest non-null value
-            const values = variants
-                .map(v => v[field])
-                .filter(v => v !== null);
-            return values.length > 0 ? Math.min(...values) : null;
+            // For price fields, return the lowest/highest value based on sort direction
+            if (field.includes('price')) {
+                const values = variants
+                    .map(v => v[field])
+                    .filter(v => v !== null);
+                
+                if (values.length === 0) return null;
+                
+                // For prices, we always want to sort by lowest first
+                return Math.min(...values);
+            }
+            
+            return variants[0][field];
         },
 
         formatCost(cost) {

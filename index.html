@@ -68,10 +68,10 @@
                         <th @click="sort('output_price_per_million')" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100">
                             Output/1M <span x-text="getSortIcon('output_price_per_million')"></span>
                         </th>
-                        <th @click="sort('provider')" class="hidden md:table-cell px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100">
+                        <th @click="sort('provider')" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100">
                             Provider <span x-text="getSortIcon('provider')"></span>
                         </th>
-                        <th @click="sort('mode')" class="hidden md:table-cell px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100">
+                        <th @click="sort('mode')" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100">
                             Mode <span x-text="getSortIcon('mode')"></span>
                         </th>
                     </tr>
@@ -81,13 +81,6 @@
                         <tr class="hover:bg-gray-50">
                             <td class="px-6 py-4">
                                 <div class="text-sm font-medium text-gray-900" x-text="group.suffix"></div>
-                                <div class="pl-4 space-y-1 mt-2">
-                                    <template x-for="variant in group.variants" :key="variant.name">
-                                        <div class="text-xs text-gray-600">
-                                            <span x-text="variant.provider" class="font-medium md:hidden"></span>
-                                        </div>
-                                    </template>
-                                </div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <template x-for="variant in group.variants" :key="variant.name">
@@ -99,12 +92,12 @@
                                     <div class="text-sm text-gray-500" x-text="formatCost(variant.output_price_per_million)"></div>
                                 </template>
                             </td>
-                            <td class="hidden md:table-cell px-6 py-4 whitespace-nowrap">
+                            <td class="px-6 py-4 whitespace-nowrap">
                                 <template x-for="variant in group.variants" :key="variant.name">
                                     <div class="text-sm text-gray-500" x-text="variant.provider"></div>
                                 </template>
                             </td>
-                            <td class="hidden md:table-cell px-6 py-4 whitespace-nowrap text-sm text-gray-500" x-text="group.mode"></td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500" x-text="group.mode"></td>
                         </tr>
                     </template>
                 </tbody>
