@@ -65,10 +65,27 @@ function llmCompare() {
                     acc[suffix] = {
                         suffix,
                         variants: [],
-                        mode: model.mode, // All variants should have same mode
+                        mode: model.mode,
                     };
                 }
-                acc[suffix].variants.push(model);
+                
+                // Check if we already have a variant with same provider and prices
+                const existingVariant = acc[suffix].variants.find(v => 
+                    v.provider === model.provider && 
+                    v.input_price_per_million === model.input_price_per_million &&
+                    v.output_price_per_million === model.output_price_per_million
+                );
+
+                if (existingVariant) {
+                    // Add the model name to existing variant's names array
+                    if (!existingVariant.names) existingVariant.names = [existingVariant.name];
+                    existingVariant.names.push(model.name);
+                } else {
+                    // Create new variant
+                    const variant = {...model};
+                    variant.names = [model.name];
+                    acc[suffix].variants.push(variant);
+                }
                 return acc;
             }, {});
 

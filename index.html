@@ -6,6 +6,20 @@
     <title>LLM Price Comparison</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    'xs': '475px',
+                    'sm': '640px',
+                    'md': '768px',
+                    'lg': '1024px',
+                    'xl': '1280px',
+                    '2xl': '1536px',
+                }
+            }
+        }
+    </script>
 </head>
 <body class="bg-gray-100">
     <div x-data="llmCompare()" class="container mx-auto px-4 py-8">
@@ -70,8 +84,7 @@
                                 <div class="pl-4 space-y-1 mt-2">
                                     <template x-for="variant in group.variants" :key="variant.name">
                                         <div class="text-xs text-gray-600">
-                                            <span x-text="variant.provider" class="font-medium"></span>
-                                            <span x-text="': ' + variant.name" class="text-gray-400"></span>
+                                            <span x-text="variant.provider" class="font-medium md:hidden"></span>
                                         </div>
                                     </template>
                                 </div>
