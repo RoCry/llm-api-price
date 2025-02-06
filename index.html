@@ -71,9 +71,7 @@
                                     <template x-for="variant in group.variants" :key="variant.name">
                                         <div class="text-xs text-gray-600">
                                             <span x-text="variant.provider" class="font-medium"></span>
-                                            <template x-if="variant.name !== group.suffix">
-                                                <span x-text="': ' + variant.name" class="text-gray-400"></span>
-                                            </template>
+                                            <span x-text="': ' + variant.name" class="text-gray-400"></span>
                                         </div>
                                     </template>
                                 </div>
