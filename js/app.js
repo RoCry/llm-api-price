@@ -10,12 +10,11 @@ function llmCompare() {
         whitelist: [],
 
         async init() {
-            // Load config first
-            const configResponse = await fetch('config.json');
-            const config = await configResponse.json();
+            // Import config
+            const { config } = await import('./config.js');
             this.whitelist = config.model_suffix_whitelist;
 
-            // Then load model data
+            // Load model data
             const response = await fetch('model_prices_and_context_window.json');
             const data = await response.json();
             this.models = Object.entries(data)
