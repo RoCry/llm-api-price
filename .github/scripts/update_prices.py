@@ -69,9 +69,9 @@ def main():
         with open(local_path, "w") as f:
             json.dump(remote_content, f, indent=2)
 
-        # Configure git
-        os.system('git config --global user.name "GitHub Action"')
-        os.system('git config --global user.email "action@github.com"')
+        # Configure git locally for this repository only, instead of globally
+        os.system('git config user.name "GitHub Action"')
+        os.system('git config user.email "action@github.com"')
 
         # Commit and push changes
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
