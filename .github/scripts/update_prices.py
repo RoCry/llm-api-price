@@ -1,7 +1,7 @@
 import requests
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 
 
 def get_remote_content():
@@ -63,6 +63,7 @@ def main():
         diff_message = generate_diff_message(local_content, remote_content)
 
         # Save new content
+        remote_content['last_updated'] = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
         with open(local_path, "w") as f:
             json.dump(remote_content, f, indent=2)
 
