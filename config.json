@@ -1,0 +1,19 @@
+{
+    "model_suffix_whitelist": [
+        "gpt-4",
+        "gpt-4o",
+        "claude-3-opus-20240229",
+        "claude-3-sonnet-20240229",
+        "claude-2.1",
+        "gemini-1.5-pro-latest",
+        "gemini-1.5-ultra-latest",
+        "mistral-large-latest",
+        "mistral-medium-latest",
+        "mixtral-8x7b-latest",
+        "llama-2-70b-chat",
+        "llama-2-13b-chat",
+        "codellama-70b-latest",
+        "gpt-4-vision-preview",
+        "gpt-4o-vision"
+    ]
+} 

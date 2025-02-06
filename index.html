@@ -32,6 +32,11 @@
                     <input type="checkbox" x-model="showOnlyVision" class="mr-2">
                     Vision Models Only
                 </label>
+
+                <label class="flex items-center">
+                    <input type="checkbox" x-model="showAllModels" class="mr-2">
+                    Show All Models
+                </label>
             </div>
         </div>
 
@@ -43,20 +48,17 @@
                         <th @click="sort('name')" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100">
                             Model <span x-text="getSortIcon('name')"></span>
                         </th>
+                        <th @click="sort('input_price_per_million')" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100">
+                            Input/1M <span x-text="getSortIcon('input_price_per_million')"></span>
+                        </th>
+                        <th @click="sort('output_price_per_million')" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100">
+                            Output/1M <span x-text="getSortIcon('output_price_per_million')"></span>
+                        </th>
                         <th @click="sort('provider')" class="hidden md:table-cell px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100">
                             Provider <span x-text="getSortIcon('provider')"></span>
                         </th>
                         <th @click="sort('mode')" class="hidden md:table-cell px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100">
                             Mode <span x-text="getSortIcon('mode')"></span>
-                        </th>
-                        <th @click="sort('input_price_per_million')" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100">
-                            Input Cost/1M <span x-text="getSortIcon('input_price_per_million')"></span>
-                        </th>
-                        <th @click="sort('output_price_per_million')" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100">
-                            Output Cost/1M <span x-text="getSortIcon('output_price_per_million')"></span>
-                        </th>
-                        <th @click="sort('max_tokens')" class="hidden lg:table-cell px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100">
-                            Context <span x-text="getSortIcon('max_tokens')"></span>
                         </th>
                     </tr>
                 </thead>
@@ -69,11 +71,10 @@
                                     <span x-text="model.provider"></span> | <span x-text="model.mode"></span>
                                 </div>
                             </td>
-                            <td class="hidden md:table-cell px-6 py-4 whitespace-nowrap text-sm text-gray-500" x-text="model.provider"></td>
-                            <td class="hidden md:table-cell px-6 py-4 whitespace-nowrap text-sm text-gray-500" x-text="model.mode"></td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500" x-text="formatCost(model.input_price_per_million)"></td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500" x-text="formatCost(model.output_price_per_million)"></td>
-                            <td class="hidden lg:table-cell px-6 py-4 whitespace-nowrap text-sm text-gray-500" x-text="model.max_tokens"></td>
+                            <td class="hidden md:table-cell px-6 py-4 whitespace-nowrap text-sm text-gray-500" x-text="model.provider"></td>
+                            <td class="hidden md:table-cell px-6 py-4 whitespace-nowrap text-sm text-gray-500" x-text="model.mode"></td>
                         </tr>
                     </template>
                 </tbody>
