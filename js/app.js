@@ -20,6 +20,7 @@ function llmCompare() {
             const response = await fetch('model_prices_and_context_window.json');
             const data = await response.json();
             this.models = Object.entries(data)
+                .filter(([key, value]) => key !== 'last_updated')  // Exclude last_updated from models
                 .filter(([key, value]) => !this.blacklist.includes(key))
                 .map(([key, value]) => ({
                     name: key,
@@ -30,6 +31,9 @@ function llmCompare() {
                     output_price_per_million: value.output_cost_per_token ? value.output_cost_per_token * 1000000 : null,
                     isWhitelisted: this.isModelWhitelisted(key)
                 }));
+            
+            // Store last_updated separately
+            this.models.last_updated = data.last_updated;
         },
 
         isModelWhitelisted(modelName) {

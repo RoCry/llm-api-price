@@ -63,7 +63,9 @@ def main():
         diff_message = generate_diff_message(local_content, remote_content)
 
         # Save new content
-        remote_content['last_updated'] = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')
+        remote_content["last_updated"] = datetime.now(timezone.utc).strftime(
+            "%Y-%m-%d %H:%M UTC"
+        )
         with open(local_path, "w") as f:
             json.dump(remote_content, f, indent=2)
 
