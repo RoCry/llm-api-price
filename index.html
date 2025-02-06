@@ -63,18 +63,37 @@
                     </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
-                    <template x-for="model in filteredModels" :key="model.name">
+                    <template x-for="group in filteredModels" :key="group.suffix">
                         <tr class="hover:bg-gray-50">
-                            <td class="px-6 py-4 whitespace-nowrap">
-                                <div class="text-sm font-medium text-gray-900" x-text="model.name"></div>
-                                <div class="md:hidden text-xs text-gray-500">
-                                    <span x-text="model.provider"></span> | <span x-text="model.mode"></span>
+                            <td class="px-6 py-4">
+                                <div class="text-sm font-medium text-gray-900" x-text="group.suffix"></div>
+                                <div class="pl-4 space-y-1 mt-2">
+                                    <template x-for="variant in group.variants" :key="variant.name">
+                                        <div class="text-xs text-gray-600">
+                                            <span x-text="variant.provider" class="font-medium"></span>
+                                            <template x-if="variant.name !== group.suffix">
+                                                <span x-text="': ' + variant.name" class="text-gray-400"></span>
+                                            </template>
+                                        </div>
+                                    </template>
                                 </div>
                             </td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500" x-text="formatCost(model.input_price_per_million)"></td>
-                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500" x-text="formatCost(model.output_price_per_million)"></td>
-                            <td class="hidden md:table-cell px-6 py-4 whitespace-nowrap text-sm text-gray-500" x-text="model.provider"></td>
-                            <td class="hidden md:table-cell px-6 py-4 whitespace-nowrap text-sm text-gray-500" x-text="model.mode"></td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <template x-for="variant in group.variants" :key="variant.name">
+                                    <div class="text-sm text-gray-500" x-text="formatCost(variant.input_price_per_million)"></div>
+                                </template>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <template x-for="variant in group.variants" :key="variant.name">
+                                    <div class="text-sm text-gray-500" x-text="formatCost(variant.output_price_per_million)"></div>
+                                </template>
+                            </td>
+                            <td class="hidden md:table-cell px-6 py-4 whitespace-nowrap">
+                                <template x-for="variant in group.variants" :key="variant.name">
+                                    <div class="text-sm text-gray-500" x-text="variant.provider"></div>
+                                </template>
+                            </td>
+                            <td class="hidden md:table-cell px-6 py-4 whitespace-nowrap text-sm text-gray-500" x-text="group.mode"></td>
                         </tr>
                     </template>
                 </tbody>
