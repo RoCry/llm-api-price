@@ -17,6 +17,9 @@ export const config = {
         "grok-2-vision",
         "o1",
         "o1-mini",
-        "o3-mini"
-    ]
+        "o3-mini",
+    ],
+    model_blacklist: [
+        "sample_spec",
+    ],
 }; 

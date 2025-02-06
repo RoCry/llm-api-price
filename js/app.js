@@ -7,18 +7,20 @@ function llmCompare() {
         showAllModels: false,
         sortField: 'name',
         sortDirection: 'asc',
-        whitelist: [],
+        suffix_whitelist: [],
+        blacklist: [],
 
         async init() {
             // Import config
             const { config } = await import('./config.js');
-            this.whitelist = config.model_suffix_whitelist;
+            this.suffix_whitelist = config.model_suffix_whitelist;
+            this.blacklist = config.model_blacklist;
 
             // Load model data
             const response = await fetch('model_prices_and_context_window.json');
             const data = await response.json();
             this.models = Object.entries(data)
-                .filter(([key, value]) => key !== 'sample_spec')
+                .filter(([key, value]) => !this.blacklist.includes(key))
                 .map(([key, value]) => ({
                     name: key,
                     ...value,
@@ -31,7 +33,7 @@ function llmCompare() {
         },
 
         isModelWhitelisted(modelName) {
-            return this.whitelist.some(suffix => {
+            return this.suffix_whitelist.some(suffix => {
                 // Get the part after the last '/' or the full string if no '/'
                 const modelSuffix = modelName.split('/').pop();
                 return modelSuffix === suffix;
