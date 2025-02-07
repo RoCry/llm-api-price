@@ -7,18 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/alpinejs" defer></script>
     <script>
-        tailwind.config = {
-            theme: {
-                screens: {
-                    'xs': '475px',
-                    'sm': '640px',
-                    'md': '768px',
-                    'lg': '1024px',
-                    'xl': '1280px',
-                    '2xl': '1536px',
-                }
-            }
-        }
+        // Remove unnecessary config
     </script>
 </head>
 <body class="bg-gray-100">
@@ -26,31 +15,41 @@
         <h1 class="text-3xl font-bold text-center mb-8">LLM Price Comparison</h1>
         
         <!-- Filters -->
-        <div class="mb-8 space-y-4">
-            <div class="flex flex-wrap gap-4">
-                <select x-model="selectedProvider" class="p-2 border rounded">
-                    <option value="">All Providers</option>
-                    <template x-for="provider in providers" :key="provider">
-                        <option x-text="provider"></option>
-                    </template>
-                </select>
+        <div class="mb-8 bg-white rounded-lg shadow p-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-600 mb-2">Provider</label>
+                    <select x-model="selectedProvider" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                        <option value="">All Providers</option>
+                        <template x-for="provider in providers" :key="provider">
+                            <option x-text="provider"></option>
+                        </template>
+                    </select>
+                </div>
 
-                <select x-model="selectedMode" class="p-2 border rounded">
-                    <option value="">All Modes</option>
-                    <template x-for="mode in modes" :key="mode">
-                        <option x-text="mode"></option>
-                    </template>
-                </select>
+                <div>
+                    <label class="block text-sm font-medium text-gray-600 mb-2">Mode</label>
+                    <select x-model="selectedMode" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                        <option value="">All Modes</option>
+                        <template x-for="mode in modes" :key="mode">
+                            <option x-text="mode"></option>
+                        </template>
+                    </select>
+                </div>
 
-                <label class="flex items-center">
-                    <input type="checkbox" x-model="showOnlyVision" class="mr-2">
-                    Vision Models Only
-                </label>
+                <div class="flex items-center">
+                    <label class="flex items-center space-x-2 text-sm font-medium text-gray-600">
+                        <input type="checkbox" x-model="showOnlyVision" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                        <span>Vision Models Only</span>
+                    </label>
+                </div>
 
-                <label class="flex items-center">
-                    <input type="checkbox" x-model="showAllModels" class="mr-2">
-                    Show All Models
-                </label>
+                <div class="flex items-center">
+                    <label class="flex items-center space-x-2 text-sm font-medium text-gray-600">
+                        <input type="checkbox" x-model="showAllModels" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                        <span>Show All Models</span>
+                    </label>
+                </div>
             </div>
         </div>
 
