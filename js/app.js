@@ -22,6 +22,7 @@ function llmCompare() {
             this.models = Object.entries(data)
                 .filter(([key, value]) => key !== 'last_updated')  // Exclude last_updated from models
                 .filter(([key, value]) => !this.blacklist.includes(key))
+                .filter(([key, value]) => value.input_cost_per_token || value.output_cost_per_token)  // filter no price
                 .map(([key, value]) => ({
                     name: key,
                     ...value,
