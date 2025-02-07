@@ -1,5 +1,5 @@
 export const config = {
-    model_suffix_whitelist: [
+    model_whitelist: [
         "claude-3-5-haiku",
         "claude-3-5-sonnet",
         "deepseek-chat",
@@ -7,10 +7,9 @@ export const config = {
         "deepseek-r1",
         "deepseek-reasoner",
         "deepseek-v3",
-        "gemini-2.0-flash-exp",
-        "gemini-2.0-flash-thinking-exp",
+        "gemini-2.0-flash",
+        "gemini-2.0-flash-thinking",
         "gemini-pro",
-        "gemini-pro-experimental",
         "gemini-pro-vision",
         "gpt-4o",
         "grok-2",

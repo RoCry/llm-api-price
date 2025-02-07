@@ -13,7 +13,7 @@ function llmCompare() {
         async init() {
             // Import config
             const { config } = await import('./config.js');
-            this.suffix_whitelist = config.model_suffix_whitelist;
+            this.suffix_whitelist = config.model_whitelist;
             this.blacklist = config.model_blacklist;
 
             // Load model data
