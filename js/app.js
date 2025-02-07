@@ -37,7 +37,15 @@ function llmCompare() {
 
             // Then set the last_updated property
             const lastUpdated = new Date(data.last_updated);
-            this.models.last_updated = lastUpdated.toLocaleString();
+            this.models.last_updated = lastUpdated.toLocaleString(undefined, {
+                year: 'numeric',
+                month: 'numeric',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                hour12: true,
+                timeZoneName: 'short'
+            });
         },
 
         isModelWhitelisted(modelName) {
