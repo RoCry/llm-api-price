@@ -2173,11 +2173,11 @@
     "max_tokens": 8192,
     "max_input_tokens": 65536,
     "max_output_tokens": 8192,
-    "input_cost_per_token": 1.4e-07,
-    "input_cost_per_token_cache_hit": 1.4e-08,
-    "cache_read_input_token_cost": 1.4e-08,
+    "input_cost_per_token": 2.7e-07,
+    "input_cost_per_token_cache_hit": 7e-08,
+    "cache_read_input_token_cost": 7e-08,
     "cache_creation_input_token_cost": 0.0,
-    "output_cost_per_token": 2.8e-07,
+    "output_cost_per_token": 1.1e-06,
     "litellm_provider": "deepseek",
     "mode": "chat",
     "supports_function_calling": true,
@@ -9030,5 +9030,5 @@
     "output_cost_per_second": 0.0,
     "litellm_provider": "assemblyai"
   },
-  "last_updated": "2025-02-07 05:07 UTC"
+  "last_updated": "2025-02-07 17:06 UTC"
 }
