@@ -8,7 +8,11 @@ def main():
     unique_models = set()
 
     for model, model_data in data.items():
-        unique_models.add(model.split("/")[-1])
+        if not isinstance(model_data, dict):
+            continue
+        provider = model_data.get("litellm_provider")
+        if provider in ["openai", "anthropic", "azure"]:
+            unique_models.add(model.split("/")[-1])
 
     # sort alphabetically
     unique_models = sorted(unique_models)

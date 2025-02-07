@@ -61,7 +61,7 @@ function llmCompare() {
             
             // Process parts from right to left
             let normalizedParts = [];
-            const hardcodedKeywords = ['exp', 'experimental', 'preview'];
+            const hardcodedKeywords = ['exp', 'experimental', 'preview', 'latest'];
             
             for (let i = parts.length - 1; i >= 0; i--) {
                 const part = parts[i];
