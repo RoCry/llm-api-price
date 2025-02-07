@@ -77,10 +77,10 @@
                     </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
-                    <template x-for="group in filteredModels" :key="group.suffix">
+                    <template x-for="group in filteredModels" :key="group.normalized_name">
                         <tr class="hover:bg-gray-50">
                             <td class="px-6 py-4">
-                                <div class="text-sm font-medium text-gray-900" x-text="group.suffix"></div>
+                                <div class="text-sm font-medium text-gray-900" x-text="group.normalized_name"></div>
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <template x-for="variant in group.variants" :key="variant.name">

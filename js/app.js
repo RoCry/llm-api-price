@@ -37,10 +37,9 @@ function llmCompare() {
         },
 
         isModelWhitelisted(modelName) {
-            return this.suffix_whitelist.some(suffix => {
-                // Get the part after the last '/' or the full string if no '/'
-                const modelSuffix = modelName.split('/').pop();
-                return modelSuffix === suffix;
+            const normalizedName = this.normalizeModelName(modelName);
+            return this.suffix_whitelist.some(name => {
+                return normalizedName === name;
             });
         },
 
@@ -50,6 +49,37 @@ function llmCompare() {
 
         get modes() {
             return [...new Set(this.models.map(m => m.mode))].sort();
+        },
+
+        normalizeModelName(modelName) {
+            // Get the part after the last '/'
+            const lastPart = modelName.split('/').pop();
+            
+            // Split by '-' and '@' to handle different separators
+            const parts = lastPart.split(/[-@]/);
+            
+            // Process parts from right to left
+            let normalizedParts = [];
+            const hardcodedKeywords = ['exp', 'experimental', 'preview'];
+            
+            for (let i = parts.length - 1; i >= 0; i--) {
+                const part = parts[i];
+                
+                // Skip if it's a hardcoded keyword
+                if (hardcodedKeywords.includes(part.toLowerCase())) {
+                    continue;
+                }
+                
+                // Skip if it's a number sequence at the end
+                // But keep numbers if they're in the middle (like claude-3-5-haiku)
+                if (i === parts.length - 1 && /^\d+$/.test(part)) {
+                    continue;
+                }
+                
+                normalizedParts.unshift(part);
+            }
+            
+            return normalizedParts.join('-');
         },
 
         get filteredModels() {
@@ -62,19 +92,19 @@ function llmCompare() {
                     return true;
                 });
 
-            // Group models by their suffix
+            // Group models by their normalized name
             const groupedModels = filtered.reduce((acc, model) => {
-                const suffix = model.name.split('/').pop();
-                if (!acc[suffix]) {
-                    acc[suffix] = {
-                        suffix,
+                const normalizedName = this.normalizeModelName(model.name);
+                if (!acc[normalizedName]) {
+                    acc[normalizedName] = {
+                        normalized_name: normalizedName,
                         variants: [],
                         mode: model.mode,
                     };
                 }
                 
                 // Check if we already have a variant with same provider and prices
-                const existingVariant = acc[suffix].variants.find(v => 
+                const existingVariant = acc[normalizedName].variants.find(v => 
                     v.provider === model.provider && 
                     v.input_price_per_million === model.input_price_per_million &&
                     v.output_price_per_million === model.output_price_per_million
@@ -88,7 +118,7 @@ function llmCompare() {
                     // Create new variant
                     const variant = {...model};
                     variant.names = [model.name];
-                    acc[suffix].variants.push(variant);
+                    acc[normalizedName].variants.push(variant);
                 }
                 return acc;
             }, {});
@@ -97,8 +127,8 @@ function llmCompare() {
             return Object.values(groupedModels)
                 .sort((a, b) => {
                     if (this.sortField === 'name') {
-                        const aVal = a.suffix;
-                        const bVal = b.suffix;
+                        const aVal = a.normalized_name;
+                        const bVal = b.normalized_name;
                         return this.sortDirection === 'asc' ? 
                             aVal.localeCompare(bVal) : 
                             bVal.localeCompare(aVal);
