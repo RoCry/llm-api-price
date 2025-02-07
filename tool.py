@@ -11,7 +11,7 @@ def main():
         if not isinstance(model_data, dict):
             continue
         provider = model_data.get("litellm_provider")
-        if provider in ["openai", "anthropic", "azure"]:
+        if provider in {"openai", "anthropic", "azure", "gemini", "openrouter", "perplexity"}:
             unique_models.add(model.split("/")[-1])
 
     # sort alphabetically
