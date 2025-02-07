@@ -11,14 +11,20 @@
     </script>
 </head>
 <body class="bg-gray-100">
-    <div x-data="llmCompare()" class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold text-center mb-8">LLM Price Comparison</h1>
+    <div x-data="llmCompare()" class="container mx-auto px-4 py-6">
+        <div class="flex items-center justify-between mb-6">
+            <h1 class="text-2xl font-bold">LLM Price Comparison</h1>
+            <div class="text-sm text-gray-600 bg-gray-50 px-3 py-1 rounded-full flex items-center gap-2">
+                <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                <span x-text="'Prices updated: ' + (models.last_updated || 'Loading...')"></span>
+            </div>
+        </div>
         
         <!-- Filters -->
-        <div class="mb-8 bg-white rounded-lg shadow p-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="mb-6 bg-white rounded-lg shadow p-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div>
-                    <label class="block text-sm font-medium text-gray-600 mb-2">Provider</label>
+                    <label class="block text-xs font-medium text-gray-600 mb-1">Provider</label>
                     <select x-model="selectedProvider" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
                         <option value="">All Providers</option>
                         <template x-for="provider in providers" :key="provider">
@@ -28,7 +34,7 @@
                 </div>
 
                 <div>
-                    <label class="block text-sm font-medium text-gray-600 mb-2">Mode</label>
+                    <label class="block text-xs font-medium text-gray-600 mb-1">Mode</label>
                     <select x-model="selectedMode" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
                         <option value="">All Modes</option>
                         <template x-for="mode in modes" :key="mode">
@@ -38,14 +44,14 @@
                 </div>
 
                 <div class="flex items-center">
-                    <label class="flex items-center space-x-2 text-sm font-medium text-gray-600">
+                    <label class="flex items-center space-x-2 text-xs font-medium text-gray-600">
                         <input type="checkbox" x-model="showOnlyVision" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                         <span>Vision Models Only</span>
                     </label>
                 </div>
 
                 <div class="flex items-center">
-                    <label class="flex items-center space-x-2 text-sm font-medium text-gray-600">
+                    <label class="flex items-center space-x-2 text-xs font-medium text-gray-600">
                         <input type="checkbox" x-model="showAllModels" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
                         <span>Show All Models</span>
                     </label>
@@ -152,7 +158,6 @@
                     <span>Source Code</span>
                 </a>
             </p>
-            <p class="mb-2" x-text="'Last Updated: ' + (models.last_updated || 'Loading...')"></p>
             <p>
                 Data sourced from 
                 <a href="https://github.com/BerriAI/litellm/blob/main/model_prices_and_context_window.json" 
