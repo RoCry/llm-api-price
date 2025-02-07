@@ -25,7 +25,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div>
                     <label class="block text-xs font-medium text-gray-600 mb-1">Provider</label>
-                    <select x-model="selectedProvider" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                    <select x-model="selectedProvider" class="w-full p-1.5 text-xs border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
                         <option value="">All Providers</option>
                         <template x-for="provider in providers" :key="provider">
                             <option x-text="provider"></option>
@@ -35,7 +35,7 @@
 
                 <div>
                     <label class="block text-xs font-medium text-gray-600 mb-1">Mode</label>
-                    <select x-model="selectedMode" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                    <select x-model="selectedMode" class="w-full p-1.5 text-xs border border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
                         <option value="">All Modes</option>
                         <template x-for="mode in modes" :key="mode">
                             <option x-text="mode"></option>
@@ -44,16 +44,16 @@
                 </div>
 
                 <div class="flex items-center">
-                    <label class="flex items-center space-x-2 text-xs font-medium text-gray-600">
-                        <input type="checkbox" x-model="showOnlyVision" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
-                        <span>Vision Models Only</span>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" x-model="showOnlyVision" class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                        <span class="text-xs font-medium text-gray-600">Vision Models Only</span>
                     </label>
                 </div>
 
                 <div class="flex items-center">
-                    <label class="flex items-center space-x-2 text-xs font-medium text-gray-600">
-                        <input type="checkbox" x-model="showAllModels" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
-                        <span>Show All Models</span>
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" x-model="showAllModels" class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                        <span class="text-xs font-medium text-gray-600">Show All Models</span>
                     </label>
                 </div>
             </div>
