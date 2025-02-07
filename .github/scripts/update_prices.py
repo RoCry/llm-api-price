@@ -12,20 +12,24 @@ def get_remote_content():
 
 
 def generate_diff_message(old_content, new_content):
+    # Remove last_updated field for comparison
+    old_content_clean = {k: v for k, v in old_content.items() if k != "last_updated"}
+    new_content_clean = {k: v for k, v in new_content.items() if k != "last_updated"}
+
     added = []
     removed = []
     modified = []
 
     # Find added and modified models
-    for model in new_content:
-        if model not in old_content:
+    for model in new_content_clean:
+        if model not in old_content_clean:
             added.append(model)
-        elif new_content[model] != old_content[model]:
+        elif new_content_clean[model] != old_content_clean[model]:
             modified.append(model)
 
     # Find removed models
-    for model in old_content:
-        if model not in new_content:
+    for model in old_content_clean:
+        if model not in new_content_clean:
             removed.append(model)
 
     # Build concise message
@@ -55,7 +59,15 @@ def main():
             with open(local_path, "r") as f:
                 local_content = json.load(f)
 
-            if local_content == remote_content:
+            # Remove last_updated field for comparison
+            local_content_clean = {
+                k: v for k, v in local_content.items() if k != "last_updated"
+            }
+            remote_content_clean = {
+                k: v for k, v in remote_content.items() if k != "last_updated"
+            }
+
+            if local_content_clean == remote_content_clean:
                 print("No updates needed")
                 return
 
