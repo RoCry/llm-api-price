@@ -104,20 +104,25 @@ function llmCompare() {
                     };
                 }
                 
-                // Check if we already have a variant with same provider and prices
+                // Find a variant with the same prices
                 const existingVariant = acc[normalizedName].variants.find(v => 
-                    v.provider === model.provider && 
                     v.input_price_per_million === model.input_price_per_million &&
                     v.output_price_per_million === model.output_price_per_million
                 );
 
                 if (existingVariant) {
-                    // Add the model name to existing variant's names array
+                    // Add the provider and model name to existing variant
+                    if (!existingVariant.providers) existingVariant.providers = [existingVariant.provider];
                     if (!existingVariant.names) existingVariant.names = [existingVariant.name];
+                    
+                    if (!existingVariant.providers.includes(model.provider)) {
+                        existingVariant.providers.push(model.provider);
+                    }
                     existingVariant.names.push(model.name);
                 } else {
                     // Create new variant
                     const variant = {...model};
+                    variant.providers = [model.provider];
                     variant.names = [model.name];
                     acc[normalizedName].variants.push(variant);
                 }
