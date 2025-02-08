@@ -11,28 +11,35 @@ def get_remote_content():
     return response.json()
 
 
+def load_local_content(file_path):
+    if not os.path.exists(file_path):
+        return {}
+    with open(file_path, "r") as f:
+        return json.load(f)
+
+
+def clean_content(content):
+    """Remove last_updated field for comparison"""
+    return {k: v for k, v in content.items() if k != "last_updated"}
+
+
+def save_content(content, file_path):
+    content["last_updated"] = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    with open(file_path, "w") as f:
+        json.dump(content, f, indent=2)
+
+
 def generate_diff_message(old_content, new_content):
-    # Remove last_updated field for comparison
-    old_content_clean = {k: v for k, v in old_content.items() if k != "last_updated"}
-    new_content_clean = {k: v for k, v in new_content.items() if k != "last_updated"}
+    old_content_clean = clean_content(old_content)
+    new_content_clean = clean_content(new_content)
 
-    added = []
-    removed = []
-    modified = []
+    added = set(new_content_clean) - set(old_content_clean)
+    removed = set(old_content_clean) - set(new_content_clean)
+    modified = {
+        model for model in set(new_content_clean) & set(old_content_clean)
+        if new_content_clean[model] != old_content_clean[model]
+    }
 
-    # Find added and modified models
-    for model in new_content_clean:
-        if model not in old_content_clean:
-            added.append(model)
-        elif new_content_clean[model] != old_content_clean[model]:
-            modified.append(model)
-
-    # Find removed models
-    for model in old_content_clean:
-        if model not in new_content_clean:
-            removed.append(model)
-
-    # Build concise message
     changes = []
     if added:
         changes.append(f"Added: {', '.join(added)}")
@@ -41,56 +48,45 @@ def generate_diff_message(old_content, new_content):
     if removed:
         changes.append(f"Removed: {', '.join(removed)}")
 
-    if not changes:
-        return "No model changes"
+    return "\n".join(changes) if changes else "No model changes"
 
-    return "\n".join(changes)
+
+def setup_git():
+    """Configure git locally for this repository"""
+    os.system('git config user.name "GitHub Action"')
+    os.system('git config user.email "action@github.com"')
+
+
+def commit_and_push(file_path, diff_message):
+    """Commit and push changes to git"""
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    commit_message = f"Update prices: {timestamp}\n\nChanges:\n{diff_message}"
+    
+    os.system(f"git add {file_path}")
+    os.system(f'git commit -m "{commit_message}"')
+    os.system("git push")
 
 
 def main():
     try:
-        # Get remote content
-        remote_content = get_remote_content()
-
-        # Check if local file exists
         local_path = "model_prices_and_context_window.json"
-        local_content = {}
-        if os.path.exists(local_path):
-            with open(local_path, "r") as f:
-                local_content = json.load(f)
+        
+        # Get both remote and local content
+        remote_content = get_remote_content()
+        local_content = load_local_content(local_path)
 
-            # Remove last_updated field for comparison
-            local_content_clean = {
-                k: v for k, v in local_content.items() if k != "last_updated"
-            }
-            remote_content_clean = {
-                k: v for k, v in remote_content.items() if k != "last_updated"
-            }
+        # Compare cleaned contents
+        if clean_content(local_content) == clean_content(remote_content):
+            print("No updates needed")
+            return
 
-            if local_content_clean == remote_content_clean:
-                print("No updates needed")
-                return
-
-        # Generate diff message
+        # Generate diff and save new content
         diff_message = generate_diff_message(local_content, remote_content)
+        save_content(remote_content, local_path)
 
-        # Save new content
-        remote_content["last_updated"] = datetime.now(timezone.utc).strftime(
-            "%Y-%m-%d %H:%M UTC"
-        )
-        with open(local_path, "w") as f:
-            json.dump(remote_content, f, indent=2)
-
-        # Configure git locally for this repository only, instead of globally
-        os.system('git config user.name "GitHub Action"')
-        os.system('git config user.email "action@github.com"')
-
-        # Commit and push changes
-        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        os.system("git add model_prices_and_context_window.json")
-        commit_message = f"Update prices: {timestamp}\n\nChanges:\n{diff_message}"
-        os.system(f'git commit -m "{commit_message}"')
-        os.system("git push")
+        # Git operations
+        setup_git()
+        commit_and_push(local_path, diff_message)
 
         print("Successfully updated prices")
         print("Changes:\n" + diff_message)
