@@ -6190,6 +6190,7 @@
     "litellm_provider": "bedrock",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_response_schema": true,
     "supports_vision": true,
     "supports_tool_choice": true
   },
@@ -6202,6 +6203,7 @@
     "litellm_provider": "bedrock",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_response_schema": true,
     "supports_vision": true,
     "supports_tool_choice": true
   },
@@ -6229,6 +6231,7 @@
     "litellm_provider": "bedrock",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_response_schema": true,
     "supports_vision": true,
     "supports_tool_choice": true
   },
@@ -6242,6 +6245,7 @@
     "mode": "chat",
     "supports_assistant_prefill": true,
     "supports_function_calling": true,
+    "supports_response_schema": true,
     "supports_prompt_caching": true,
     "supports_tool_choice": true
   },
@@ -6254,6 +6258,7 @@
     "litellm_provider": "bedrock",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_response_schema": true,
     "supports_vision": true,
     "supports_tool_choice": true
   },
@@ -6266,6 +6271,7 @@
     "litellm_provider": "bedrock",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_response_schema": true,
     "supports_vision": true,
     "supports_tool_choice": true
   },
@@ -6278,6 +6284,7 @@
     "litellm_provider": "bedrock",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_response_schema": true,
     "supports_vision": true,
     "supports_tool_choice": true
   },
@@ -6305,6 +6312,7 @@
     "litellm_provider": "bedrock",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_response_schema": true,
     "supports_vision": true,
     "supports_tool_choice": true
   },
@@ -6319,6 +6327,7 @@
     "supports_assistant_prefill": true,
     "supports_function_calling": true,
     "supports_prompt_caching": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "us.anthropic.claude-3-opus-20240229-v1:0": {
@@ -6330,6 +6339,7 @@
     "litellm_provider": "bedrock",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_response_schema": true,
     "supports_vision": true,
     "supports_tool_choice": true
   },
@@ -6342,6 +6352,7 @@
     "litellm_provider": "bedrock",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_response_schema": true,
     "supports_vision": true,
     "supports_tool_choice": true
   },
@@ -6354,6 +6365,7 @@
     "litellm_provider": "bedrock",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_response_schema": true,
     "supports_vision": true,
     "supports_tool_choice": true
   },
@@ -6381,6 +6393,7 @@
     "litellm_provider": "bedrock",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_response_schema": true,
     "supports_vision": true,
     "supports_tool_choice": true
   },
@@ -6407,6 +6420,7 @@
     "litellm_provider": "bedrock",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_response_schema": true,
     "supports_vision": true,
     "supports_tool_choice": true
   },
@@ -9045,5 +9059,5 @@
     "output_cost_per_second": 0.0,
     "litellm_provider": "assemblyai"
   },
-  "last_updated": "2025-02-08 00:29 UTC"
+  "last_updated": "2025-02-08 03:08 UTC"
 }
