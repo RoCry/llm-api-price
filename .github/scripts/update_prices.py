@@ -29,7 +29,7 @@ def save_content(content, file_path):
         json.dump(content, f, indent=2)
 
 
-def generate_diff_message(old_content, new_content):
+def generate_diff_message(old_content, new_content) -> str:
     old_content_clean = clean_content(old_content)
     new_content_clean = clean_content(new_content)
 
@@ -41,14 +41,17 @@ def generate_diff_message(old_content, new_content):
     }
 
     changes = []
-    if added:
-        changes.append(f"Added: {', '.join(added)}")
-    if modified:
-        changes.append(f"Modified: {', '.join(modified)}")
-    if removed:
-        changes.append(f"Removed: {', '.join(removed)}")
+    def _append_fulfill_model(label, models):
+        if not models:
+            return
+        infos = [f"{name}@{new_content_clean[name]['litellm_provider']}" for name in models]
+        changes.append(f"{label}: {', '.join(infos)}")
 
-    return "\n".join(changes) if changes else "No model changes"
+    _append_fulfill_model("Added", added)
+    _append_fulfill_model("Modified", modified)
+    _append_fulfill_model("Removed", removed)
+
+    return "\n".join(changes) if changes else ""
 
 
 def setup_git():
@@ -75,13 +78,11 @@ def main():
         remote_content = get_remote_content()
         local_content = load_local_content(local_path)
 
-        # Compare cleaned contents
-        if clean_content(local_content) == clean_content(remote_content):
-            print("No updates needed")
-            return
-
         # Generate diff and save new content
         diff_message = generate_diff_message(local_content, remote_content)
+        if not diff_message:
+            print("No updates needed")
+            return
         save_content(remote_content, local_path)
 
         # Git operations
