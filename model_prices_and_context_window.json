@@ -8195,6 +8195,24 @@
     "deprecation_date": "2025-02-22",
     "supports_tool_choice": true
   },
+  "perplexity/sonar": {
+    "max_tokens": 127072,
+    "max_input_tokens": 127072,
+    "max_output_tokens": 127072,
+    "input_cost_per_token": 1e-06,
+    "output_cost_per_token": 1e-06,
+    "litellm_provider": "perplexity",
+    "mode": "chat"
+  },
+  "perplexity/sonar-pro": {
+    "max_tokens": 200000,
+    "max_input_tokens": 200000,
+    "max_output_tokens": 8096,
+    "input_cost_per_token": 3e-06,
+    "output_cost_per_token": 1.5e-05,
+    "litellm_provider": "perplexity",
+    "mode": "chat"
+  },
   "perplexity/pplx-7b-chat": {
     "max_tokens": 8192,
     "max_input_tokens": 8192,
@@ -9088,5 +9106,5 @@
     "output_cost_per_second": 0.0,
     "litellm_provider": "assemblyai"
   },
-  "last_updated": "2025-02-12 07:07 UTC"
+  "last_updated": "2025-02-12 17:06 UTC"
 }
