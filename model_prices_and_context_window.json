@@ -7094,7 +7094,9 @@
     "input_cost_per_token": 7.2e-07,
     "output_cost_per_token": 7.2e-07,
     "litellm_provider": "bedrock_converse",
-    "mode": "chat"
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_tool_choice": false
   },
   "meta.llama2-13b-chat-v1": {
     "max_tokens": 4096,
@@ -7430,6 +7432,17 @@
     "input_cost_per_token": 2e-06,
     "output_cost_per_token": 2e-06,
     "litellm_provider": "bedrock",
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_tool_choice": false
+  },
+  "us.meta.llama3-3-70b-instruct-v1:0": {
+    "max_tokens": 4096,
+    "max_input_tokens": 128000,
+    "max_output_tokens": 4096,
+    "input_cost_per_token": 7.2e-07,
+    "output_cost_per_token": 7.2e-07,
+    "litellm_provider": "bedrock_converse",
     "mode": "chat",
     "supports_function_calling": true,
     "supports_tool_choice": false
@@ -9122,5 +9135,5 @@
     "output_cost_per_second": 0.0,
     "litellm_provider": "assemblyai"
   },
-  "last_updated": "2024-02-14T05:07Z"
+  "last_updated": "2025-02-14T23:07:01.083560+00:00"
 }
