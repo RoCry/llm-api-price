@@ -35,7 +35,7 @@ function llmCompare() {
                     isWhitelisted: this.isModelWhitelisted(key)
                 }));
 
-            // Then set the last_updated property
+            // Parse the ISO date string directly
             const lastUpdated = new Date(data.last_updated);
             this.models.last_updated = lastUpdated.toLocaleString(undefined, {
                 year: 'numeric',

@@ -24,7 +24,7 @@ def clean_content(content):
 
 
 def save_content(content, file_path):
-    content["last_updated"] = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    content["last_updated"] = datetime.now(timezone.utc).isoformat()
     with open(file_path, "w") as f:
         json.dump(content, f, indent=2)
 
