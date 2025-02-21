@@ -2642,6 +2642,17 @@
     "supports_function_calling": true,
     "supports_tool_choice": true
   },
+  "cerebras/llama3.3-70b": {
+    "max_tokens": 128000,
+    "max_input_tokens": 128000,
+    "max_output_tokens": 128000,
+    "input_cost_per_token": 8.5e-07,
+    "output_cost_per_token": 1.2e-06,
+    "litellm_provider": "cerebras",
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_tool_choice": true
+  },
   "friendliai/meta-llama-3.1-8b-instruct": {
     "max_tokens": 8192,
     "max_input_tokens": 8192,
@@ -7449,7 +7460,8 @@
     "litellm_provider": "bedrock",
     "mode": "chat",
     "supports_function_calling": true,
-    "supports_tool_choice": false
+    "supports_tool_choice": false,
+    "supports_vision": true
   },
   "us.meta.llama3-2-11b-instruct-v1:0": {
     "max_tokens": 128000,
@@ -7460,7 +7472,8 @@
     "litellm_provider": "bedrock",
     "mode": "chat",
     "supports_function_calling": true,
-    "supports_tool_choice": false
+    "supports_tool_choice": false,
+    "supports_vision": true
   },
   "meta.llama3-2-90b-instruct-v1:0": {
     "max_tokens": 128000,
@@ -7471,7 +7484,8 @@
     "litellm_provider": "bedrock",
     "mode": "chat",
     "supports_function_calling": true,
-    "supports_tool_choice": false
+    "supports_tool_choice": false,
+    "supports_vision": true
   },
   "us.meta.llama3-2-90b-instruct-v1:0": {
     "max_tokens": 128000,
@@ -7482,7 +7496,8 @@
     "litellm_provider": "bedrock",
     "mode": "chat",
     "supports_function_calling": true,
-    "supports_tool_choice": false
+    "supports_tool_choice": false,
+    "supports_vision": true
   },
   "us.meta.llama3-3-70b-instruct-v1:0": {
     "max_tokens": 4096,
@@ -9193,5 +9208,5 @@
     "litellm_provider": "jina_ai",
     "mode": "rerank"
   },
-  "last_updated": "2025-02-21T05:07:21.321483+00:00"
+  "last_updated": "2025-02-21T06:09:41.436012+00:00"
 }
