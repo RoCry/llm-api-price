@@ -5981,6 +5981,19 @@
     "litellm_provider": "bedrock",
     "mode": "chat"
   },
+  "amazon.rerank-v1:0": {
+    "max_tokens": 32000,
+    "max_input_tokens": 32000,
+    "max_output_tokens": 32000,
+    "max_query_tokens": 32000,
+    "max_document_chunks_per_query": 100,
+    "max_tokens_per_document_chunk": 512,
+    "input_cost_per_token": 0.0,
+    "input_cost_per_query": 0.001,
+    "output_cost_per_token": 0.0,
+    "litellm_provider": "bedrock",
+    "mode": "rerank"
+  },
   "amazon.titan-text-lite-v1": {
     "max_tokens": 4000,
     "max_input_tokens": 42000,
@@ -7020,6 +7033,19 @@
     "litellm_provider": "bedrock",
     "mode": "chat",
     "supports_tool_choice": true
+  },
+  "cohere.rerank-v3-5:0": {
+    "max_tokens": 32000,
+    "max_input_tokens": 32000,
+    "max_output_tokens": 32000,
+    "max_query_tokens": 32000,
+    "max_document_chunks_per_query": 100,
+    "max_tokens_per_document_chunk": 512,
+    "input_cost_per_token": 0.0,
+    "input_cost_per_query": 0.002,
+    "output_cost_per_token": 0.0,
+    "litellm_provider": "bedrock",
+    "mode": "rerank"
   },
   "cohere.command-text-v14": {
     "max_tokens": 4096,
@@ -9157,5 +9183,15 @@
     "output_cost_per_second": 0.0,
     "litellm_provider": "assemblyai"
   },
-  "last_updated": "2025-02-18T20:07:34.869736+00:00"
+  "jina-reranker-v2-base-multilingual": {
+    "max_tokens": 1024,
+    "max_input_tokens": 1024,
+    "max_output_tokens": 1024,
+    "max_document_chunks_per_query": 2048,
+    "input_cost_per_token": 1.8e-08,
+    "output_cost_per_token": 1.8e-08,
+    "litellm_provider": "jina_ai",
+    "mode": "rerank"
+  },
+  "last_updated": "2025-02-21T05:07:21.321483+00:00"
 }
