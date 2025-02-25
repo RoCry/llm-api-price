@@ -4073,6 +4073,25 @@
     "supports_assistant_prefill": true,
     "supports_tool_choice": true
   },
+  "vertex_ai/claude-3-7-sonnet-20250219": {
+    "max_tokens": 8192,
+    "max_input_tokens": 200000,
+    "max_output_tokens": 8192,
+    "input_cost_per_token": 3e-06,
+    "output_cost_per_token": 1.5e-05,
+    "cache_creation_input_token_cost": 3.75e-06,
+    "cache_read_input_token_cost": 3e-07,
+    "litellm_provider": "vertex_ai-anthropic_models",
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_vision": true,
+    "tool_use_system_prompt_tokens": 159,
+    "supports_assistant_prefill": true,
+    "supports_prompt_caching": true,
+    "supports_response_schema": true,
+    "deprecation_date": "2025-06-01",
+    "supports_tool_choice": true
+  },
   "vertex_ai/claude-3-haiku": {
     "max_tokens": 4096,
     "max_input_tokens": 200000,
@@ -6343,7 +6362,7 @@
     "max_output_tokens": 8192,
     "input_cost_per_token": 3e-06,
     "output_cost_per_token": 1.5e-05,
-    "litellm_provider": "bedrock",
+    "litellm_provider": "bedrock_converse",
     "mode": "chat",
     "supports_function_calling": true,
     "supports_vision": true,
@@ -9242,5 +9261,5 @@
     "litellm_provider": "jina_ai",
     "mode": "rerank"
   },
-  "last_updated": "2025-02-24T21:06:26.283108+00:00"
+  "last_updated": "2025-02-25T03:13:15.951354+00:00"
 }
