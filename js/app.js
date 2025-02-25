@@ -9,12 +9,16 @@ function llmCompare() {
         sortDirection: 'asc',
         suffix_whitelist: [],
         blacklist: [],
+        showWhitelistConfig: false,
+        allNormalizedModels: [],
+        customWhitelist: [],
 
         async init() {
             // Import config
             const { config } = await import('./config.js');
             this.suffix_whitelist = config.model_whitelist;
             this.blacklist = config.model_blacklist;
+            this.customWhitelist = [...this.suffix_whitelist];
 
             // Load model data
             const response = await fetch('model_prices_and_context_window.json');
@@ -35,6 +39,9 @@ function llmCompare() {
                     isWhitelisted: this.isModelWhitelisted(key)
                 }));
 
+            // Get all unique normalized model names for the whitelist UI
+            this.allNormalizedModels = [...new Set(this.models.map(m => this.normalizeModelName(m.name)))].sort();
+
             // Parse the ISO date string directly
             const lastUpdated = new Date(data.last_updated);
             this.models.last_updated = lastUpdated.toLocaleString(undefined, {
@@ -50,9 +57,62 @@ function llmCompare() {
 
         isModelWhitelisted(modelName) {
             const normalizedName = this.normalizeModelName(modelName);
-            return this.suffix_whitelist.some(name => {
+            return this.customWhitelist.some(name => {
                 return normalizedName === name;
             });
+        },
+
+        toggleWhitelistConfig() {
+            this.showWhitelistConfig = !this.showWhitelistConfig;
+        },
+
+        toggleModelInWhitelist(modelName) {
+            if (this.customWhitelist.includes(modelName)) {
+                this.customWhitelist = this.customWhitelist.filter(name => name !== modelName);
+            } else {
+                this.customWhitelist.push(modelName);
+            }
+            // Update isWhitelisted property for all models
+            this.models.forEach(model => {
+                model.isWhitelisted = this.isModelWhitelisted(model.name);
+            });
+        },
+
+        selectAllModels() {
+            this.customWhitelist = [...this.allNormalizedModels];
+            this.models.forEach(model => {
+                model.isWhitelisted = true;
+            });
+        },
+
+        deselectAllModels() {
+            this.customWhitelist = [];
+            this.models.forEach(model => {
+                model.isWhitelisted = false;
+            });
+            this.showAllModels = true;
+        },
+
+        resetWhitelist() {
+            this.customWhitelist = [...this.suffix_whitelist];
+            this.models.forEach(model => {
+                model.isWhitelisted = this.isModelWhitelisted(model.name);
+            });
+            this.showAllModels = false;
+        },
+
+        // Watch for changes to showAllModels
+        watchShowAllModels() {
+            if (this.showAllModels && this.customWhitelist.length === 0) {
+                // If showing all models and whitelist is empty, no need to do anything
+                return;
+            } else if (this.showAllModels && this.customWhitelist.length > 0) {
+                // If showing all models but whitelist has items, clear the whitelist
+                this.deselectAllModels();
+            } else if (!this.showAllModels && this.customWhitelist.length === 0) {
+                // If not showing all models but whitelist is empty, reset to default
+                this.resetWhitelist();
+            }
         },
 
         get providers() {
