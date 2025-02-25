@@ -2,6 +2,7 @@ export const config = {
     model_whitelist: [
         "claude-3-5-haiku",
         "claude-3-5-sonnet",
+        "claude-3-7-sonnet",
         "deepseek-chat",
         "deepseek-coder",
         "deepseek-r1",
