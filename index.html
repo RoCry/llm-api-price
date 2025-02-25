@@ -22,7 +22,7 @@
         
         <!-- Filters -->
         <div class="mb-6 bg-white rounded-lg shadow p-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div>
                     <select x-model="selectedProvider" class="w-full text-xs border border-gray-300 rounded-md px-2 py-1 bg-gray-50 focus:border-blue-500 focus:ring-1 focus:ring-blue-500" title="Filter by Provider">
                         <option value="">All Providers</option>
@@ -47,17 +47,13 @@
                         <span class="text-xs font-medium text-gray-600">Vision Models Only</span>
                     </label>
                 </div>
-
-                <div class="flex items-center">
-                    <label class="flex items-center space-x-2">
-                        <input type="checkbox" x-model="showAllModels" @change="watchShowAllModels()" class="w-3.5 h-3.5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
-                        <span class="text-xs font-medium text-gray-600">Show All Models</span>
-                    </label>
-                </div>
             </div>
             
             <!-- Whitelist Configuration Toggle -->
-            <div class="mt-4 flex justify-end">
+            <div class="mt-4 flex justify-between items-center">
+                <div class="text-xs text-gray-600">
+                    <span x-text="customWhitelist.length === 0 ? 'Showing all models' : 'Showing ' + customWhitelist.length + ' whitelisted models'"></span>
+                </div>
                 <button 
                     @click="toggleWhitelistConfig()" 
                     class="text-xs text-blue-600 hover:text-blue-800 flex items-center gap-1"

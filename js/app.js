@@ -4,7 +4,6 @@ function llmCompare() {
         selectedProvider: '',
         selectedMode: '',
         showOnlyVision: false,
-        showAllModels: false,
         sortField: 'name',
         sortDirection: 'asc',
         suffix_whitelist: [],
@@ -31,6 +30,7 @@ function llmCompare() {
                 .filter(([key, value]) => value.input_cost_per_token || value.output_cost_per_token)  // filter no price
                 .map(([key, value]) => ({
                     name: key,
+                    normalized_name: this.normalizeModelName(key),
                     ...value,
                     provider: value.litellm_provider,
                     // Convert to price per million tokens
@@ -40,7 +40,7 @@ function llmCompare() {
                 }));
 
             // Get all unique normalized model names for the whitelist UI
-            this.allNormalizedModels = [...new Set(this.models.map(m => this.normalizeModelName(m.name)))].sort();
+            this.allNormalizedModels = [...new Set(this.models.map(m => m.normalized_name))].sort();
 
             // Parse the ISO date string directly
             const lastUpdated = new Date(data.last_updated);
@@ -90,7 +90,6 @@ function llmCompare() {
             this.models.forEach(model => {
                 model.isWhitelisted = false;
             });
-            this.showAllModels = true;
         },
 
         resetWhitelist() {
@@ -98,21 +97,6 @@ function llmCompare() {
             this.models.forEach(model => {
                 model.isWhitelisted = this.isModelWhitelisted(model.name);
             });
-            this.showAllModels = false;
-        },
-
-        // Watch for changes to showAllModels
-        watchShowAllModels() {
-            if (this.showAllModels && this.customWhitelist.length === 0) {
-                // If showing all models and whitelist is empty, no need to do anything
-                return;
-            } else if (this.showAllModels && this.customWhitelist.length > 0) {
-                // If showing all models but whitelist has items, clear the whitelist
-                this.deselectAllModels();
-            } else if (!this.showAllModels && this.customWhitelist.length === 0) {
-                // If not showing all models but whitelist is empty, reset to default
-                this.resetWhitelist();
-            }
         },
 
         get providers() {
@@ -157,7 +141,7 @@ function llmCompare() {
         get filteredModels() {
             const filtered = this.models
                 .filter(model => {
-                    if (!this.showAllModels && !model.isWhitelisted) return false;
+                    if (this.customWhitelist.length > 0 && !model.isWhitelisted) return false;
                     if (this.selectedProvider && model.provider !== this.selectedProvider) return false;
                     if (this.selectedMode && model.mode !== this.selectedMode) return false;
                     if (this.showOnlyVision && !model.supports_vision) return false;
@@ -166,7 +150,7 @@ function llmCompare() {
 
             // Group models by their normalized name
             const groupedModels = filtered.reduce((acc, model) => {
-                const normalizedName = this.normalizeModelName(model.name);
+                const normalizedName = model.normalized_name;
                 if (!acc[normalizedName]) {
                     acc[normalizedName] = {
                         normalized_name: normalizedName,
