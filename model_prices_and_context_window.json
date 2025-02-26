@@ -1732,6 +1732,19 @@
     "source": "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/metagenai.meta-llama-3-1-405b-instruct-offer?tab=PlansAndPrice",
     "supports_tool_choice": true
   },
+  "azure_ai/Phi-4": {
+    "max_tokens": 4096,
+    "max_input_tokens": 128000,
+    "max_output_tokens": 4096,
+    "input_cost_per_token": 1.25e-07,
+    "output_cost_per_token": 5e-07,
+    "litellm_provider": "azure_ai",
+    "mode": "chat",
+    "supports_vision": false,
+    "source": "https://techcommunity.microsoft.com/blog/machinelearningblog/affordable-innovation-unveiling-the-pricing-of-phi-3-slms-on-models-as-a-service/4156495",
+    "supports_function_calling": true,
+    "supports_tool_choice": true
+  },
   "azure_ai/Phi-3.5-mini-instruct": {
     "max_tokens": 4096,
     "max_input_tokens": 128000,
@@ -2747,6 +2760,43 @@
     "deprecation_date": "2025-10-01",
     "supports_tool_choice": true
   },
+  "claude-3-5-haiku-latest": {
+    "max_tokens": 8192,
+    "max_input_tokens": 200000,
+    "max_output_tokens": 8192,
+    "input_cost_per_token": 1e-06,
+    "output_cost_per_token": 5e-06,
+    "cache_creation_input_token_cost": 1.25e-06,
+    "cache_read_input_token_cost": 1e-07,
+    "litellm_provider": "anthropic",
+    "mode": "chat",
+    "supports_function_calling": true,
+    "tool_use_system_prompt_tokens": 264,
+    "supports_assistant_prefill": true,
+    "supports_prompt_caching": true,
+    "supports_response_schema": true,
+    "deprecation_date": "2025-10-01",
+    "supports_tool_choice": true
+  },
+  "claude-3-opus-latest": {
+    "max_tokens": 4096,
+    "max_input_tokens": 200000,
+    "max_output_tokens": 4096,
+    "input_cost_per_token": 1.5e-05,
+    "output_cost_per_token": 7.5e-05,
+    "cache_creation_input_token_cost": 1.875e-05,
+    "cache_read_input_token_cost": 1.5e-06,
+    "litellm_provider": "anthropic",
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_vision": true,
+    "tool_use_system_prompt_tokens": 395,
+    "supports_assistant_prefill": true,
+    "supports_prompt_caching": true,
+    "supports_response_schema": true,
+    "deprecation_date": "2025-03-01",
+    "supports_tool_choice": true
+  },
   "claude-3-opus-20240229": {
     "max_tokens": 4096,
     "max_input_tokens": 200000,
@@ -2783,7 +2833,45 @@
     "deprecation_date": "2025-07-21",
     "supports_tool_choice": true
   },
+  "claude-3-5-sonnet-latest": {
+    "max_tokens": 8192,
+    "max_input_tokens": 200000,
+    "max_output_tokens": 8192,
+    "input_cost_per_token": 3e-06,
+    "output_cost_per_token": 1.5e-05,
+    "cache_creation_input_token_cost": 3.75e-06,
+    "cache_read_input_token_cost": 3e-07,
+    "litellm_provider": "anthropic",
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_vision": true,
+    "tool_use_system_prompt_tokens": 159,
+    "supports_assistant_prefill": true,
+    "supports_prompt_caching": true,
+    "supports_response_schema": true,
+    "deprecation_date": "2025-06-01",
+    "supports_tool_choice": true
+  },
   "claude-3-5-sonnet-20240620": {
+    "max_tokens": 8192,
+    "max_input_tokens": 200000,
+    "max_output_tokens": 8192,
+    "input_cost_per_token": 3e-06,
+    "output_cost_per_token": 1.5e-05,
+    "cache_creation_input_token_cost": 3.75e-06,
+    "cache_read_input_token_cost": 3e-07,
+    "litellm_provider": "anthropic",
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_vision": true,
+    "tool_use_system_prompt_tokens": 159,
+    "supports_assistant_prefill": true,
+    "supports_prompt_caching": true,
+    "supports_response_schema": true,
+    "deprecation_date": "2025-06-01",
+    "supports_tool_choice": true
+  },
+  "claude-3-7-sonnet-latest": {
     "max_tokens": 8192,
     "max_input_tokens": 200000,
     "max_output_tokens": 8192,
@@ -4073,7 +4161,7 @@
     "supports_assistant_prefill": true,
     "supports_tool_choice": true
   },
-  "vertex_ai/claude-3-7-sonnet-20250219": {
+  "vertex_ai/claude-3-7-sonnet@20250219": {
     "max_tokens": 8192,
     "max_input_tokens": 200000,
     "max_output_tokens": 8192,
@@ -6459,6 +6547,21 @@
     "input_cost_per_token": 3e-06,
     "output_cost_per_token": 1.5e-05,
     "litellm_provider": "bedrock",
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_vision": true,
+    "supports_assistant_prefill": true,
+    "supports_prompt_caching": true,
+    "supports_response_schema": true,
+    "supports_tool_choice": true
+  },
+  "us.anthropic.claude-3-7-sonnet-20250219-v1:0": {
+    "max_tokens": 8192,
+    "max_input_tokens": 200000,
+    "max_output_tokens": 8192,
+    "input_cost_per_token": 3e-06,
+    "output_cost_per_token": 1.5e-05,
+    "litellm_provider": "bedrock_converse",
     "mode": "chat",
     "supports_function_calling": true,
     "supports_vision": true,
@@ -9261,5 +9364,5 @@
     "litellm_provider": "jina_ai",
     "mode": "rerank"
   },
-  "last_updated": "2025-02-25T03:13:15.951354+00:00"
+  "last_updated": "2025-02-26T04:55:46.285226+00:00"
 }
