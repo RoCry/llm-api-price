@@ -36,20 +36,26 @@ def generate_diff_message(old_content, new_content) -> str:
     added = set(new_content_clean) - set(old_content_clean)
     removed = set(old_content_clean) - set(new_content_clean)
     modified = {
-        model for model in set(new_content_clean) & set(old_content_clean)
+        model
+        for model in set(new_content_clean) & set(old_content_clean)
         if new_content_clean[model] != old_content_clean[model]
     }
 
     changes = []
-    def _append_fulfill_model(label, models):
+
+    def _append_fulfill_model(label, models, is_removed=False):
         if not models:
             return
-        infos = [f"{name}@{new_content_clean[name]['litellm_provider']}" for name in models]
+        # Use old_content for removed models, new_content for added/modified models
+        content_to_use = old_content_clean if is_removed else new_content_clean
+        infos = [
+            f"{name}@{content_to_use[name]['litellm_provider']}" for name in models
+        ]
         changes.append(f"{label}: {', '.join(infos)}")
 
     _append_fulfill_model("Added", added)
     _append_fulfill_model("Modified", modified)
-    _append_fulfill_model("Removed", removed)
+    _append_fulfill_model("Removed", removed, is_removed=True)
 
     return "\n".join(changes) if changes else ""
 
@@ -64,7 +70,7 @@ def commit_and_push(file_path, diff_message):
     """Commit and push changes to git"""
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     commit_message = f"Update prices: {timestamp}\n\nChanges:\n{diff_message}"
-    
+
     os.system(f"git add {file_path}")
     os.system(f'git commit -m "{commit_message}"')
     os.system("git push")
@@ -73,7 +79,7 @@ def commit_and_push(file_path, diff_message):
 def main():
     try:
         local_path = "model_prices_and_context_window.json"
-        
+
         # Get both remote and local content
         remote_content = get_remote_content()
         local_content = load_local_content(local_path)
