@@ -2753,6 +2753,7 @@
     "litellm_provider": "anthropic",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_vision": true,
     "tool_use_system_prompt_tokens": 264,
     "supports_assistant_prefill": true,
     "supports_prompt_caching": true,
@@ -2771,6 +2772,7 @@
     "litellm_provider": "anthropic",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_vision": true,
     "tool_use_system_prompt_tokens": 264,
     "supports_assistant_prefill": true,
     "supports_prompt_caching": true,
@@ -9393,5 +9395,5 @@
     "litellm_provider": "jina_ai",
     "mode": "rerank"
   },
-  "last_updated": "2025-02-26T07:07:33.327765+00:00"
+  "last_updated": "2025-02-27T00:30:46.887824+00:00"
 }
