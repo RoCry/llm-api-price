@@ -1447,7 +1447,7 @@
     "mode": "chat",
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
-    "deprecation_date": "2025-03-31",
+    "deprecation_date": "2025-05-31",
     "supports_tool_choice": true
   },
   "azure/gpt-3.5-turbo-0125": {
@@ -2784,10 +2784,10 @@
     "max_tokens": 8192,
     "max_input_tokens": 200000,
     "max_output_tokens": 8192,
-    "input_cost_per_token": 1e-06,
-    "output_cost_per_token": 5e-06,
-    "cache_creation_input_token_cost": 1.25e-06,
-    "cache_read_input_token_cost": 1e-07,
+    "input_cost_per_token": 8e-07,
+    "output_cost_per_token": 4e-06,
+    "cache_creation_input_token_cost": 1e-06,
+    "cache_read_input_token_cost": 8e-07,
     "litellm_provider": "anthropic",
     "mode": "chat",
     "supports_function_calling": true,
@@ -2946,7 +2946,7 @@
     "supports_assistant_prefill": true,
     "supports_prompt_caching": true,
     "supports_response_schema": true,
-    "deprecation_date": "2025-06-01",
+    "deprecation_date": "2026-02-01",
     "supports_tool_choice": true
   },
   "claude-3-5-sonnet-20241022": {
@@ -9433,5 +9433,5 @@
     "litellm_provider": "jina_ai",
     "mode": "rerank"
   },
-  "last_updated": "2025-02-28T00:30:47.989962+00:00"
+  "last_updated": "2025-02-28T05:07:43.447876+00:00"
 }
