@@ -76,6 +76,44 @@
     "supports_system_messages": true,
     "supports_tool_choice": true
   },
+  "gpt-4.5-preview": {
+    "max_tokens": 16384,
+    "max_input_tokens": 128000,
+    "max_output_tokens": 16384,
+    "input_cost_per_token": 7.5e-05,
+    "output_cost_per_token": 0.00015,
+    "input_cost_per_token_batches": 3.75e-05,
+    "output_cost_per_token_batches": 7.5e-05,
+    "cache_read_input_token_cost": 3.75e-05,
+    "litellm_provider": "openai",
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
+    "supports_vision": true,
+    "supports_prompt_caching": true,
+    "supports_system_messages": true,
+    "supports_tool_choice": true
+  },
+  "gpt-4.5-preview-2025-02-27": {
+    "max_tokens": 16384,
+    "max_input_tokens": 128000,
+    "max_output_tokens": 16384,
+    "input_cost_per_token": 7.5e-05,
+    "output_cost_per_token": 0.00015,
+    "input_cost_per_token_batches": 3.75e-05,
+    "output_cost_per_token_batches": 7.5e-05,
+    "cache_read_input_token_cost": 3.75e-05,
+    "litellm_provider": "openai",
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
+    "supports_vision": true,
+    "supports_prompt_caching": true,
+    "supports_system_messages": true,
+    "supports_tool_choice": true
+  },
   "gpt-4o-audio-preview": {
     "max_tokens": 16384,
     "max_input_tokens": 128000,
@@ -9395,5 +9433,5 @@
     "litellm_provider": "jina_ai",
     "mode": "rerank"
   },
-  "last_updated": "2025-02-27T00:30:46.887824+00:00"
+  "last_updated": "2025-02-28T00:30:47.989962+00:00"
 }
