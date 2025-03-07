@@ -1068,9 +1068,9 @@
     "max_tokens": 65536,
     "max_input_tokens": 128000,
     "max_output_tokens": 65536,
-    "input_cost_per_token": 3e-06,
-    "output_cost_per_token": 1.2e-05,
-    "cache_read_input_token_cost": 1.5e-06,
+    "input_cost_per_token": 1.21e-06,
+    "output_cost_per_token": 4.84e-06,
+    "cache_read_input_token_cost": 6.05e-07,
     "litellm_provider": "azure",
     "mode": "chat",
     "supports_function_calling": true,
@@ -1082,9 +1082,9 @@
     "max_tokens": 65536,
     "max_input_tokens": 128000,
     "max_output_tokens": 65536,
-    "input_cost_per_token": 3e-06,
-    "output_cost_per_token": 1.2e-05,
-    "cache_read_input_token_cost": 1.5e-06,
+    "input_cost_per_token": 1.21e-06,
+    "output_cost_per_token": 4.84e-06,
+    "cache_read_input_token_cost": 6.05e-07,
     "litellm_provider": "azure",
     "mode": "chat",
     "supports_function_calling": true,
@@ -9464,5 +9464,5 @@
     "litellm_provider": "jina_ai",
     "mode": "rerank"
   },
-  "last_updated": "2025-03-06T07:07:52.053164+00:00"
+  "last_updated": "2025-03-07T07:07:18.282123+00:00"
 }
