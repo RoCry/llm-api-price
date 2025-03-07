@@ -2794,6 +2794,7 @@
     "supports_vision": true,
     "tool_use_system_prompt_tokens": 264,
     "supports_assistant_prefill": true,
+    "supports_pdf_input": true,
     "supports_prompt_caching": true,
     "supports_response_schema": true,
     "deprecation_date": "2025-10-01",
@@ -2813,6 +2814,7 @@
     "supports_vision": true,
     "tool_use_system_prompt_tokens": 264,
     "supports_assistant_prefill": true,
+    "supports_pdf_input": true,
     "supports_prompt_caching": true,
     "supports_response_schema": true,
     "deprecation_date": "2025-10-01",
@@ -2887,6 +2889,7 @@
     "supports_vision": true,
     "tool_use_system_prompt_tokens": 159,
     "supports_assistant_prefill": true,
+    "supports_pdf_input": true,
     "supports_prompt_caching": true,
     "supports_response_schema": true,
     "deprecation_date": "2025-06-01",
@@ -2906,6 +2909,7 @@
     "supports_vision": true,
     "tool_use_system_prompt_tokens": 159,
     "supports_assistant_prefill": true,
+    "supports_pdf_input": true,
     "supports_prompt_caching": true,
     "supports_response_schema": true,
     "deprecation_date": "2025-06-01",
@@ -2925,6 +2929,7 @@
     "supports_vision": true,
     "tool_use_system_prompt_tokens": 159,
     "supports_assistant_prefill": true,
+    "supports_pdf_input": true,
     "supports_prompt_caching": true,
     "supports_response_schema": true,
     "deprecation_date": "2025-06-01",
@@ -2944,6 +2949,7 @@
     "supports_vision": true,
     "tool_use_system_prompt_tokens": 159,
     "supports_assistant_prefill": true,
+    "supports_pdf_input": true,
     "supports_prompt_caching": true,
     "supports_response_schema": true,
     "deprecation_date": "2026-02-01",
@@ -4158,6 +4164,7 @@
     "litellm_provider": "vertex_ai-anthropic_models",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_pdf_input": true,
     "supports_vision": true,
     "supports_assistant_prefill": true,
     "supports_tool_choice": true
@@ -4171,6 +4178,7 @@
     "litellm_provider": "vertex_ai-anthropic_models",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_pdf_input": true,
     "supports_vision": true,
     "supports_assistant_prefill": true,
     "supports_tool_choice": true
@@ -4184,6 +4192,7 @@
     "litellm_provider": "vertex_ai-anthropic_models",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_pdf_input": true,
     "supports_vision": true,
     "supports_assistant_prefill": true,
     "supports_tool_choice": true
@@ -4197,6 +4206,7 @@
     "litellm_provider": "vertex_ai-anthropic_models",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_pdf_input": true,
     "supports_vision": true,
     "supports_assistant_prefill": true,
     "supports_tool_choice": true
@@ -4212,6 +4222,7 @@
     "litellm_provider": "vertex_ai-anthropic_models",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_pdf_input": true,
     "supports_vision": true,
     "tool_use_system_prompt_tokens": 159,
     "supports_assistant_prefill": true,
@@ -4255,6 +4266,7 @@
     "litellm_provider": "vertex_ai-anthropic_models",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_pdf_input": true,
     "supports_assistant_prefill": true,
     "supports_tool_choice": true
   },
@@ -4267,6 +4279,7 @@
     "litellm_provider": "vertex_ai-anthropic_models",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_pdf_input": true,
     "supports_assistant_prefill": true,
     "supports_tool_choice": true
   },
@@ -9505,5 +9518,5 @@
     "litellm_provider": "jina_ai",
     "mode": "rerank"
   },
-  "last_updated": "2025-03-07T16:08:00.223948+00:00"
+  "last_updated": "2025-03-07T19:06:25.822602+00:00"
 }
