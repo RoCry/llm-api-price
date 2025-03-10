@@ -1993,8 +1993,8 @@
     "max_tokens": 8191,
     "max_input_tokens": 32000,
     "max_output_tokens": 8191,
-    "input_cost_per_token": 1e-06,
-    "output_cost_per_token": 3e-06,
+    "input_cost_per_token": 1e-07,
+    "output_cost_per_token": 3e-07,
     "litellm_provider": "mistral",
     "supports_function_calling": true,
     "mode": "chat",
@@ -2005,8 +2005,8 @@
     "max_tokens": 8191,
     "max_input_tokens": 32000,
     "max_output_tokens": 8191,
-    "input_cost_per_token": 1e-06,
-    "output_cost_per_token": 3e-06,
+    "input_cost_per_token": 1e-07,
+    "output_cost_per_token": 3e-07,
     "litellm_provider": "mistral",
     "supports_function_calling": true,
     "mode": "chat",
@@ -9538,5 +9538,5 @@
     "litellm_provider": "jina_ai",
     "mode": "rerank"
   },
-  "last_updated": "2025-03-10T21:06:55.559793+00:00"
+  "last_updated": "2025-03-10T23:07:00.726994+00:00"
 }
