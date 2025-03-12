@@ -6635,6 +6635,12 @@
     "supports_prompt_caching": true,
     "supports_response_schema": true
   },
+  "1024-x-1024/50-steps/bedrock/amazon.nova-canvas-v1:0": {
+    "max_input_tokens": 2600,
+    "output_cost_per_image": 0.06,
+    "litellm_provider": "bedrock",
+    "mode": "image_generation"
+  },
   "eu.amazon.nova-pro-v1:0": {
     "max_tokens": 4096,
     "max_input_tokens": 300000,
@@ -9638,5 +9644,5 @@
     "litellm_provider": "jina_ai",
     "mode": "rerank"
   },
-  "last_updated": "2025-03-12T02:31:32.106999+00:00"
+  "last_updated": "2025-03-12T06:10:12.441350+00:00"
 }
