@@ -1447,7 +1447,7 @@
     "input_cost_per_token_batches": 3.75e-05,
     "output_cost_per_token_batches": 7.5e-05,
     "cache_read_input_token_cost": 3.75e-05,
-    "litellm_provider": "openai",
+    "litellm_provider": "azure",
     "mode": "chat",
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
@@ -10357,5 +10357,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-03-22T01:34:47.531289+00:00"
+  "last_updated": "2025-03-22T04:08:27.435301+00:00"
 }
