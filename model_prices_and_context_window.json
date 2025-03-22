@@ -15,6 +15,12 @@
     "supports_prompt_caching": true,
     "supports_response_schema": true,
     "supports_system_messages": true,
+    "supports_web_search": true,
+    "search_context_cost_per_query": {
+      "search_context_size_low": 0.0,
+      "search_context_size_medium": 0.0,
+      "search_context_size_high": 0.0
+    },
     "deprecation_date": "date when the model becomes deprecated in the format YYYY-MM-DD"
   },
   "omni-moderation-latest": {
@@ -75,6 +81,31 @@
     "supports_prompt_caching": true,
     "supports_system_messages": true,
     "supports_tool_choice": true
+  },
+  "gpt-4o-search-preview": {
+    "max_tokens": 16384,
+    "max_input_tokens": 128000,
+    "max_output_tokens": 16384,
+    "input_cost_per_token": 2.5e-06,
+    "output_cost_per_token": 1e-05,
+    "input_cost_per_token_batches": 1.25e-06,
+    "output_cost_per_token_batches": 5e-06,
+    "cache_read_input_token_cost": 1.25e-06,
+    "litellm_provider": "openai",
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
+    "supports_vision": true,
+    "supports_prompt_caching": true,
+    "supports_system_messages": true,
+    "supports_tool_choice": true,
+    "supports_web_search": true,
+    "search_context_cost_per_query": {
+      "search_context_size_low": 0.03,
+      "search_context_size_medium": 0.035,
+      "search_context_size_high": 0.05
+    }
   },
   "gpt-4.5-preview": {
     "max_tokens": 16384,
@@ -201,6 +232,31 @@
     "supports_system_messages": true,
     "supports_tool_choice": true
   },
+  "gpt-4o-mini-search-preview": {
+    "max_tokens": 16384,
+    "max_input_tokens": 128000,
+    "max_output_tokens": 16384,
+    "input_cost_per_token": 1.5e-07,
+    "output_cost_per_token": 6e-07,
+    "input_cost_per_token_batches": 7.5e-08,
+    "output_cost_per_token_batches": 3e-07,
+    "cache_read_input_token_cost": 7.5e-08,
+    "litellm_provider": "openai",
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
+    "supports_vision": true,
+    "supports_prompt_caching": true,
+    "supports_system_messages": true,
+    "supports_tool_choice": true,
+    "supports_web_search": true,
+    "search_context_cost_per_query": {
+      "search_context_size_low": 0.025,
+      "search_context_size_medium": 0.0275,
+      "search_context_size_high": 0.03
+    }
+  },
   "gpt-4o-mini-2024-07-18": {
     "max_tokens": 16384,
     "max_input_tokens": 128000,
@@ -218,7 +274,12 @@
     "supports_vision": true,
     "supports_prompt_caching": true,
     "supports_system_messages": true,
-    "supports_tool_choice": true
+    "supports_tool_choice": true,
+    "search_context_cost_per_query": {
+      "search_context_size_low": 30.0,
+      "search_context_size_medium": 35.0,
+      "search_context_size_high": 50.0
+    }
   },
   "o1-pro": {
     "max_tokens": 100000,
@@ -10357,5 +10418,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-03-22T04:08:27.435301+00:00"
+  "last_updated": "2025-03-22T21:06:15.234191+00:00"
 }
