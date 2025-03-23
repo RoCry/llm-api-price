@@ -80,7 +80,13 @@
     "supports_vision": true,
     "supports_prompt_caching": true,
     "supports_system_messages": true,
-    "supports_tool_choice": true
+    "supports_tool_choice": true,
+    "supports_web_search": true,
+    "search_context_cost_per_query": {
+      "search_context_size_low": 0.03,
+      "search_context_size_medium": 0.035,
+      "search_context_size_high": 0.05
+    }
   },
   "gpt-4o-search-preview-2025-03-11": {
     "max_tokens": 16384,
@@ -255,7 +261,13 @@
     "supports_vision": true,
     "supports_prompt_caching": true,
     "supports_system_messages": true,
-    "supports_tool_choice": true
+    "supports_tool_choice": true,
+    "supports_web_search": true,
+    "search_context_cost_per_query": {
+      "search_context_size_low": 0.025,
+      "search_context_size_medium": 0.0275,
+      "search_context_size_high": 0.03
+    }
   },
   "gpt-4o-mini-search-preview-2025-03-11": {
     "max_tokens": 16384,
@@ -10468,5 +10480,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-03-22T22:06:48.979378+00:00"
+  "last_updated": "2025-03-23T00:34:59.876120+00:00"
 }
