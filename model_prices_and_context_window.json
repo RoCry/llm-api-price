@@ -5384,6 +5384,29 @@
     "mode": "embedding",
     "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models"
   },
+  "multimodalembedding": {
+    "max_tokens": 2048,
+    "max_input_tokens": 2048,
+    "output_vector_size": 768,
+    "input_cost_per_character": 2e-07,
+    "input_cost_per_image": 0.0001,
+    "input_cost_per_video_per_second": 0.0005,
+    "input_cost_per_video_per_second_above_8s_interval": 0.001,
+    "input_cost_per_video_per_second_above_15s_interval": 0.002,
+    "input_cost_per_token": 8e-07,
+    "output_cost_per_token": 0,
+    "litellm_provider": "vertex_ai-embedding-models",
+    "mode": "embedding",
+    "supported_endpoints": [
+      "/v1/embeddings"
+    ],
+    "supported_modalities": [
+      "text",
+      "image",
+      "video"
+    ],
+    "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models"
+  },
   "text-embedding-large-exp-03-07": {
     "max_tokens": 8192,
     "max_input_tokens": 8192,
@@ -10566,5 +10589,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-03-26T16:09:05.018691+00:00"
+  "last_updated": "2025-03-27T06:10:12.684822+00:00"
 }
