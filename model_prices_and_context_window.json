@@ -1188,21 +1188,50 @@
     "output_cost_per_pixel": 0.0,
     "litellm_provider": "openai"
   },
+  "gpt-4o-transcribe": {
+    "mode": "audio_transcription",
+    "input_cost_per_token": 2.5e-06,
+    "input_cost_per_audio_token": 6e-06,
+    "output_cost_per_token": 1e-05,
+    "litellm_provider": "openai",
+    "supported_endpoints": [
+      "/v1/audio/transcriptions"
+    ]
+  },
+  "gpt-4o-mini-transcribe": {
+    "mode": "audio_transcription",
+    "input_cost_per_token": 1.25e-06,
+    "input_cost_per_audio_token": 3e-06,
+    "output_cost_per_token": 5e-06,
+    "litellm_provider": "openai",
+    "supported_endpoints": [
+      "/v1/audio/transcriptions"
+    ]
+  },
   "whisper-1": {
     "mode": "audio_transcription",
     "input_cost_per_second": 0.0001,
     "output_cost_per_second": 0.0001,
-    "litellm_provider": "openai"
+    "litellm_provider": "openai",
+    "supported_endpoints": [
+      "/v1/audio/transcriptions"
+    ]
   },
   "tts-1": {
     "mode": "audio_speech",
     "input_cost_per_character": 1.5e-05,
-    "litellm_provider": "openai"
+    "litellm_provider": "openai",
+    "supported_endpoints": [
+      "/v1/audio/speech"
+    ]
   },
   "tts-1-hd": {
     "mode": "audio_speech",
     "input_cost_per_character": 3e-05,
-    "litellm_provider": "openai"
+    "litellm_provider": "openai",
+    "supported_endpoints": [
+      "/v1/audio/speech"
+    ]
   },
   "azure/gpt-4o-mini-realtime-preview-2024-12-17": {
     "max_tokens": 4096,
@@ -10589,5 +10618,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-03-27T06:10:12.684822+00:00"
+  "last_updated": "2025-03-27T07:08:01.999071+00:00"
 }
