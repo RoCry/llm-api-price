@@ -4717,6 +4717,13 @@
     "supports_vision": true,
     "supports_response_schema": true,
     "supports_audio_output": true,
+    "supports_audio_input": true,
+    "supported_modalities": [
+      "text",
+      "image",
+      "audio",
+      "video"
+    ],
     "supports_tool_choice": true,
     "source": "https://ai.google.dev/pricing#2_0flash"
   },
@@ -10641,5 +10648,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-03-29T08:08:40.266345+00:00"
+  "last_updated": "2025-03-30T02:35:47.490674+00:00"
 }
