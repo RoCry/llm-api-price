@@ -97,14 +97,14 @@
     "litellm_provider": "watsonx",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_tool_choice": true,
     "supports_parallel_function_calling": false,
     "supports_vision": false,
     "supports_audio_input": false,
     "supports_audio_output": false,
     "supports_prompt_caching": true,
     "supports_response_schema": true,
-    "supports_system_messages": true,
-    "deprecation_date": null
+    "supports_system_messages": true
   },
   "gpt-4o-search-preview-2025-03-11": {
     "max_tokens": 16384,
@@ -10768,5 +10768,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-04-05T04:08:35.255110+00:00"
+  "last_updated": "2025-04-05T05:07:00.770893+00:00"
 }
