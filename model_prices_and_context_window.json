@@ -8509,7 +8509,8 @@
     "input_cost_per_second": 0.011,
     "output_cost_per_second": 0.011,
     "litellm_provider": "bedrock",
-    "mode": "chat"
+    "mode": "chat",
+    "supports_tool_choice": true
   },
   "bedrock/*/6-month-commitment/cohere.command-text-v14": {
     "max_tokens": 4096,
@@ -8518,7 +8519,8 @@
     "input_cost_per_second": 0.0066027,
     "output_cost_per_second": 0.0066027,
     "litellm_provider": "bedrock",
-    "mode": "chat"
+    "mode": "chat",
+    "supports_tool_choice": true
   },
   "cohere.command-light-text-v14": {
     "max_tokens": 4096,
@@ -8537,7 +8539,8 @@
     "input_cost_per_second": 0.001902,
     "output_cost_per_second": 0.001902,
     "litellm_provider": "bedrock",
-    "mode": "chat"
+    "mode": "chat",
+    "supports_tool_choice": true
   },
   "bedrock/*/6-month-commitment/cohere.command-light-text-v14": {
     "max_tokens": 4096,
@@ -8546,7 +8549,8 @@
     "input_cost_per_second": 0.0011416,
     "output_cost_per_second": 0.0011416,
     "litellm_provider": "bedrock",
-    "mode": "chat"
+    "mode": "chat",
+    "supports_tool_choice": true
   },
   "cohere.command-r-plus-v1:0": {
     "max_tokens": 4096,
@@ -10845,5 +10849,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-04-08T04:09:15.590431+00:00"
+  "last_updated": "2025-04-08T20:08:05.532998+00:00"
 }
