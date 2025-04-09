@@ -2431,25 +2431,26 @@
     "max_tokens": 4096,
     "max_input_tokens": 131072,
     "max_output_tokens": 4096,
-    "input_cost_per_token": 0,
-    "output_cost_per_token": 0,
+    "input_cost_per_token": 7.5e-08,
+    "output_cost_per_token": 3e-07,
     "litellm_provider": "azure_ai",
     "mode": "chat",
     "supports_function_calling": true,
-    "source": "https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/models-featured#microsoft"
+    "source": "https://techcommunity.microsoft.com/blog/Azure-AI-Services-blog/announcing-new-phi-pricing-empowering-your-business-with-small-language-models/4395112"
   },
   "azure_ai/Phi-4-multimodal-instruct": {
     "max_tokens": 4096,
     "max_input_tokens": 131072,
     "max_output_tokens": 4096,
-    "input_cost_per_token": 0,
-    "output_cost_per_token": 0,
+    "input_cost_per_token": 8e-08,
+    "input_cost_per_audio_token": 4e-06,
+    "output_cost_per_token": 0.00032,
     "litellm_provider": "azure_ai",
     "mode": "chat",
     "supports_audio_input": true,
     "supports_function_calling": true,
     "supports_vision": true,
-    "source": "https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/models-featured#microsoft"
+    "source": "https://techcommunity.microsoft.com/blog/Azure-AI-Services-blog/announcing-new-phi-pricing-empowering-your-business-with-small-language-models/4395112"
   },
   "azure_ai/Phi-4": {
     "max_tokens": 16384,
@@ -10849,5 +10850,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-04-09T00:32:29.583676+00:00"
+  "last_updated": "2025-04-09T21:06:45.850989+00:00"
 }
