@@ -1314,6 +1314,86 @@
     "supports_system_messages": true,
     "supports_tool_choice": true
   },
+  "azure/gpt-4o-realtime-preview-2024-12-17": {
+    "max_tokens": 4096,
+    "max_input_tokens": 128000,
+    "max_output_tokens": 4096,
+    "input_cost_per_token": 5e-06,
+    "input_cost_per_audio_token": 4e-05,
+    "cache_read_input_token_cost": 2.5e-06,
+    "output_cost_per_token": 2e-05,
+    "output_cost_per_audio_token": 8e-05,
+    "litellm_provider": "azure",
+    "mode": "chat",
+    "supported_modalities": [
+      "text",
+      "audio"
+    ],
+    "supported_output_modalities": [
+      "text",
+      "audio"
+    ],
+    "supports_function_calling": true,
+    "supports_parallel_function_calling": true,
+    "supports_audio_input": true,
+    "supports_audio_output": true,
+    "supports_system_messages": true,
+    "supports_tool_choice": true
+  },
+  "azure/us/gpt-4o-realtime-preview-2024-12-17": {
+    "max_tokens": 4096,
+    "max_input_tokens": 128000,
+    "max_output_tokens": 4096,
+    "input_cost_per_token": 5.5e-06,
+    "input_cost_per_audio_token": 4.4e-05,
+    "cache_read_input_token_cost": 2.75e-06,
+    "cache_read_input_audio_token_cost": 2.5e-06,
+    "output_cost_per_token": 2.2e-05,
+    "output_cost_per_audio_token": 8e-05,
+    "litellm_provider": "azure",
+    "mode": "chat",
+    "supported_modalities": [
+      "text",
+      "audio"
+    ],
+    "supported_output_modalities": [
+      "text",
+      "audio"
+    ],
+    "supports_function_calling": true,
+    "supports_parallel_function_calling": true,
+    "supports_audio_input": true,
+    "supports_audio_output": true,
+    "supports_system_messages": true,
+    "supports_tool_choice": true
+  },
+  "azure/eu/gpt-4o-realtime-preview-2024-12-17": {
+    "max_tokens": 4096,
+    "max_input_tokens": 128000,
+    "max_output_tokens": 4096,
+    "input_cost_per_token": 5.5e-06,
+    "input_cost_per_audio_token": 4.4e-05,
+    "cache_read_input_token_cost": 2.75e-06,
+    "cache_read_input_audio_token_cost": 2.5e-06,
+    "output_cost_per_token": 2.2e-05,
+    "output_cost_per_audio_token": 8e-05,
+    "litellm_provider": "azure",
+    "mode": "chat",
+    "supported_modalities": [
+      "text",
+      "audio"
+    ],
+    "supported_output_modalities": [
+      "text",
+      "audio"
+    ],
+    "supports_function_calling": true,
+    "supports_parallel_function_calling": true,
+    "supports_audio_input": true,
+    "supports_audio_output": true,
+    "supports_system_messages": true,
+    "supports_tool_choice": true
+  },
   "azure/gpt-4o-realtime-preview-2024-10-01": {
     "max_tokens": 4096,
     "max_input_tokens": 128000,
@@ -11017,5 +11097,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-04-10T02:33:57.259455+00:00"
+  "last_updated": "2025-04-11T05:07:47.080877+00:00"
 }
