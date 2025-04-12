@@ -5209,7 +5209,7 @@
     "input_cost_per_audio_token": 7e-07,
     "input_cost_per_token": 1.25e-06,
     "input_cost_per_token_above_200k_tokens": 2.5e-06,
-    "output_cost_per_token": 1e-06,
+    "output_cost_per_token": 1e-05,
     "output_cost_per_token_above_200k_tokens": 1.5e-05,
     "litellm_provider": "gemini",
     "mode": "chat",
@@ -11214,5 +11214,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-04-12T01:34:56.081299+00:00"
+  "last_updated": "2025-04-12T16:07:46.945172+00:00"
 }
