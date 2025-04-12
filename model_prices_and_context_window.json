@@ -15,6 +15,7 @@
     "supports_prompt_caching": true,
     "supports_response_schema": true,
     "supports_system_messages": true,
+    "supports_reasoning": true,
     "supports_web_search": true,
     "search_context_cost_per_query": {
       "search_context_size_low": 0.0,
@@ -379,6 +380,7 @@
     "supports_response_schema": true,
     "supports_tool_choice": true,
     "supports_native_streaming": false,
+    "supports_reasoning": true,
     "supported_modalities": [
       "text",
       "image"
@@ -409,6 +411,7 @@
     "supports_response_schema": true,
     "supports_tool_choice": true,
     "supports_native_streaming": false,
+    "supports_reasoning": true,
     "supported_modalities": [
       "text",
       "image"
@@ -436,6 +439,7 @@
     "supports_prompt_caching": true,
     "supports_system_messages": true,
     "supports_response_schema": true,
+    "supports_reasoning": true,
     "supports_tool_choice": true
   },
   "o1-mini": {
@@ -464,6 +468,7 @@
     "supports_vision": false,
     "supports_prompt_caching": true,
     "supports_response_schema": true,
+    "supports_reasoning": true,
     "supports_tool_choice": true
   },
   "o3-mini-2025-01-31": {
@@ -480,6 +485,7 @@
     "supports_vision": false,
     "supports_prompt_caching": true,
     "supports_response_schema": true,
+    "supports_reasoning": true,
     "supports_tool_choice": true
   },
   "o1-mini-2024-09-12": {
@@ -492,6 +498,7 @@
     "litellm_provider": "openai",
     "mode": "chat",
     "supports_vision": true,
+    "supports_reasoning": true,
     "supports_prompt_caching": true
   },
   "o1-preview": {
@@ -504,6 +511,7 @@
     "litellm_provider": "openai",
     "mode": "chat",
     "supports_vision": true,
+    "supports_reasoning": true,
     "supports_prompt_caching": true
   },
   "o1-preview-2024-09-12": {
@@ -516,6 +524,7 @@
     "litellm_provider": "openai",
     "mode": "chat",
     "supports_vision": true,
+    "supports_reasoning": true,
     "supports_prompt_caching": true
   },
   "o1-2024-12-17": {
@@ -533,6 +542,7 @@
     "supports_prompt_caching": true,
     "supports_system_messages": true,
     "supports_response_schema": true,
+    "supports_reasoning": true,
     "supports_tool_choice": true
   },
   "chatgpt-4o-latest": {
@@ -1460,6 +1470,7 @@
     "cache_read_input_token_cost": 5.5e-07,
     "litellm_provider": "azure",
     "mode": "chat",
+    "supports_reasoning": true,
     "supports_vision": false,
     "supports_prompt_caching": true,
     "supports_tool_choice": true
@@ -1476,6 +1487,7 @@
     "litellm_provider": "azure",
     "mode": "chat",
     "supports_vision": false,
+    "supports_reasoning": true,
     "supports_prompt_caching": true,
     "supports_tool_choice": true
   },
@@ -1491,6 +1503,7 @@
     "litellm_provider": "azure",
     "mode": "chat",
     "supports_vision": false,
+    "supports_reasoning": true,
     "supports_prompt_caching": true,
     "supports_tool_choice": true
   },
@@ -1521,6 +1534,7 @@
     "mode": "chat",
     "supports_vision": false,
     "supports_prompt_caching": true,
+    "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true
   },
@@ -1536,6 +1550,7 @@
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
     "supports_vision": false,
+    "supports_reasoning": true,
     "supports_prompt_caching": true
   },
   "azure/o1-mini-2024-09-12": {
@@ -1550,6 +1565,7 @@
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
     "supports_vision": false,
+    "supports_reasoning": true,
     "supports_prompt_caching": true
   },
   "azure/us/o1-mini-2024-09-12": {
@@ -1596,6 +1612,7 @@
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
     "supports_vision": true,
+    "supports_reasoning": true,
     "supports_prompt_caching": true,
     "supports_tool_choice": true
   },
@@ -1611,6 +1628,7 @@
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
     "supports_vision": true,
+    "supports_reasoning": true,
     "supports_prompt_caching": true,
     "supports_tool_choice": true
   },
@@ -1656,6 +1674,7 @@
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
     "supports_vision": false,
+    "supports_reasoning": true,
     "supports_prompt_caching": true
   },
   "azure/o1-preview-2024-09-12": {
@@ -1670,6 +1689,7 @@
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
     "supports_vision": false,
+    "supports_reasoning": true,
     "supports_prompt_caching": true
   },
   "azure/us/o1-preview-2024-09-12": {
@@ -2328,6 +2348,7 @@
     "litellm_provider": "azure_ai",
     "mode": "chat",
     "supports_tool_choice": true,
+    "supports_reasoning": true,
     "source": "https://techcommunity.microsoft.com/blog/machinelearningblog/deepseek-r1-improved-performance-higher-limits-and-transparent-pricing/4386367"
   },
   "azure_ai/deepseek-v3": {
@@ -3027,6 +3048,7 @@
     "supports_function_calling": true,
     "supports_assistant_prefill": true,
     "supports_tool_choice": true,
+    "supports_reasoning": true,
     "supports_prompt_caching": true
   },
   "deepseek/deepseek-chat": {
@@ -3189,6 +3211,7 @@
     "mode": "chat",
     "supports_function_calling": true,
     "supports_tool_choice": true,
+    "supports_reasoning": true,
     "supports_response_schema": false,
     "source": "https://x.ai/api#pricing"
   },
@@ -3202,6 +3225,7 @@
     "mode": "chat",
     "supports_function_calling": true,
     "supports_tool_choice": true,
+    "supports_reasoning": true,
     "supports_response_schema": false,
     "source": "https://x.ai/api#pricing"
   },
@@ -3213,6 +3237,7 @@
     "output_cost_per_token": 4e-06,
     "litellm_provider": "xai",
     "mode": "chat",
+    "supports_reasoning": true,
     "supports_function_calling": true,
     "supports_tool_choice": true,
     "supports_response_schema": false,
@@ -3288,6 +3313,7 @@
     "mode": "chat",
     "supports_system_messages": false,
     "supports_function_calling": false,
+    "supports_reasoning": true,
     "supports_response_schema": false,
     "supports_tool_choice": true
   },
@@ -3799,7 +3825,8 @@
     "supports_prompt_caching": true,
     "supports_response_schema": true,
     "deprecation_date": "2025-06-01",
-    "supports_tool_choice": true
+    "supports_tool_choice": true,
+    "supports_reasoning": true
   },
   "claude-3-7-sonnet-20250219": {
     "max_tokens": 128000,
@@ -3819,7 +3846,8 @@
     "supports_prompt_caching": true,
     "supports_response_schema": true,
     "deprecation_date": "2026-02-01",
-    "supports_tool_choice": true
+    "supports_tool_choice": true,
+    "supports_reasoning": true
   },
   "claude-3-5-sonnet-20241022": {
     "max_tokens": 8192,
@@ -5532,6 +5560,7 @@
     "supports_prompt_caching": true,
     "supports_response_schema": true,
     "deprecation_date": "2025-06-01",
+    "supports_reasoning": true,
     "supports_tool_choice": true
   },
   "vertex_ai/claude-3-haiku": {
@@ -6861,6 +6890,7 @@
     "mode": "chat",
     "supports_function_calling": true,
     "supports_assistant_prefill": true,
+    "supports_reasoning": true,
     "supports_tool_choice": true,
     "supports_prompt_caching": true
   },
@@ -7036,6 +7066,7 @@
     "mode": "chat",
     "supports_function_calling": true,
     "supports_vision": true,
+    "supports_reasoning": true,
     "tool_use_system_prompt_tokens": 159,
     "supports_assistant_prefill": true,
     "supports_tool_choice": true
@@ -7051,6 +7082,7 @@
     "mode": "chat",
     "supports_function_calling": true,
     "supports_vision": true,
+    "supports_reasoning": true,
     "tool_use_system_prompt_tokens": 159,
     "supports_tool_choice": true
   },
@@ -7218,6 +7250,7 @@
     "litellm_provider": "openrouter",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_reasoning": true,
     "supports_parallel_function_calling": true,
     "supports_vision": false,
     "supports_tool_choice": true
@@ -7231,6 +7264,7 @@
     "litellm_provider": "openrouter",
     "mode": "chat",
     "supports_function_calling": true,
+    "supports_reasoning": true,
     "supports_parallel_function_calling": true,
     "supports_vision": false,
     "supports_tool_choice": true
@@ -8048,6 +8082,7 @@
     "supports_assistant_prefill": true,
     "supports_prompt_caching": true,
     "supports_response_schema": true,
+    "supports_reasoning": true,
     "supports_tool_choice": true
   },
   "anthropic.claude-3-5-sonnet-20241022-v2:0": {
@@ -8165,7 +8200,8 @@
     "supports_assistant_prefill": true,
     "supports_prompt_caching": true,
     "supports_response_schema": true,
-    "supports_tool_choice": true
+    "supports_tool_choice": true,
+    "supports_reasoning": true
   },
   "us.anthropic.claude-3-haiku-20240307-v1:0": {
     "max_tokens": 4096,
@@ -8924,6 +8960,7 @@
     "output_cost_per_token": 5.4e-06,
     "litellm_provider": "bedrock_converse",
     "mode": "chat",
+    "supports_reasoning": true,
     "supports_function_calling": false,
     "supports_tool_choice": false
   },
@@ -10732,7 +10769,8 @@
     },
     "supports_assistant_prefill": true,
     "supports_function_calling": true,
-    "supports_tool_choice": true
+    "supports_tool_choice": true,
+    "supports_reasoning": true
   },
   "databricks/databricks-meta-llama-3-1-405b-instruct": {
     "max_tokens": 128000,
@@ -11012,6 +11050,7 @@
     "max_input_tokens": 32768,
     "max_output_tokens": 8192,
     "litellm_provider": "snowflake",
+    "supports_reasoning": true,
     "mode": "chat"
   },
   "snowflake/snowflake-arctic": {
@@ -11175,5 +11214,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-04-11T23:07:07.542424+00:00"
+  "last_updated": "2025-04-12T01:34:56.081299+00:00"
 }
