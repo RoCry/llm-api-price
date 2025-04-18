@@ -1551,6 +1551,82 @@
       "/v1/audio/speech"
     ]
   },
+  "azure/gpt-4.1": {
+    "max_tokens": 32768,
+    "max_input_tokens": 1047576,
+    "max_output_tokens": 32768,
+    "input_cost_per_token": 2e-06,
+    "output_cost_per_token": 8e-06,
+    "input_cost_per_token_batches": 1e-06,
+    "output_cost_per_token_batches": 4e-06,
+    "cache_read_input_token_cost": 5e-07,
+    "litellm_provider": "azure",
+    "mode": "chat",
+    "supported_endpoints": [
+      "/v1/chat/completions",
+      "/v1/batch",
+      "/v1/responses"
+    ],
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "text"
+    ],
+    "supports_function_calling": true,
+    "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
+    "supports_vision": true,
+    "supports_prompt_caching": true,
+    "supports_system_messages": true,
+    "supports_tool_choice": true,
+    "supports_native_streaming": true,
+    "supports_web_search": true,
+    "search_context_cost_per_query": {
+      "search_context_size_low": 0.03,
+      "search_context_size_medium": 0.035,
+      "search_context_size_high": 0.05
+    }
+  },
+  "azure/gpt-4.1-2025-04-14": {
+    "max_tokens": 32768,
+    "max_input_tokens": 1047576,
+    "max_output_tokens": 32768,
+    "input_cost_per_token": 2e-06,
+    "output_cost_per_token": 8e-06,
+    "input_cost_per_token_batches": 1e-06,
+    "output_cost_per_token_batches": 4e-06,
+    "cache_read_input_token_cost": 5e-07,
+    "litellm_provider": "azure",
+    "mode": "chat",
+    "supported_endpoints": [
+      "/v1/chat/completions",
+      "/v1/batch",
+      "/v1/responses"
+    ],
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "text"
+    ],
+    "supports_function_calling": true,
+    "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
+    "supports_vision": true,
+    "supports_prompt_caching": true,
+    "supports_system_messages": true,
+    "supports_tool_choice": true,
+    "supports_native_streaming": true,
+    "supports_web_search": true,
+    "search_context_cost_per_query": {
+      "search_context_size_low": 0.03,
+      "search_context_size_medium": 0.035,
+      "search_context_size_high": 0.05
+    }
+  },
   "azure/gpt-4o-mini-realtime-preview-2024-12-17": {
     "max_tokens": 4096,
     "max_input_tokens": 128000,
@@ -11498,5 +11574,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-04-16T20:08:50.367880+00:00"
+  "last_updated": "2025-04-18T03:20:17.659923+00:00"
 }
