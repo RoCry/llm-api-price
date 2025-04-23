@@ -1577,7 +1577,6 @@
     "supports_prompt_caching": false,
     "supports_system_messages": true,
     "supports_tool_choice": true,
-    "supports_native_streaming": false,
     "supports_reasoning": true
   },
   "azure/gpt-4o-audio-preview-2024-12-17": {
@@ -12028,5 +12027,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-04-20T19:06:29.502143+00:00"
+  "last_updated": "2025-04-23T01:35:44.720527+00:00"
 }
