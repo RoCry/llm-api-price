@@ -1507,6 +1507,96 @@
     "output_cost_per_pixel": 0.0,
     "litellm_provider": "openai"
   },
+  "gpt-image-1": {
+    "mode": "image_generation",
+    "input_cost_per_pixel": 4.0054321e-08,
+    "output_cost_per_pixel": 0.0,
+    "litellm_provider": "openai",
+    "supported_endpoints": [
+      "/v1/images/generations"
+    ]
+  },
+  "low/1024-x-1024/gpt-image-1": {
+    "mode": "image_generation",
+    "input_cost_per_pixel": 1.0490417e-08,
+    "output_cost_per_pixel": 0.0,
+    "litellm_provider": "openai",
+    "supported_endpoints": [
+      "/v1/images/generations"
+    ]
+  },
+  "medium/1024-x-1024/gpt-image-1": {
+    "mode": "image_generation",
+    "input_cost_per_pixel": 4.0054321e-08,
+    "output_cost_per_pixel": 0.0,
+    "litellm_provider": "openai",
+    "supported_endpoints": [
+      "/v1/images/generations"
+    ]
+  },
+  "high/1024-x-1024/gpt-image-1": {
+    "mode": "image_generation",
+    "input_cost_per_pixel": 1.59263611e-07,
+    "output_cost_per_pixel": 0.0,
+    "litellm_provider": "openai",
+    "supported_endpoints": [
+      "/v1/images/generations"
+    ]
+  },
+  "low/1024-x-1536/gpt-image-1": {
+    "mode": "image_generation",
+    "input_cost_per_pixel": 1.0172526e-08,
+    "output_cost_per_pixel": 0.0,
+    "litellm_provider": "openai",
+    "supported_endpoints": [
+      "/v1/images/generations"
+    ]
+  },
+  "medium/1024-x-1536/gpt-image-1": {
+    "mode": "image_generation",
+    "input_cost_per_pixel": 4.0054321e-08,
+    "output_cost_per_pixel": 0.0,
+    "litellm_provider": "openai",
+    "supported_endpoints": [
+      "/v1/images/generations"
+    ]
+  },
+  "high/1024-x-1536/gpt-image-1": {
+    "mode": "image_generation",
+    "input_cost_per_pixel": 1.58945719e-07,
+    "output_cost_per_pixel": 0.0,
+    "litellm_provider": "openai",
+    "supported_endpoints": [
+      "/v1/images/generations"
+    ]
+  },
+  "low/1536-x-1024/gpt-image-1": {
+    "mode": "image_generation",
+    "input_cost_per_pixel": 1.0172526e-08,
+    "output_cost_per_pixel": 0.0,
+    "litellm_provider": "openai",
+    "supported_endpoints": [
+      "/v1/images/generations"
+    ]
+  },
+  "medium/1536-x-1024/gpt-image-1": {
+    "mode": "image_generation",
+    "input_cost_per_pixel": 4.0054321e-08,
+    "output_cost_per_pixel": 0.0,
+    "litellm_provider": "openai",
+    "supported_endpoints": [
+      "/v1/images/generations"
+    ]
+  },
+  "high/1536-x-1024/gpt-image-1": {
+    "mode": "image_generation",
+    "input_cost_per_pixel": 1.58945719e-07,
+    "output_cost_per_pixel": 0.0,
+    "litellm_provider": "openai",
+    "supported_endpoints": [
+      "/v1/images/generations"
+    ]
+  },
   "gpt-4o-transcribe": {
     "mode": "audio_transcription",
     "input_cost_per_token": 2.5e-06,
@@ -12027,5 +12117,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-04-23T01:35:44.720527+00:00"
+  "last_updated": "2025-04-23T20:08:39.020651+00:00"
 }
