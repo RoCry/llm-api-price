@@ -7458,6 +7458,17 @@
     "source": "https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#foundation_models",
     "supports_tool_choice": true
   },
+  "command-a-03-2025": {
+    "max_tokens": 8000,
+    "max_input_tokens": 256000,
+    "max_output_tokens": 8000,
+    "input_cost_per_token": 2.5e-06,
+    "output_cost_per_token": 1e-05,
+    "litellm_provider": "cohere_chat",
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_tool_choice": true
+  },
   "command-r": {
     "max_tokens": 4096,
     "max_input_tokens": 128000,
@@ -12117,5 +12128,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-04-23T20:08:39.020651+00:00"
+  "last_updated": "2025-04-25T00:33:26.457488+00:00"
 }
