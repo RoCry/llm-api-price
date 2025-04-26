@@ -2346,9 +2346,9 @@
     "max_tokens": 65536,
     "max_input_tokens": 128000,
     "max_output_tokens": 65536,
-    "input_cost_per_token": 1.21e-06,
-    "output_cost_per_token": 4.84e-06,
-    "cache_read_input_token_cost": 6.05e-07,
+    "input_cost_per_token": 1.1e-06,
+    "output_cost_per_token": 4.4e-06,
+    "cache_read_input_token_cost": 5.5e-07,
     "litellm_provider": "azure",
     "mode": "chat",
     "supports_function_calling": true,
@@ -12228,5 +12228,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-04-26T04:08:32.616503+00:00"
+  "last_updated": "2025-04-26T16:07:35.620429+00:00"
 }
