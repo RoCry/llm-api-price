@@ -1674,6 +1674,24 @@
       "/v1/audio/speech"
     ]
   },
+  "gpt-4o-mini-tts": {
+    "mode": "audio_speech",
+    "input_cost_per_token": 2.5e-06,
+    "output_cost_per_token": 1e-05,
+    "output_cost_per_audio_token": 1.2e-05,
+    "output_cost_per_second": 0.00025,
+    "litellm_provider": "openai",
+    "supported_modalities": [
+      "text",
+      "audio"
+    ],
+    "supported_output_modalities": [
+      "audio"
+    ],
+    "supported_endpoints": [
+      "/v1/audio/speech"
+    ]
+  },
   "azure/computer-use-preview": {
     "max_tokens": 1024,
     "max_input_tokens": 8192,
@@ -12410,5 +12428,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-04-30T04:09:16.134873+00:00"
+  "last_updated": "2025-05-01T06:11:21.305508+00:00"
 }
