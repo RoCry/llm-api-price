@@ -9182,6 +9182,7 @@
     "supports_assistant_prefill": true,
     "supports_prompt_caching": true,
     "supports_response_schema": true,
+    "supports_pdf_input": true,
     "supports_reasoning": true,
     "supports_tool_choice": true
   },
@@ -9300,6 +9301,7 @@
     "supports_assistant_prefill": true,
     "supports_prompt_caching": true,
     "supports_response_schema": true,
+    "supports_pdf_input": true,
     "supports_tool_choice": true,
     "supports_reasoning": true
   },
@@ -12428,5 +12430,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-05-01T06:11:21.305508+00:00"
+  "last_updated": "2025-05-01T22:07:08.835261+00:00"
 }
