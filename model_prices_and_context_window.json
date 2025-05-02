@@ -6741,6 +6741,86 @@
     "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing#partner-models",
     "supports_tool_choice": true
   },
+  "vertex_ai/meta/llama-4-scout-17b-16e-instruct-maas": {
+    "max_tokens": 10000000.0,
+    "max_input_tokens": 10000000.0,
+    "max_output_tokens": 10000000.0,
+    "input_cost_per_token": 2.5e-07,
+    "output_cost_per_token": 7e-07,
+    "litellm_provider": "vertex_ai-llama_models",
+    "mode": "chat",
+    "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing#partner-models",
+    "supports_tool_choice": true,
+    "supports_function_calling": true,
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "text",
+      "code"
+    ]
+  },
+  "vertex_ai/meta/llama-4-scout-128b-16e-instruct-maas": {
+    "max_tokens": 10000000.0,
+    "max_input_tokens": 10000000.0,
+    "max_output_tokens": 10000000.0,
+    "input_cost_per_token": 2.5e-07,
+    "output_cost_per_token": 7e-07,
+    "litellm_provider": "vertex_ai-llama_models",
+    "mode": "chat",
+    "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing#partner-models",
+    "supports_tool_choice": true,
+    "supports_function_calling": true,
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "text",
+      "code"
+    ]
+  },
+  "vertex_ai/meta/llama-4-maverick-17b-128e-instruct-maas": {
+    "max_tokens": 1000000.0,
+    "max_input_tokens": 1000000.0,
+    "max_output_tokens": 1000000.0,
+    "input_cost_per_token": 3.5e-07,
+    "output_cost_per_token": 1.15e-06,
+    "litellm_provider": "vertex_ai-llama_models",
+    "mode": "chat",
+    "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing#partner-models",
+    "supports_tool_choice": true,
+    "supports_function_calling": true,
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "text",
+      "code"
+    ]
+  },
+  "vertex_ai/meta/llama-4-maverick-17b-16e-instruct-maas": {
+    "max_tokens": 1000000.0,
+    "max_input_tokens": 1000000.0,
+    "max_output_tokens": 1000000.0,
+    "input_cost_per_token": 3.5e-07,
+    "output_cost_per_token": 1.15e-06,
+    "litellm_provider": "vertex_ai-llama_models",
+    "mode": "chat",
+    "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing#partner-models",
+    "supports_tool_choice": true,
+    "supports_function_calling": true,
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "text",
+      "code"
+    ]
+  },
   "vertex_ai/meta/llama3-70b-instruct-maas": {
     "max_tokens": 32000,
     "max_input_tokens": 32000,
@@ -12430,5 +12510,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-05-01T22:07:08.835261+00:00"
+  "last_updated": "2025-05-02T06:10:56.697937+00:00"
 }
