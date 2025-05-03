@@ -9205,6 +9205,20 @@
     "supports_response_schema": true,
     "source": "https://aws.amazon.com/bedrock/pricing/"
   },
+  "us.amazon.nova-premier-v1:0": {
+    "max_tokens": 4096,
+    "max_input_tokens": 1000000,
+    "max_output_tokens": 4096,
+    "input_cost_per_token": 2.5e-06,
+    "output_cost_per_token": 1.25e-05,
+    "litellm_provider": "bedrock_converse",
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_vision": true,
+    "supports_pdf_input": true,
+    "supports_prompt_caching": false,
+    "supports_response_schema": true
+  },
   "anthropic.claude-3-sonnet-20240229-v1:0": {
     "max_tokens": 4096,
     "max_input_tokens": 200000,
@@ -12510,5 +12524,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-05-02T06:10:56.697937+00:00"
+  "last_updated": "2025-05-03T18:08:48.851465+00:00"
 }
