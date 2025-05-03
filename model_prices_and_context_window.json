@@ -6761,7 +6761,7 @@
       "code"
     ]
   },
-  "vertex_ai/meta/llama-4-scout-128b-16e-instruct-maas": {
+  "vertex_ai/meta/llama-4-scout-17b-128e-instruct-maas": {
     "max_tokens": 10000000.0,
     "max_input_tokens": 10000000.0,
     "max_output_tokens": 10000000.0,
@@ -12524,5 +12524,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-05-03T18:08:48.851465+00:00"
+  "last_updated": "2025-05-03T20:07:41.487229+00:00"
 }
