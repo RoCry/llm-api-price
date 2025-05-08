@@ -4512,7 +4512,7 @@
     "supports_function_calling": true,
     "supports_tool_choice": true
   },
-  "cerebras/llama3.3-70b": {
+  "cerebras/llama-3.3-70b": {
     "max_tokens": 128000,
     "max_input_tokens": 128000,
     "max_output_tokens": 128000,
@@ -12749,5 +12749,5 @@
     "litellm_provider": "snowflake",
     "mode": "chat"
   },
-  "last_updated": "2025-05-07T06:10:58.908536+00:00"
+  "last_updated": "2025-05-08T07:08:12.938456+00:00"
 }
