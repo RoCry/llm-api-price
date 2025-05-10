@@ -5991,9 +5991,9 @@
     "supports_tool_choice": true
   },
   "gemini/gemini-2.5-pro-exp-03-25": {
-    "max_tokens": 65536,
+    "max_tokens": 65535,
     "max_input_tokens": 1048576,
-    "max_output_tokens": 65536,
+    "max_output_tokens": 65535,
     "max_images_per_prompt": 3000,
     "max_videos_per_prompt": 10,
     "max_video_length": 1,
@@ -6032,9 +6032,9 @@
     "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
   },
   "gemini/gemini-2.5-flash-preview-04-17": {
-    "max_tokens": 65536,
+    "max_tokens": 65535,
     "max_input_tokens": 1048576,
-    "max_output_tokens": 65536,
+    "max_output_tokens": 65535,
     "max_images_per_prompt": 3000,
     "max_videos_per_prompt": 10,
     "max_video_length": 1,
@@ -6072,9 +6072,9 @@
     "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview"
   },
   "gemini-2.5-flash-preview-04-17": {
-    "max_tokens": 65536,
+    "max_tokens": 65535,
     "max_input_tokens": 1048576,
-    "max_output_tokens": 65536,
+    "max_output_tokens": 65535,
     "max_images_per_prompt": 3000,
     "max_videos_per_prompt": 10,
     "max_video_length": 1,
@@ -6208,9 +6208,9 @@
     "deprecation_date": "2026-02-25"
   },
   "gemini-2.5-pro-preview-05-06": {
-    "max_tokens": 65536,
+    "max_tokens": 65535,
     "max_input_tokens": 1048576,
-    "max_output_tokens": 65536,
+    "max_output_tokens": 65535,
     "max_images_per_prompt": 3000,
     "max_videos_per_prompt": 10,
     "max_video_length": 1,
@@ -6248,9 +6248,9 @@
     "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview"
   },
   "gemini-2.5-pro-preview-03-25": {
-    "max_tokens": 65536,
+    "max_tokens": 65535,
     "max_input_tokens": 1048576,
-    "max_output_tokens": 65536,
+    "max_output_tokens": 65535,
     "max_images_per_prompt": 3000,
     "max_videos_per_prompt": 10,
     "max_video_length": 1,
@@ -6430,9 +6430,9 @@
     "source": "https://ai.google.dev/pricing#2_0flash"
   },
   "gemini/gemini-2.5-pro-preview-05-06": {
-    "max_tokens": 65536,
+    "max_tokens": 65535,
     "max_input_tokens": 1048576,
-    "max_output_tokens": 65536,
+    "max_output_tokens": 65535,
     "max_images_per_prompt": 3000,
     "max_videos_per_prompt": 10,
     "max_video_length": 1,
@@ -6466,9 +6466,9 @@
     "source": "https://ai.google.dev/gemini-api/docs/pricing#gemini-2.5-pro-preview"
   },
   "gemini/gemini-2.5-pro-preview-03-25": {
-    "max_tokens": 65536,
+    "max_tokens": 65535,
     "max_input_tokens": 1048576,
-    "max_output_tokens": 65536,
+    "max_output_tokens": 65535,
     "max_images_per_prompt": 3000,
     "max_videos_per_prompt": 10,
     "max_video_length": 1,
@@ -12996,5 +12996,5 @@
     ],
     "source": "https://docs.nscale.com/docs/inference/serverless-models/current#image-models"
   },
-  "last_updated": "2025-05-09T15:07:48.706310+00:00"
+  "last_updated": "2025-05-10T07:06:47.776259+00:00"
 }
