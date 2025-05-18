@@ -13207,5 +13207,19 @@
     ],
     "source": "https://docs.nscale.com/docs/inference/serverless-models/current#image-models"
   },
-  "last_updated": "2025-05-17T15:06:42.408390+00:00"
+  "featherless_ai/featherless-ai/Qwerky-72B": {
+    "max_tokens": 32768,
+    "max_input_tokens": 32768,
+    "max_output_tokens": 4096,
+    "litellm_provider": "featherless_ai",
+    "mode": "chat"
+  },
+  "featherless_ai/featherless-ai/Qwerky-QwQ-32B": {
+    "max_tokens": 32768,
+    "max_input_tokens": 32768,
+    "max_output_tokens": 4096,
+    "litellm_provider": "featherless_ai",
+    "mode": "chat"
+  },
+  "last_updated": "2025-05-18T03:28:25.912930+00:00"
 }
