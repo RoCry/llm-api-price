@@ -4203,6 +4203,19 @@
     "supports_vision": true,
     "supports_tool_choice": true
   },
+  "xai/grok-3": {
+    "max_tokens": 131072,
+    "max_input_tokens": 131072,
+    "max_output_tokens": 131072,
+    "input_cost_per_token": 3e-06,
+    "output_cost_per_token": 1.5e-05,
+    "litellm_provider": "xai",
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_tool_choice": true,
+    "supports_response_schema": false,
+    "source": "https://x.ai/api#pricing"
+  },
   "xai/grok-3-beta": {
     "max_tokens": 131072,
     "max_input_tokens": 131072,
@@ -13582,5 +13595,5 @@
     "litellm_provider": "featherless_ai",
     "mode": "chat"
   },
-  "last_updated": "2025-05-21T06:11:14.307609+00:00"
+  "last_updated": "2025-05-21T21:07:05.493555+00:00"
 }
