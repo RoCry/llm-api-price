@@ -12949,6 +12949,22 @@
     },
     "supports_tool_choice": true
   },
+  "databricks/databricks-llama-4-maverick": {
+    "max_tokens": 128000,
+    "max_input_tokens": 128000,
+    "max_output_tokens": 128000,
+    "input_cost_per_token": 5e-06,
+    "input_dbu_cost_per_token": 7.143e-05,
+    "output_cost_per_token": 1.5e-05,
+    "output_dbu_cost_per_token": 0.00021429,
+    "litellm_provider": "databricks",
+    "mode": "chat",
+    "source": "https://www.databricks.com/product/pricing/foundation-model-serving",
+    "metadata": {
+      "notes": "Databricks documentation now provides both DBU costs (_dbu_cost_per_token) and dollar costs(_cost_per_token)."
+    },
+    "supports_tool_choice": true
+  },
   "databricks/databricks-dbrx-instruct": {
     "max_tokens": 32768,
     "max_input_tokens": 32768,
@@ -13595,5 +13611,5 @@
     "litellm_provider": "featherless_ai",
     "mode": "chat"
   },
-  "last_updated": "2025-05-21T21:07:05.493555+00:00"
+  "last_updated": "2025-05-22T04:11:02.205800+00:00"
 }
