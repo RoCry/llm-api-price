@@ -4952,9 +4952,9 @@
     "supports_tool_choice": true
   },
   "claude-opus-4-20250514": {
-    "max_tokens": 128000,
+    "max_tokens": 32000,
     "max_input_tokens": 200000,
-    "max_output_tokens": 128000,
+    "max_output_tokens": 32000,
     "input_cost_per_token": 1.5e-05,
     "output_cost_per_token": 7.5e-05,
     "search_context_cost_per_query": {
@@ -4978,9 +4978,9 @@
     "supports_computer_use": true
   },
   "claude-sonnet-4-20250514": {
-    "max_tokens": 128000,
+    "max_tokens": 64000,
     "max_input_tokens": 200000,
-    "max_output_tokens": 128000,
+    "max_output_tokens": 64000,
     "input_cost_per_token": 3e-06,
     "output_cost_per_token": 1.5e-05,
     "search_context_cost_per_query": {
@@ -7338,9 +7338,9 @@
     "supports_tool_choice": true
   },
   "vertex_ai/claude-opus-4@20250514": {
-    "max_tokens": 128000,
+    "max_tokens": 32000,
     "max_input_tokens": 200000,
-    "max_output_tokens": 128000,
+    "max_output_tokens": 32000,
     "input_cost_per_token": 1.5e-05,
     "output_cost_per_token": 7.5e-05,
     "search_context_cost_per_query": {
@@ -7364,9 +7364,9 @@
     "supports_computer_use": true
   },
   "vertex_ai/claude-sonnet-4@20250514": {
-    "max_tokens": 128000,
+    "max_tokens": 64000,
     "max_input_tokens": 200000,
-    "max_output_tokens": 128000,
+    "max_output_tokens": 64000,
     "input_cost_per_token": 3e-06,
     "output_cost_per_token": 1.5e-05,
     "search_context_cost_per_query": {
@@ -10005,9 +10005,9 @@
     "supports_tool_choice": true
   },
   "anthropic.claude-opus-4-20250514-v1:0": {
-    "max_tokens": 128000,
+    "max_tokens": 32000,
     "max_input_tokens": 200000,
-    "max_output_tokens": 128000,
+    "max_output_tokens": 32000,
     "input_cost_per_token": 1.5e-05,
     "output_cost_per_token": 7.5e-05,
     "search_context_cost_per_query": {
@@ -10031,9 +10031,9 @@
     "supports_computer_use": true
   },
   "anthropic.claude-sonnet-4-20250514-v1:0": {
-    "max_tokens": 128000,
+    "max_tokens": 64000,
     "max_input_tokens": 200000,
-    "max_output_tokens": 128000,
+    "max_output_tokens": 64000,
     "input_cost_per_token": 3e-06,
     "output_cost_per_token": 1.5e-05,
     "search_context_cost_per_query": {
@@ -10207,9 +10207,9 @@
     "supports_reasoning": true
   },
   "us.anthropic.claude-opus-4-20250514-v1:0": {
-    "max_tokens": 128000,
+    "max_tokens": 32000,
     "max_input_tokens": 200000,
-    "max_output_tokens": 128000,
+    "max_output_tokens": 32000,
     "input_cost_per_token": 1.5e-05,
     "output_cost_per_token": 7.5e-05,
     "search_context_cost_per_query": {
@@ -10233,9 +10233,9 @@
     "supports_computer_use": true
   },
   "us.anthropic.claude-sonnet-4-20250514-v1:0": {
-    "max_tokens": 128000,
+    "max_tokens": 64000,
     "max_input_tokens": 200000,
-    "max_output_tokens": 128000,
+    "max_output_tokens": 64000,
     "input_cost_per_token": 3e-06,
     "output_cost_per_token": 1.5e-05,
     "search_context_cost_per_query": {
@@ -10380,9 +10380,9 @@
     "supports_tool_choice": true
   },
   "eu.anthropic.claude-opus-4-20250514-v1:0": {
-    "max_tokens": 128000,
+    "max_tokens": 32000,
     "max_input_tokens": 200000,
-    "max_output_tokens": 128000,
+    "max_output_tokens": 32000,
     "input_cost_per_token": 1.5e-05,
     "output_cost_per_token": 7.5e-05,
     "search_context_cost_per_query": {
@@ -10406,9 +10406,9 @@
     "supports_computer_use": true
   },
   "eu.anthropic.claude-sonnet-4-20250514-v1:0": {
-    "max_tokens": 128000,
+    "max_tokens": 64000,
     "max_input_tokens": 200000,
-    "max_output_tokens": 128000,
+    "max_output_tokens": 64000,
     "input_cost_per_token": 3e-06,
     "output_cost_per_token": 1.5e-05,
     "search_context_cost_per_query": {
@@ -13871,5 +13871,5 @@
     "litellm_provider": "featherless_ai",
     "mode": "chat"
   },
-  "last_updated": "2025-05-22T21:07:12.332858+00:00"
+  "last_updated": "2025-05-23T01:35:55.901159+00:00"
 }
