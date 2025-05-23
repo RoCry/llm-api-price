@@ -4082,6 +4082,19 @@
     "supports_assistant_prefill": true,
     "supports_tool_choice": true
   },
+  "mistral/devstral-small-2505": {
+    "max_tokens": 128000,
+    "max_input_tokens": 128000,
+    "max_output_tokens": 128000,
+    "input_cost_per_token": 1e-07,
+    "output_cost_per_token": 3e-07,
+    "litellm_provider": "mistral",
+    "mode": "chat",
+    "source": "https://mistral.ai/news/devstral",
+    "supports_function_calling": true,
+    "supports_assistant_prefill": true,
+    "supports_tool_choice": true
+  },
   "mistral/mistral-embed": {
     "max_tokens": 8192,
     "max_input_tokens": 8192,
@@ -13883,5 +13896,5 @@
     "litellm_provider": "featherless_ai",
     "mode": "chat"
   },
-  "last_updated": "2025-05-23T06:10:56.238651+00:00"
+  "last_updated": "2025-05-23T22:07:27.355190+00:00"
 }
