@@ -3380,6 +3380,18 @@
     "supports_function_calling": true,
     "source": "https://azuremarketplace.microsoft.com/en/marketplace/apps/000-000.mistral-nemo-12b-2407?tab=PlansAndPrice"
   },
+  "azure_ai/mistral-medium-2505": {
+    "max_tokens": 8191,
+    "max_input_tokens": 131072,
+    "max_output_tokens": 8191,
+    "input_cost_per_token": 4e-07,
+    "output_cost_per_token": 2e-06,
+    "litellm_provider": "azure_ai",
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_assistant_prefill": true,
+    "supports_tool_choice": true
+  },
   "azure_ai/mistral-large": {
     "max_tokens": 8191,
     "max_input_tokens": 32000,
@@ -13148,7 +13160,7 @@
     "max_output_tokens": 128000,
     "input_cost_per_token": 2.5e-06,
     "input_dbu_cost_per_token": 3.571e-05,
-    "output_cost_per_token": 0.00017857,
+    "output_cost_per_token": 1.7857e-05,
     "output_db_cost_per_token": 0.000214286,
     "litellm_provider": "databricks",
     "mode": "chat",
@@ -13871,5 +13883,5 @@
     "litellm_provider": "featherless_ai",
     "mode": "chat"
   },
-  "last_updated": "2025-05-23T01:35:55.901159+00:00"
+  "last_updated": "2025-05-23T06:10:56.238651+00:00"
 }
