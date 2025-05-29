@@ -475,6 +475,23 @@
     "supports_system_messages": true,
     "supports_tool_choice": true
   },
+  "gpt-4o-mini-audio-preview": {
+    "max_tokens": 16384,
+    "max_input_tokens": 128000,
+    "max_output_tokens": 16384,
+    "input_cost_per_token": 1.5e-07,
+    "input_cost_per_audio_token": 1e-05,
+    "output_cost_per_token": 6e-07,
+    "output_cost_per_audio_token": 2e-05,
+    "litellm_provider": "openai",
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_parallel_function_calling": true,
+    "supports_audio_input": true,
+    "supports_audio_output": true,
+    "supports_system_messages": true,
+    "supports_tool_choice": true
+  },
   "gpt-4o-mini-audio-preview-2024-12-17": {
     "max_tokens": 16384,
     "max_input_tokens": 128000,
@@ -3870,12 +3887,25 @@
   },
   "mistral/mistral-medium-latest": {
     "max_tokens": 8191,
-    "max_input_tokens": 32000,
+    "max_input_tokens": 131072,
     "max_output_tokens": 8191,
-    "input_cost_per_token": 2.7e-06,
-    "output_cost_per_token": 8.1e-06,
+    "input_cost_per_token": 4e-07,
+    "output_cost_per_token": 2e-06,
     "litellm_provider": "mistral",
     "mode": "chat",
+    "supports_function_calling": true,
+    "supports_assistant_prefill": true,
+    "supports_tool_choice": true
+  },
+  "mistral/mistral-medium-2505": {
+    "max_tokens": 8191,
+    "max_input_tokens": 131072,
+    "max_output_tokens": 8191,
+    "input_cost_per_token": 4e-07,
+    "output_cost_per_token": 2e-06,
+    "litellm_provider": "mistral",
+    "mode": "chat",
+    "supports_function_calling": true,
     "supports_assistant_prefill": true,
     "supports_tool_choice": true
   },
@@ -13896,5 +13926,5 @@
     "litellm_provider": "featherless_ai",
     "mode": "chat"
   },
-  "last_updated": "2025-05-26T18:09:54.248170+00:00"
+  "last_updated": "2025-05-29T00:34:45.304554+00:00"
 }
