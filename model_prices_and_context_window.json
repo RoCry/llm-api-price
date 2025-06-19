@@ -6720,8 +6720,8 @@
     "output_cost_per_token_above_200k_tokens": 1.5e-05,
     "litellm_provider": "gemini",
     "mode": "chat",
-    "rpm": 5,
-    "tpm": 250000,
+    "rpm": 0.002,
+    "tpm": 8e-06,
     "supports_system_messages": true,
     "supports_function_calling": true,
     "supports_vision": true,
@@ -6786,7 +6786,9 @@
     "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
     "supports_parallel_function_calling": true,
     "supports_web_search": true,
-    "supports_url_context": true
+    "supports_url_context": true,
+    "tpm": 8e-06,
+    "rpm": 1e-05
   },
   "gemini-2.5-flash": {
     "max_tokens": 65535,
@@ -15249,5 +15251,5 @@
       "notes": "Deepgram's hosted OpenAI Whisper models - pricing may differ from native Deepgram models"
     }
   },
-  "last_updated": "2025-06-19T03:29:25.651760+00:00"
+  "last_updated": "2025-06-19T06:11:19.899566+00:00"
 }
