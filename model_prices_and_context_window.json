@@ -6788,7 +6788,8 @@
     "supports_web_search": true,
     "supports_url_context": true,
     "tpm": 8000000,
-    "rpm": 100000
+    "rpm": 100000,
+    "supports_pdf_input": true
   },
   "gemini-2.5-flash": {
     "max_tokens": 65535,
@@ -6830,7 +6831,8 @@
     "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
     "supports_parallel_function_calling": true,
     "supports_web_search": true,
-    "supports_url_context": true
+    "supports_url_context": true,
+    "supports_pdf_input": true
   },
   "gemini/gemini-2.5-flash-preview-tts": {
     "max_tokens": 65535,
@@ -6910,7 +6912,8 @@
     ],
     "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
     "supports_web_search": true,
-    "supports_url_context": true
+    "supports_url_context": true,
+    "supports_pdf_input": true
   },
   "gemini/gemini-2.5-flash-preview-04-17": {
     "max_tokens": 65535,
@@ -6951,7 +6954,8 @@
       "text"
     ],
     "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
-    "supports_web_search": true
+    "supports_web_search": true,
+    "supports_pdf_input": true
   },
   "gemini/gemini-2.5-flash-lite-preview-06-17": {
     "max_tokens": 65535,
@@ -6995,7 +6999,8 @@
     "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-lite",
     "supports_parallel_function_calling": true,
     "supports_web_search": true,
-    "supports_url_context": true
+    "supports_url_context": true,
+    "supports_pdf_input": true
   },
   "gemini-2.5-flash-preview-05-20": {
     "max_tokens": 65535,
@@ -7037,7 +7042,8 @@
     "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
     "supports_parallel_function_calling": true,
     "supports_web_search": true,
-    "supports_url_context": true
+    "supports_url_context": true,
+    "supports_pdf_input": true
   },
   "gemini-2.5-flash-preview-04-17": {
     "max_tokens": 65535,
@@ -7078,7 +7084,8 @@
     ],
     "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
     "supports_parallel_function_calling": true,
-    "supports_web_search": true
+    "supports_web_search": true,
+    "supports_pdf_input": true
   },
   "gemini-2.5-flash-lite-preview-06-17": {
     "max_tokens": 65535,
@@ -7120,7 +7127,8 @@
     "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
     "supports_parallel_function_calling": true,
     "supports_web_search": true,
-    "supports_url_context": true
+    "supports_url_context": true,
+    "supports_pdf_input": true
   },
   "gemini-2.0-flash": {
     "max_tokens": 8192,
@@ -7266,7 +7274,8 @@
     ],
     "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
     "supports_parallel_function_calling": true,
-    "supports_web_search": true
+    "supports_web_search": true,
+    "supports_pdf_input": true
   },
   "gemini-2.5-pro-preview-05-06": {
     "max_tokens": 65535,
@@ -7311,7 +7320,8 @@
     ],
     "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
     "supports_parallel_function_calling": true,
-    "supports_web_search": true
+    "supports_web_search": true,
+    "supports_pdf_input": true
   },
   "gemini-2.5-pro-preview-03-25": {
     "max_tokens": 65535,
@@ -7353,7 +7363,8 @@
     ],
     "source": "https://ai.google.dev/gemini-api/docs/models#gemini-2.5-flash-preview",
     "supports_parallel_function_calling": true,
-    "supports_web_search": true
+    "supports_web_search": true,
+    "supports_pdf_input": true
   },
   "gemini-2.0-flash-preview-image-generation": {
     "max_tokens": 8192,
@@ -7678,7 +7689,8 @@
     ],
     "source": "https://ai.google.dev/gemini-api/docs/pricing#gemini-2.5-pro-preview",
     "supports_web_search": true,
-    "supports_url_context": true
+    "supports_url_context": true,
+    "supports_pdf_input": true
   },
   "gemini/gemini-2.5-pro-preview-05-06": {
     "max_tokens": 65535,
@@ -7716,7 +7728,8 @@
     ],
     "source": "https://ai.google.dev/gemini-api/docs/pricing#gemini-2.5-pro-preview",
     "supports_web_search": true,
-    "supports_url_context": true
+    "supports_url_context": true,
+    "supports_pdf_input": true
   },
   "gemini/gemini-2.5-pro-preview-03-25": {
     "max_tokens": 65535,
@@ -7753,7 +7766,8 @@
       "text"
     ],
     "source": "https://ai.google.dev/gemini-api/docs/pricing#gemini-2.5-pro-preview",
-    "supports_web_search": true
+    "supports_web_search": true,
+    "supports_pdf_input": true
   },
   "gemini/gemini-2.0-flash-exp": {
     "max_tokens": 8192,
@@ -15422,5 +15436,5 @@
       "notes": "Deepgram's hosted OpenAI Whisper models - pricing may differ from native Deepgram models"
     }
   },
-  "last_updated": "2025-06-20T03:28:53.404658+00:00"
+  "last_updated": "2025-06-20T04:13:14.513553+00:00"
 }
