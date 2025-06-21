@@ -2160,9 +2160,9 @@
     "max_tokens": 100000,
     "max_input_tokens": 200000,
     "max_output_tokens": 100000,
-    "input_cost_per_token": 1e-05,
-    "output_cost_per_token": 4e-05,
-    "cache_read_input_token_cost": 2.5e-06,
+    "input_cost_per_token": 2e-06,
+    "output_cost_per_token": 8e-06,
+    "cache_read_input_token_cost": 5e-07,
     "litellm_provider": "azure",
     "mode": "chat",
     "supported_endpoints": [
@@ -15478,5 +15478,5 @@
       "notes": "Deepgram's hosted OpenAI Whisper models - pricing may differ from native Deepgram models"
     }
   },
-  "last_updated": "2025-06-21T01:35:36.100744+00:00"
+  "last_updated": "2025-06-21T07:07:34.754117+00:00"
 }
