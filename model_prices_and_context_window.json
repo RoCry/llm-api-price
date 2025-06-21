@@ -2679,7 +2679,7 @@
     "supports_prompt_caching": true,
     "supports_tool_choice": true
   },
-  "azure/codex-mini-latest": {
+  "azure/codex-mini": {
     "max_tokens": 100000,
     "max_input_tokens": 200000,
     "max_output_tokens": 100000,
@@ -15478,5 +15478,5 @@
       "notes": "Deepgram's hosted OpenAI Whisper models - pricing may differ from native Deepgram models"
     }
   },
-  "last_updated": "2025-06-20T19:06:35.775230+00:00"
+  "last_updated": "2025-06-21T01:35:36.100744+00:00"
 }
