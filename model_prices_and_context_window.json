@@ -10962,8 +10962,7 @@
     "output_cost_per_token": 2.4e-05,
     "litellm_provider": "bedrock",
     "mode": "chat",
-    "supports_function_calling": true,
-    "supports_tool_choice": true
+    "supports_function_calling": true
   },
   "mistral.mistral-large-2407-v1:0": {
     "max_tokens": 8191,
@@ -10984,8 +10983,7 @@
     "output_cost_per_token": 3e-06,
     "litellm_provider": "bedrock",
     "mode": "chat",
-    "supports_function_calling": true,
-    "supports_tool_choice": true
+    "supports_function_calling": true
   },
   "bedrock/us-west-2/mistral.mixtral-8x7b-instruct-v0:1": {
     "max_tokens": 8191,
@@ -11055,8 +11053,7 @@
     "output_cost_per_token": 2.4e-05,
     "litellm_provider": "bedrock",
     "mode": "chat",
-    "supports_function_calling": true,
-    "supports_tool_choice": true
+    "supports_function_calling": true
   },
   "bedrock/us-west-2/mistral.mistral-large-2402-v1:0": {
     "max_tokens": 8191,
@@ -11066,8 +11063,7 @@
     "output_cost_per_token": 2.4e-05,
     "litellm_provider": "bedrock",
     "mode": "chat",
-    "supports_function_calling": true,
-    "supports_tool_choice": true
+    "supports_function_calling": true
   },
   "bedrock/eu-west-3/mistral.mistral-large-2402-v1:0": {
     "max_tokens": 8191,
@@ -11077,8 +11073,7 @@
     "output_cost_per_token": 3.12e-05,
     "litellm_provider": "bedrock",
     "mode": "chat",
-    "supports_function_calling": true,
-    "supports_tool_choice": true
+    "supports_function_calling": true
   },
   "amazon.nova-micro-v1:0": {
     "max_tokens": 10000,
@@ -15801,5 +15796,5 @@
       "notes": "ElevenLabs Scribe v1 experimental - enhanced version of the main Scribe model"
     }
   },
-  "last_updated": "2025-07-05T16:08:23.068578+00:00"
+  "last_updated": "2025-07-05T17:06:29.874949+00:00"
 }
