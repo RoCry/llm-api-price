@@ -11280,7 +11280,7 @@
   },
   "amazon.nova-micro-v1:0": {
     "max_tokens": 10000,
-    "max_input_tokens": 300000,
+    "max_input_tokens": 128000,
     "max_output_tokens": 10000,
     "input_cost_per_token": 3.5e-08,
     "output_cost_per_token": 1.4e-07,
@@ -11292,7 +11292,7 @@
   },
   "us.amazon.nova-micro-v1:0": {
     "max_tokens": 10000,
-    "max_input_tokens": 300000,
+    "max_input_tokens": 128000,
     "max_output_tokens": 10000,
     "input_cost_per_token": 3.5e-08,
     "output_cost_per_token": 1.4e-07,
@@ -11304,7 +11304,7 @@
   },
   "eu.amazon.nova-micro-v1:0": {
     "max_tokens": 10000,
-    "max_input_tokens": 300000,
+    "max_input_tokens": 128000,
     "max_output_tokens": 10000,
     "input_cost_per_token": 4.6e-08,
     "output_cost_per_token": 1.84e-07,
@@ -11316,7 +11316,7 @@
   },
   "amazon.nova-lite-v1:0": {
     "max_tokens": 10000,
-    "max_input_tokens": 128000,
+    "max_input_tokens": 300000,
     "max_output_tokens": 10000,
     "input_cost_per_token": 6e-08,
     "output_cost_per_token": 2.4e-07,
@@ -11330,7 +11330,7 @@
   },
   "us.amazon.nova-lite-v1:0": {
     "max_tokens": 10000,
-    "max_input_tokens": 128000,
+    "max_input_tokens": 300000,
     "max_output_tokens": 10000,
     "input_cost_per_token": 6e-08,
     "output_cost_per_token": 2.4e-07,
@@ -11344,7 +11344,7 @@
   },
   "eu.amazon.nova-lite-v1:0": {
     "max_tokens": 10000,
-    "max_input_tokens": 128000,
+    "max_input_tokens": 300000,
     "max_output_tokens": 10000,
     "input_cost_per_token": 7.8e-08,
     "output_cost_per_token": 3.12e-07,
@@ -11407,7 +11407,7 @@
   },
   "apac.amazon.nova-micro-v1:0": {
     "max_tokens": 10000,
-    "max_input_tokens": 300000,
+    "max_input_tokens": 128000,
     "max_output_tokens": 10000,
     "input_cost_per_token": 3.7e-08,
     "output_cost_per_token": 1.48e-07,
@@ -11419,7 +11419,7 @@
   },
   "apac.amazon.nova-lite-v1:0": {
     "max_tokens": 10000,
-    "max_input_tokens": 128000,
+    "max_input_tokens": 300000,
     "max_output_tokens": 10000,
     "input_cost_per_token": 6.3e-08,
     "output_cost_per_token": 2.52e-07,
@@ -13450,6 +13450,16 @@
     "supports_parallel_function_calling": true,
     "mode": "chat",
     "supports_tool_choice": true
+  },
+  "together_ai/moonshotai/Kimi-K2-Instruct": {
+    "input_cost_per_token": 1e-06,
+    "output_cost_per_token": 3e-06,
+    "litellm_provider": "together_ai",
+    "supports_function_calling": true,
+    "supports_tool_choice": true,
+    "supports_parallel_function_calling": true,
+    "mode": "chat",
+    "source": "https://www.together.ai/models/kimi-k2-instruct"
   },
   "ollama/codegemma": {
     "max_tokens": 8192,
@@ -16142,5 +16152,5 @@
     "mode": "chat",
     "source": "https://platform.moonshot.ai/docs/pricing"
   },
-  "last_updated": "2025-07-16T03:35:39.463667+00:00"
+  "last_updated": "2025-07-16T15:08:25.106797+00:00"
 }
