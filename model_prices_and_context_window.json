@@ -5430,7 +5430,7 @@
     "supports_reasoning": true,
     "supports_tool_choice": true
   },
-  "groq/moonshotai-kimi-k2-instruct": {
+  "groq/moonshotai/kimi-k2-instruct": {
     "max_tokens": 131072,
     "max_input_tokens": 131072,
     "max_output_tokens": 16384,
@@ -16400,5 +16400,5 @@
     "mode": "chat",
     "source": "https://platform.moonshot.ai/docs/pricing"
   },
-  "last_updated": "2025-07-19T19:06:20.922949+00:00"
+  "last_updated": "2025-07-19T21:06:53.616867+00:00"
 }
