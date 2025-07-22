@@ -10898,6 +10898,16 @@
     "mode": "chat",
     "supports_tool_choice": true
   },
+  "openrouter/qwen/qwen-vl-plus": {
+    "max_tokens": 8192,
+    "max_input_tokens": 8192,
+    "max_output_tokens": 2048,
+    "input_cost_per_token": 0.00021,
+    "output_cost_per_token": 0.00063,
+    "litellm_provider": "qwen",
+    "mode": "chat",
+    "supports_tool_choice": false
+  },
   "openrouter/switchpoint/router": {
     "max_tokens": 131072,
     "max_input_tokens": 131072,
@@ -14462,6 +14472,19 @@
     "supports_tool_choice": false,
     "supports_response_schema": true
   },
+  "fireworks_ai/accounts/fireworks/models/kimi-k2-instruct": {
+    "max_tokens": 131072,
+    "max_input_tokens": 131072,
+    "max_output_tokens": 16384,
+    "input_cost_per_token": 6e-07,
+    "output_cost_per_token": 2.5e-06,
+    "litellm_provider": "fireworks_ai",
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_response_schema": true,
+    "supports_tool_choice": true,
+    "source": "https://fireworks.ai/models/fireworks/kimi-k2-instruct"
+  },
   "fireworks_ai/accounts/fireworks/models/llama-v3p1-405b-instruct": {
     "max_tokens": 16384,
     "max_input_tokens": 128000,
@@ -16936,5 +16959,5 @@
     "supports_system_messages": true,
     "supports_tool_choice": false
   },
-  "last_updated": "2025-07-21T22:08:21.496552+00:00"
+  "last_updated": "2025-07-22T00:37:47.032786+00:00"
 }
