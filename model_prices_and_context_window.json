@@ -10904,7 +10904,7 @@
     "max_output_tokens": 2048,
     "input_cost_per_token": 0.00021,
     "output_cost_per_token": 0.00063,
-    "litellm_provider": "qwen",
+    "litellm_provider": "openrouter",
     "mode": "chat",
     "supports_tool_choice": false
   },
@@ -16959,5 +16959,5 @@
     "supports_system_messages": true,
     "supports_tool_choice": false
   },
-  "last_updated": "2025-07-22T00:37:47.032786+00:00"
+  "last_updated": "2025-07-22T01:37:04.893142+00:00"
 }
