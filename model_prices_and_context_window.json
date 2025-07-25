@@ -11123,6 +11123,17 @@
     "mode": "chat",
     "supports_tool_choice": true
   },
+  "openrouter/qwen/qwen3-coder": {
+    "max_tokens": 1000000,
+    "max_input_tokens": 1000000,
+    "max_output_tokens": 1000000,
+    "input_cost_per_token": 1e-06,
+    "output_cost_per_token": 5e-06,
+    "litellm_provider": "openrouter",
+    "source": "https://openrouter.ai/qwen/qwen3-coder",
+    "mode": "chat",
+    "supports_tool_choice": true
+  },
   "openrouter/switchpoint/router": {
     "max_tokens": 131072,
     "max_input_tokens": 131072,
@@ -17374,5 +17385,5 @@
     "supports_system_messages": true,
     "supports_tool_choice": false
   },
-  "last_updated": "2025-07-25T03:36:27.414957+00:00"
+  "last_updated": "2025-07-25T05:13:35.904817+00:00"
 }
