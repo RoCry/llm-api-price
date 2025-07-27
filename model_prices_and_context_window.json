@@ -10448,8 +10448,8 @@
     "max_tokens": 2048,
     "max_input_tokens": 131072,
     "max_output_tokens": 2048,
-    "input_cost_per_token": 0.1,
-    "output_cost_per_token": 0.2,
+    "input_cost_per_token": 1e-07,
+    "output_cost_per_token": 2e-07,
     "litellm_provider": "openrouter",
     "mode": "chat",
     "source": "https://openrouter.ai/api/v1/models/bytedance/ui-tars-1.5-7b",
@@ -11128,8 +11128,8 @@
     "max_tokens": 8192,
     "max_input_tokens": 8192,
     "max_output_tokens": 2048,
-    "input_cost_per_token": 0.00021,
-    "output_cost_per_token": 0.00063,
+    "input_cost_per_token": 2.1e-07,
+    "output_cost_per_token": 6.3e-07,
     "litellm_provider": "openrouter",
     "mode": "chat",
     "supports_tool_choice": true
@@ -17396,5 +17396,5 @@
     "supports_system_messages": true,
     "supports_tool_choice": false
   },
-  "last_updated": "2025-07-25T18:10:53.003868+00:00"
+  "last_updated": "2025-07-27T17:06:25.034172+00:00"
 }
