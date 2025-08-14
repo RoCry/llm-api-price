@@ -11223,6 +11223,17 @@
     "mode": "chat",
     "supports_tool_choice": true
   },
+  "openrouter/deepseek/deepseek-chat-v3-0324": {
+    "max_tokens": 8192,
+    "max_input_tokens": 65536,
+    "max_output_tokens": 8192,
+    "input_cost_per_token": 1.4e-07,
+    "output_cost_per_token": 2.8e-07,
+    "litellm_provider": "openrouter",
+    "supports_prompt_caching": true,
+    "mode": "chat",
+    "supports_tool_choice": true
+  },
   "openrouter/deepseek/deepseek-coder": {
     "max_tokens": 8192,
     "max_input_tokens": 66000,
@@ -18618,5 +18629,5 @@
     "supports_response_schema": false,
     "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing"
   },
-  "last_updated": "2025-08-14T00:36:00.828845+00:00"
+  "last_updated": "2025-08-14T18:11:09.941952+00:00"
 }
