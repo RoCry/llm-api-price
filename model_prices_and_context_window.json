@@ -730,13 +730,13 @@
       "text"
     ],
     "supports_pdf_input": true,
-    "supports_function_calling": true,
-    "supports_parallel_function_calling": true,
+    "supports_function_calling": false,
+    "supports_parallel_function_calling": false,
     "supports_response_schema": true,
     "supports_vision": true,
     "supports_prompt_caching": true,
     "supports_system_messages": true,
-    "supports_tool_choice": true,
+    "supports_tool_choice": false,
     "supports_native_streaming": true,
     "supports_reasoning": true
   },
@@ -762,13 +762,13 @@
       "text"
     ],
     "supports_pdf_input": true,
-    "supports_function_calling": true,
-    "supports_parallel_function_calling": true,
+    "supports_function_calling": false,
+    "supports_parallel_function_calling": false,
     "supports_response_schema": true,
     "supports_vision": true,
     "supports_prompt_caching": true,
     "supports_system_messages": true,
-    "supports_tool_choice": true,
+    "supports_tool_choice": false,
     "supports_native_streaming": true,
     "supports_reasoning": true
   },
@@ -18629,5 +18629,5 @@
     "supports_response_schema": false,
     "source": "https://www.oracle.com/artificial-intelligence/generative-ai/generative-ai-service/pricing"
   },
-  "last_updated": "2025-08-14T18:11:09.941952+00:00"
+  "last_updated": "2025-08-18T16:09:20.981036+00:00"
 }
