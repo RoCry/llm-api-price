@@ -8032,7 +8032,6 @@
     "output_cost_per_image": 0.039,
     "litellm_provider": "gemini",
     "mode": "chat",
-    "supports_reasoning": true,
     "supports_system_messages": true,
     "supports_function_calling": true,
     "supports_vision": true,
@@ -8397,7 +8396,6 @@
     "output_cost_per_image": 0.039,
     "litellm_provider": "vertex_ai-language-models",
     "mode": "chat",
-    "supports_reasoning": true,
     "supports_system_messages": true,
     "supports_function_calling": true,
     "supports_vision": true,
@@ -20901,5 +20899,5 @@
       "notes": "DALL-E 2 via AI/ML API - Reliable text-to-image generation"
     }
   },
-  "last_updated": "2025-08-30T06:09:19.636081+00:00"
+  "last_updated": "2025-08-30T18:08:42.246457+00:00"
 }
