@@ -13122,6 +13122,7 @@
     "mode": "chat",
     "supports_response_schema": true,
     "supports_tool_choice": true,
+    "supports_function_calling": true,
     "supports_reasoning": true
   },
   "openai.gpt-oss-120b-1:0": {
@@ -13134,6 +13135,7 @@
     "mode": "chat",
     "supports_response_schema": true,
     "supports_tool_choice": true,
+    "supports_function_calling": true,
     "supports_reasoning": true
   },
   "anthropic.claude-opus-4-1-20250805-v1:0": {
@@ -21175,5 +21177,5 @@
       "notes": "Volcengine Doubao embedding model - text-240715 version with 2560 dimensions"
     }
   },
-  "last_updated": "2025-09-09T01:35:21.175950+00:00"
+  "last_updated": "2025-09-09T21:06:38.083115+00:00"
 }
