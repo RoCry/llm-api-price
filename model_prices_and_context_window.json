@@ -15701,7 +15701,8 @@
     "cache_read_input_token_cost": 2.16e-07,
     "litellm_provider": "deepinfra",
     "mode": "chat",
-    "supports_tool_choice": true
+    "supports_tool_choice": true,
+    "supports_reasoning": true
   },
   "deepinfra/google/gemini-2.0-flash-001": {
     "max_tokens": 1000000,
@@ -20551,5 +20552,5 @@
       "notes": "Volcengine Doubao embedding model - text-240715 version with 2560 dimensions"
     }
   },
-  "last_updated": "2025-09-10T06:11:20.097413+00:00"
+  "last_updated": "2025-09-11T03:19:52.027596+00:00"
 }
