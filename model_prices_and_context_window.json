@@ -19220,7 +19220,6 @@
     "supports_function_calling": true,
     "supports_tool_choice": true,
     "supports_reasoning": true,
-    "supports_caching": true,
     "mode": "chat",
     "tiered_pricing": [
       {
@@ -19263,7 +19262,6 @@
     "supports_function_calling": true,
     "supports_tool_choice": true,
     "supports_reasoning": true,
-    "supports_caching": true,
     "mode": "chat",
     "tiered_pricing": [
       {
@@ -19358,7 +19356,6 @@
     "supports_function_calling": true,
     "supports_tool_choice": true,
     "supports_reasoning": true,
-    "supports_caching": true,
     "mode": "chat",
     "tiered_pricing": [
       {
@@ -19556,7 +19553,6 @@
     "supports_function_calling": true,
     "supports_tool_choice": true,
     "supports_reasoning": true,
-    "supports_caching": true,
     "mode": "chat",
     "tiered_pricing": [
       {
@@ -19623,7 +19619,6 @@
     "max_tokens": 131072,
     "max_input_tokens": 98304,
     "max_output_tokens": 8192,
-    "max_chain_of_thought_tokens": 32768,
     "input_cost_per_token": 8e-07,
     "output_cost_per_token": 2.4e-06,
     "litellm_provider": "dashscope",
@@ -21049,5 +21044,5 @@
       "notes": "Volcengine Doubao embedding model - text-240715 version with 2560 dimensions"
     }
   },
-  "last_updated": "2025-09-12T01:35:20.096623+00:00"
+  "last_updated": "2025-09-12T03:15:17.245684+00:00"
 }
