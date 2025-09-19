@@ -305,8 +305,7 @@
     "output_cost_per_token": 0.0,
     "output_vector_size": 1024,
     "supports_embedding_image_input": true,
-    "supports_image_input": true,
-    "supports_multimodal_embedding": true
+    "supports_image_input": true
   },
   "us.twelvelabs.marengo-embed-2-7-v1:0": {
     "input_cost_per_token": 7e-05,
@@ -320,8 +319,7 @@
     "output_cost_per_token": 0.0,
     "output_vector_size": 1024,
     "supports_embedding_image_input": true,
-    "supports_image_input": true,
-    "supports_multimodal_embedding": true
+    "supports_image_input": true
   },
   "eu.twelvelabs.marengo-embed-2-7-v1:0": {
     "input_cost_per_token": 7e-05,
@@ -335,15 +333,13 @@
     "output_cost_per_token": 0.0,
     "output_vector_size": 1024,
     "supports_embedding_image_input": true,
-    "supports_image_input": true,
-    "supports_multimodal_embedding": true
+    "supports_image_input": true
   },
   "twelvelabs.pegasus-1-2-v1:0": {
     "input_cost_per_video_per_second": 0.00049,
     "output_cost_per_token": 7.5e-06,
     "litellm_provider": "bedrock",
     "mode": "chat",
-    "supports_multimodal_input": true,
     "supports_video_input": true
   },
   "us.twelvelabs.pegasus-1-2-v1:0": {
@@ -351,7 +347,6 @@
     "output_cost_per_token": 7.5e-06,
     "litellm_provider": "bedrock",
     "mode": "chat",
-    "supports_multimodal_input": true,
     "supports_video_input": true
   },
   "eu.twelvelabs.pegasus-1-2-v1:0": {
@@ -359,7 +354,6 @@
     "output_cost_per_token": 7.5e-06,
     "litellm_provider": "bedrock",
     "mode": "chat",
-    "supports_multimodal_input": true,
     "supports_video_input": true
   },
   "amazon.titan-text-express-v1": {
@@ -21343,5 +21337,5 @@
     "supports_vision": true,
     "supports_web_search": true
   },
-  "last_updated": "2025-09-19T00:32:53.927988+00:00"
+  "last_updated": "2025-09-19T01:35:27.670170+00:00"
 }
