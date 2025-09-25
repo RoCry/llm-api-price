@@ -12522,7 +12522,7 @@
     "supports_function_calling": true,
     "supports_native_streaming": false,
     "supports_parallel_function_calling": true,
-    "supports_pdf_input": false,
+    "supports_pdf_input": true,
     "supports_prompt_caching": true,
     "supports_reasoning": false,
     "supports_response_schema": true,
@@ -21828,5 +21828,5 @@
     "supports_vision": true,
     "supports_web_search": true
   },
-  "last_updated": "2025-09-24T18:11:34.446378+00:00"
+  "last_updated": "2025-09-25T05:08:09.777009+00:00"
 }
