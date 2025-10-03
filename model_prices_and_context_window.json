@@ -18385,6 +18385,20 @@
     "mode": "rerank",
     "output_cost_per_token": 0.0
   },
+  "nvidia_nim/nvidia/nv-rerankqa-mistral-4b-v3": {
+    "input_cost_per_query": 0.0,
+    "input_cost_per_token": 0.0,
+    "litellm_provider": "nvidia_nim",
+    "mode": "rerank",
+    "output_cost_per_token": 0.0
+  },
+  "nvidia_nim/nvidia/llama-3_2-nv-rerankqa-1b-v2": {
+    "input_cost_per_query": 0.0,
+    "input_cost_per_token": 0.0,
+    "litellm_provider": "nvidia_nim",
+    "mode": "rerank",
+    "output_cost_per_token": 0.0
+  },
   "sagemaker/meta-textgeneration-llama-2-13b": {
     "input_cost_per_token": 0.0,
     "litellm_provider": "sagemaker",
@@ -22409,5 +22423,5 @@
     "supports_vision": true,
     "supports_web_search": true
   },
-  "last_updated": "2025-10-03T01:35:20.068731+00:00"
+  "last_updated": "2025-10-03T02:32:31.444009+00:00"
 }
