@@ -13265,8 +13265,7 @@
     "supported_endpoints": [
       "/v1/images/generations",
       "/v1/images/edits"
-    ],
-    "supports_vision": true
+    ]
   },
   "gpt-realtime": {
     "cache_creation_input_audio_token_cost": 4e-07,
@@ -23018,5 +23017,5 @@
     "supports_vision": true,
     "supports_web_search": true
   },
-  "last_updated": "2025-10-07T19:06:21.527464+00:00"
+  "last_updated": "2025-10-08T01:35:32.105192+00:00"
 }
