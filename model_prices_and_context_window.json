@@ -17499,13 +17499,9 @@
   },
   "openrouter/anthropic/claude-sonnet-4.5": {
     "input_cost_per_image": 0.0048,
-    "cache_creation_input_token_cost": 3.75e-06,
-    "cache_read_input_token_cost": 3e-07,
     "input_cost_per_token": 3e-06,
     "input_cost_per_token_above_200k_tokens": 6e-06,
     "output_cost_per_token_above_200k_tokens": 2.25e-05,
-    "cache_creation_input_token_cost_above_200k_tokens": 7.5e-06,
-    "cache_read_input_token_cost_above_200k_tokens": 6e-07,
     "litellm_provider": "openrouter",
     "max_input_tokens": 1000000,
     "max_output_tokens": 1000000,
@@ -17515,7 +17511,6 @@
     "supports_assistant_prefill": true,
     "supports_computer_use": true,
     "supports_function_calling": true,
-    "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_tool_choice": true,
     "supports_vision": true,
@@ -23566,5 +23561,5 @@
     "supports_vision": true,
     "supports_web_search": true
   },
-  "last_updated": "2025-10-16T20:08:25.990660+00:00"
+  "last_updated": "2025-10-16T23:07:18.258826+00:00"
 }
