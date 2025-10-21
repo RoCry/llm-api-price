@@ -934,7 +934,7 @@
     "litellm_provider": "bedrock_converse",
     "max_input_tokens": 200000,
     "max_output_tokens": 64000,
-    "max_tokens": 200000,
+    "max_tokens": 64000,
     "mode": "chat",
     "output_cost_per_token": 1.65e-05,
     "search_context_cost_per_query": {
@@ -4981,7 +4981,7 @@
     "litellm_provider": "anthropic",
     "max_input_tokens": 200000,
     "max_output_tokens": 64000,
-    "max_tokens": 200000,
+    "max_tokens": 64000,
     "mode": "chat",
     "output_cost_per_token": 1.5e-05,
     "search_context_cost_per_query": {
@@ -5011,7 +5011,7 @@
     "litellm_provider": "anthropic",
     "max_input_tokens": 200000,
     "max_output_tokens": 64000,
-    "max_tokens": 200000,
+    "max_tokens": 64000,
     "mode": "chat",
     "output_cost_per_token": 1.5e-05,
     "search_context_cost_per_query": {
@@ -8051,7 +8051,7 @@
     "litellm_provider": "bedrock_converse",
     "max_input_tokens": 200000,
     "max_output_tokens": 64000,
-    "max_tokens": 200000,
+    "max_tokens": 64000,
     "mode": "chat",
     "output_cost_per_token": 1.65e-05,
     "search_context_cost_per_query": {
@@ -12130,7 +12130,7 @@
     "litellm_provider": "bedrock_converse",
     "max_input_tokens": 200000,
     "max_output_tokens": 64000,
-    "max_tokens": 200000,
+    "max_tokens": 64000,
     "mode": "chat",
     "output_cost_per_token": 1.5e-05,
     "search_context_cost_per_query": {
@@ -14751,7 +14751,7 @@
     "litellm_provider": "bedrock_converse",
     "max_input_tokens": 200000,
     "max_output_tokens": 64000,
-    "max_tokens": 200000,
+    "max_tokens": 64000,
     "mode": "chat",
     "output_cost_per_token": 1.65e-05,
     "search_context_cost_per_query": {
@@ -20606,7 +20606,7 @@
     "litellm_provider": "bedrock_converse",
     "max_input_tokens": 200000,
     "max_output_tokens": 64000,
-    "max_tokens": 200000,
+    "max_tokens": 64000,
     "mode": "chat",
     "output_cost_per_token": 1.65e-05,
     "search_context_cost_per_query": {
@@ -22025,7 +22025,7 @@
     "litellm_provider": "vertex_ai-anthropic_models",
     "max_input_tokens": 200000,
     "max_output_tokens": 64000,
-    "max_tokens": 200000,
+    "max_tokens": 64000,
     "mode": "chat",
     "output_cost_per_token": 1.5e-05,
     "output_cost_per_token_batches": 7.5e-06,
@@ -22051,7 +22051,7 @@
     "litellm_provider": "vertex_ai-anthropic_models",
     "max_input_tokens": 200000,
     "max_output_tokens": 64000,
-    "max_tokens": 200000,
+    "max_tokens": 64000,
     "mode": "chat",
     "output_cost_per_token": 1.5e-05,
     "output_cost_per_token_batches": 7.5e-06,
@@ -23676,5 +23676,5 @@
     "supports_vision": true,
     "supports_web_search": true
   },
-  "last_updated": "2025-10-18T21:06:43.494881+00:00"
+  "last_updated": "2025-10-21T00:34:11.018541+00:00"
 }
