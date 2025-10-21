@@ -2769,6 +2769,18 @@
     "mode": "embedding",
     "output_cost_per_token": 0.0
   },
+  "azure/speech/azure-tts": {
+    "input_cost_per_character": 1.5e-05,
+    "litellm_provider": "azure",
+    "mode": "audio_speech",
+    "source": "https://azure.microsoft.com/en-us/pricing/calculator/"
+  },
+  "azure/speech/azure-tts-hd": {
+    "input_cost_per_character": 3e-05,
+    "litellm_provider": "azure",
+    "mode": "audio_speech",
+    "source": "https://azure.microsoft.com/en-us/pricing/calculator/"
+  },
   "azure/tts-1": {
     "input_cost_per_character": 1.5e-05,
     "litellm_provider": "azure",
@@ -23676,5 +23688,5 @@
     "supports_vision": true,
     "supports_web_search": true
   },
-  "last_updated": "2025-10-21T00:34:11.018541+00:00"
+  "last_updated": "2025-10-21T01:35:37.449663+00:00"
 }
