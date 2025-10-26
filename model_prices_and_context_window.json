@@ -23901,7 +23901,25 @@
     "output_cost_per_video_per_second": 0.1,
     "source": "https://platform.openai.com/docs/api-reference/videos",
     "supported_modalities": [
-      "text"
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "video"
+    ],
+    "supported_resolutions": [
+      "720x1280",
+      "1280x720"
+    ]
+  },
+  "openai/sora-2-pro": {
+    "litellm_provider": "openai",
+    "mode": "video_generation",
+    "output_cost_per_video_per_second": 0.3,
+    "source": "https://platform.openai.com/docs/api-reference/videos",
+    "supported_modalities": [
+      "text",
+      "image"
     ],
     "supported_output_modalities": [
       "video"
@@ -23959,5 +23977,5 @@
       "1792x1024"
     ]
   },
-  "last_updated": "2025-10-25T21:06:54.356830+00:00"
+  "last_updated": "2025-10-26T18:09:39.631289+00:00"
 }
