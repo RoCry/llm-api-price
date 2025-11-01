@@ -5150,6 +5150,7 @@
     "supports_response_schema": true,
     "supports_tool_choice": true,
     "supports_vision": true,
+    "supports_web_search": true,
     "tool_use_system_prompt_tokens": 346
   },
   "claude-opus-4-1": {
@@ -24093,5 +24094,5 @@
       "1792x1024"
     ]
   },
-  "last_updated": "2025-10-31T03:27:13.614974+00:00"
+  "last_updated": "2025-11-01T01:35:42.302361+00:00"
 }
