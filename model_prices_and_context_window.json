@@ -7887,10 +7887,97 @@
       }
     ]
   },
+  "firecrawl/search": {
+    "litellm_provider": "firecrawl",
+    "mode": "search",
+    "tiered_pricing": [
+      {
+        "input_cost_per_query": 0.00166,
+        "max_results_range": [
+          1,
+          10
+        ]
+      },
+      {
+        "input_cost_per_query": 0.00332,
+        "max_results_range": [
+          11,
+          20
+        ]
+      },
+      {
+        "input_cost_per_query": 0.00498,
+        "max_results_range": [
+          21,
+          30
+        ]
+      },
+      {
+        "input_cost_per_query": 0.00664,
+        "max_results_range": [
+          31,
+          40
+        ]
+      },
+      {
+        "input_cost_per_query": 0.0083,
+        "max_results_range": [
+          41,
+          50
+        ]
+      },
+      {
+        "input_cost_per_query": 0.00996,
+        "max_results_range": [
+          51,
+          60
+        ]
+      },
+      {
+        "input_cost_per_query": 0.01162,
+        "max_results_range": [
+          61,
+          70
+        ]
+      },
+      {
+        "input_cost_per_query": 0.01328,
+        "max_results_range": [
+          71,
+          80
+        ]
+      },
+      {
+        "input_cost_per_query": 0.01494,
+        "max_results_range": [
+          81,
+          90
+        ]
+      },
+      {
+        "input_cost_per_query": 0.0166,
+        "max_results_range": [
+          91,
+          100
+        ]
+      }
+    ],
+    "metadata": {
+      "notes": "Firecrawl search pricing: $83 for 100,000 credits, 2 credits per 10 results. Cost = ceiling(limit/10) * 2 * $0.00083"
+    }
+  },
   "perplexity/search": {
     "input_cost_per_query": 0.005,
     "litellm_provider": "perplexity",
     "mode": "search"
+  },
+  "searxng/search": {
+    "litellm_provider": "searxng",
+    "mode": "search",
+    "input_cost_per_query": 0.0,
+    "metadata": {
+      "notes": "SearXNG is an open-source metasearch engine. Free to use when self-hosted or using public instances."
+    }
   },
   "elevenlabs/scribe_v1": {
     "input_cost_per_second": 6.11e-05,
@@ -24220,5 +24307,5 @@
       "1792x1024"
     ]
   },
-  "last_updated": "2025-11-04T03:26:20.429960+00:00"
+  "last_updated": "2025-11-05T02:38:54.867584+00:00"
 }
