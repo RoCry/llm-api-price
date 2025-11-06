@@ -1105,6 +1105,11 @@
     "supports_tool_choice": true,
     "supports_vision": true
   },
+  "azure/container": {
+    "code_interpreter_cost_per_session": 0.03,
+    "litellm_provider": "azure",
+    "mode": "chat"
+  },
   "azure/eu/gpt-4o-2024-08-06": {
     "deprecation_date": "2026-02-27",
     "cache_read_input_token_cost": 1.375e-06,
@@ -24315,6 +24320,11 @@
     "litellm_provider": "vertex_ai",
     "mode": "vector_store"
   },
+  "openai/container": {
+    "code_interpreter_cost_per_session": 0.03,
+    "litellm_provider": "openai",
+    "mode": "chat"
+  },
   "openai/sora-2": {
     "litellm_provider": "openai",
     "mode": "video_generation",
@@ -24397,5 +24407,5 @@
       "1792x1024"
     ]
   },
-  "last_updated": "2025-11-05T03:27:32.398584+00:00"
+  "last_updated": "2025-11-06T00:35:02.436765+00:00"
 }
