@@ -16199,6 +16199,21 @@
     "supports_response_schema": true,
     "supports_tool_choice": true
   },
+  "mistral/magistral-medium-2509": {
+    "input_cost_per_token": 2e-06,
+    "litellm_provider": "mistral",
+    "max_input_tokens": 40000,
+    "max_output_tokens": 40000,
+    "max_tokens": 40000,
+    "mode": "chat",
+    "output_cost_per_token": 5e-06,
+    "source": "https://mistral.ai/news/magistral",
+    "supports_assistant_prefill": true,
+    "supports_function_calling": true,
+    "supports_reasoning": true,
+    "supports_response_schema": true,
+    "supports_tool_choice": true
+  },
   "mistral/mistral-ocr-latest": {
     "litellm_provider": "mistral",
     "ocr_cost_per_page": 0.001,
@@ -24526,5 +24541,5 @@
       "1792x1024"
     ]
   },
-  "last_updated": "2025-11-11T00:35:42.927178+00:00"
+  "last_updated": "2025-11-11T03:28:31.732138+00:00"
 }
