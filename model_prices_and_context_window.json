@@ -5611,8 +5611,12 @@
     "max_tokens": 4096,
     "mode": "chat",
     "output_cost_per_token": 1.65e-05,
+    "supports_assistant_prefill": true,
+    "supports_computer_use": true,
     "supports_function_calling": true,
     "supports_pdf_input": true,
+    "supports_prompt_caching": true,
+    "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
     "supports_vision": true
@@ -5752,8 +5756,12 @@
     "max_tokens": 4096,
     "mode": "chat",
     "output_cost_per_token": 1.65e-05,
+    "supports_assistant_prefill": true,
+    "supports_computer_use": true,
     "supports_function_calling": true,
     "supports_pdf_input": true,
+    "supports_prompt_caching": true,
+    "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
     "supports_vision": true
@@ -26685,5 +26693,5 @@
       "comment": "Estimated cost based on standard TTS pricing. RunwayML uses ElevenLabs models."
     }
   },
-  "last_updated": "2025-11-22T18:10:04.253521+00:00"
+  "last_updated": "2025-11-22T19:06:41.165857+00:00"
 }
