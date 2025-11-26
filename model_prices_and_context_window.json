@@ -26208,6 +26208,15 @@
     "supports_parallel_function_calling": false,
     "supports_vision": false
   },
+  "watsonx/whisper-large-v3-turbo": {
+    "input_cost_per_second": 0.0001,
+    "output_cost_per_second": 0.0001,
+    "litellm_provider": "watsonx",
+    "mode": "audio_transcription",
+    "supported_endpoints": [
+      "/v1/audio/transcriptions"
+    ]
+  },
   "whisper-1": {
     "input_cost_per_second": 0.0001,
     "litellm_provider": "openai",
@@ -26900,5 +26909,5 @@
       "comment": "Estimated cost based on standard TTS pricing. RunwayML uses ElevenLabs models."
     }
   },
-  "last_updated": "2025-11-26T20:09:09.566178+00:00"
+  "last_updated": "2025-11-26T23:07:34.178140+00:00"
 }
