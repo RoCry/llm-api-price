@@ -9522,6 +9522,15 @@
     "output_cost_per_token": 0.0,
     "supports_embedding_image_input": true
   },
+  "embed-multilingual-light-v3.0": {
+    "input_cost_per_token": 0.0001,
+    "litellm_provider": "cohere",
+    "max_input_tokens": 1024,
+    "max_tokens": 1024,
+    "mode": "embedding",
+    "output_cost_per_token": 0.0,
+    "supports_embedding_image_input": true
+  },
   "eu.amazon.nova-lite-v1:0": {
     "input_cost_per_token": 7.8e-08,
     "litellm_provider": "bedrock_converse",
@@ -26878,5 +26887,5 @@
       "comment": "Estimated cost based on standard TTS pricing. RunwayML uses ElevenLabs models."
     }
   },
-  "last_updated": "2025-11-25T23:07:43.861312+00:00"
+  "last_updated": "2025-11-26T17:07:40.992882+00:00"
 }
