@@ -10421,6 +10421,19 @@
     "supports_response_schema": true,
     "supports_tool_choice": true
   },
+  "fireworks_ai/accounts/fireworks/models/deepseek-v3p2": {
+    "input_cost_per_token": 1.2e-06,
+    "litellm_provider": "fireworks_ai",
+    "max_input_tokens": 163840,
+    "max_output_tokens": 163840,
+    "max_tokens": 163840,
+    "mode": "chat",
+    "output_cost_per_token": 1.2e-06,
+    "source": "https://fireworks.ai/models/fireworks/deepseek-v3p2",
+    "supports_function_calling": true,
+    "supports_response_schema": true,
+    "supports_tool_choice": true
+  },
   "fireworks_ai/accounts/fireworks/models/firefunction-v2": {
     "input_cost_per_token": 9e-07,
     "litellm_provider": "fireworks_ai",
@@ -24824,6 +24837,15 @@
     "supports_parallel_function_calling": true,
     "supports_tool_choice": true
   },
+  "vertex_ai/chirp": {
+    "input_cost_per_character": 3e-05,
+    "litellm_provider": "vertex_ai",
+    "mode": "audio_speech",
+    "source": "https://cloud.google.com/text-to-speech/pricing",
+    "supported_endpoints": [
+      "/v1/audio/speech"
+    ]
+  },
   "vertex_ai/claude-3-5-haiku": {
     "input_cost_per_token": 1e-06,
     "litellm_provider": "vertex_ai-anthropic_models",
@@ -27460,5 +27482,5 @@
       "comment": "Estimated cost based on standard TTS pricing. RunwayML uses ElevenLabs models."
     }
   },
-  "last_updated": "2025-12-02T04:15:08.908640+00:00"
+  "last_updated": "2025-12-03T00:36:01.380555+00:00"
 }
