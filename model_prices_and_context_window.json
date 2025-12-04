@@ -424,6 +424,15 @@
     "litellm_provider": "bedrock",
     "mode": "image_generation"
   },
+  "amazon.titan-image-generator-v2:0": {
+    "input_cost_per_image": 0.0,
+    "output_cost_per_image": 0.008,
+    "output_cost_per_image_premium_image": 0.01,
+    "output_cost_per_image_above_1024_and_1024_pixels": 0.01,
+    "output_cost_per_image_above_1024_and_1024_pixels_and_premium_image": 0.012,
+    "litellm_provider": "bedrock",
+    "mode": "image_generation"
+  },
   "twelvelabs.marengo-embed-2-7-v1:0": {
     "input_cost_per_token": 7e-05,
     "litellm_provider": "bedrock",
@@ -27717,5 +27726,5 @@
       "comment": "Estimated cost based on standard TTS pricing. RunwayML uses ElevenLabs models."
     }
   },
-  "last_updated": "2025-12-04T06:13:03.310522+00:00"
+  "last_updated": "2025-12-04T18:12:42.650888+00:00"
 }
