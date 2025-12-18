@@ -13005,6 +13005,7 @@
     "supports_function_calling": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
+    "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_system_messages": true,
     "supports_tool_choice": true,
@@ -31426,5 +31427,5 @@
     "litellm_provider": "fireworks_ai",
     "mode": "chat"
   },
-  "last_updated": "2025-12-18T09:12:00.554887+00:00"
+  "last_updated": "2025-12-18T10:09:27.364091+00:00"
 }
