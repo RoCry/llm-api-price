@@ -12353,6 +12353,7 @@
     "max_videos_per_prompt": 10,
     "mode": "image_generation",
     "output_cost_per_image": 0.039,
+    "output_cost_per_image_token": 3e-05,
     "output_cost_per_reasoning_token": 2.5e-06,
     "output_cost_per_token": 2.5e-06,
     "rpm": 100000,
@@ -12401,6 +12402,7 @@
     "max_videos_per_prompt": 10,
     "mode": "image_generation",
     "output_cost_per_image": 0.039,
+    "output_cost_per_image_token": 3e-05,
     "output_cost_per_reasoning_token": 3e-05,
     "output_cost_per_token": 3e-05,
     "rpm": 100000,
@@ -14133,6 +14135,7 @@
     "max_videos_per_prompt": 10,
     "mode": "image_generation",
     "output_cost_per_image": 0.039,
+    "output_cost_per_image_token": 3e-05,
     "output_cost_per_reasoning_token": 2.5e-06,
     "output_cost_per_token": 2.5e-06,
     "rpm": 100000,
@@ -14181,6 +14184,7 @@
     "max_videos_per_prompt": 10,
     "mode": "image_generation",
     "output_cost_per_image": 0.039,
+    "output_cost_per_image_token": 3e-05,
     "output_cost_per_reasoning_token": 3e-05,
     "output_cost_per_token": 3e-05,
     "rpm": 100000,
@@ -24558,6 +24562,16 @@
     "mode": "image_generation",
     "output_cost_per_pixel": 0.0
   },
+  "linkup/search": {
+    "input_cost_per_query": 0.00587,
+    "litellm_provider": "linkup",
+    "mode": "search"
+  },
+  "linkup/search-deep": {
+    "input_cost_per_query": 0.05867,
+    "litellm_provider": "linkup",
+    "mode": "search"
+  },
   "tavily/search": {
     "input_cost_per_query": 0.008,
     "litellm_provider": "tavily",
@@ -27292,6 +27306,7 @@
     "max_videos_per_prompt": 10,
     "mode": "image_generation",
     "output_cost_per_image": 0.039,
+    "output_cost_per_image_token": 3e-05,
     "output_cost_per_reasoning_token": 2.5e-06,
     "output_cost_per_token": 2.5e-06,
     "rpm": 100000,
@@ -31411,5 +31426,5 @@
     "litellm_provider": "fireworks_ai",
     "mode": "chat"
   },
-  "last_updated": "2025-12-18T03:35:05.293290+00:00"
+  "last_updated": "2025-12-18T09:12:00.554887+00:00"
 }
