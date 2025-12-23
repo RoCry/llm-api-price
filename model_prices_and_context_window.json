@@ -24965,6 +24965,7 @@
     "mode": "chat",
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "together_ai/Qwen/Qwen2.5-7B-Instruct-Turbo": {
@@ -24972,6 +24973,7 @@
     "mode": "chat",
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "together_ai/Qwen/Qwen3-235B-A22B-Instruct-2507-tput": {
@@ -24983,6 +24985,7 @@
     "source": "https://www.together.ai/models/qwen3-235b-a22b-instruct-2507-fp8",
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "together_ai/Qwen/Qwen3-235B-A22B-Thinking-2507": {
@@ -24994,6 +24997,7 @@
     "source": "https://www.together.ai/models/qwen3-235b-a22b-thinking-2507",
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "together_ai/Qwen/Qwen3-235B-A22B-fp8-tput": {
@@ -25016,6 +25020,7 @@
     "source": "https://www.together.ai/models/qwen3-coder-480b-a35b-instruct",
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "together_ai/deepseek-ai/DeepSeek-R1": {
@@ -25028,6 +25033,7 @@
     "output_cost_per_token": 7e-06,
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "together_ai/deepseek-ai/DeepSeek-R1-0528-tput": {
@@ -25039,6 +25045,7 @@
     "source": "https://www.together.ai/models/deepseek-r1-0528-throughput",
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "together_ai/deepseek-ai/DeepSeek-V3": {
@@ -25051,6 +25058,7 @@
     "output_cost_per_token": 1.25e-06,
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "together_ai/deepseek-ai/DeepSeek-V3.1": {
@@ -25070,6 +25078,7 @@
     "mode": "chat",
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "together_ai/meta-llama/Llama-3.3-70B-Instruct-Turbo": {
@@ -25099,6 +25108,7 @@
     "output_cost_per_token": 8.5e-07,
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "together_ai/meta-llama/Llama-4-Scout-17B-16E-Instruct": {
@@ -25108,6 +25118,7 @@
     "output_cost_per_token": 5.9e-07,
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "together_ai/meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo": {
@@ -25117,6 +25128,7 @@
     "output_cost_per_token": 3.5e-06,
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "together_ai/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo": {
@@ -25172,6 +25184,7 @@
     "source": "https://www.together.ai/models/kimi-k2-instruct",
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "together_ai/openai/gpt-oss-120b": {
@@ -25183,6 +25196,7 @@
     "source": "https://www.together.ai/models/gpt-oss-120b",
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "together_ai/openai/gpt-oss-20b": {
@@ -25194,6 +25208,7 @@
     "source": "https://www.together.ai/models/gpt-oss-20b",
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "together_ai/togethercomputer/CodeLlama-34b-Instruct": {
@@ -25212,6 +25227,7 @@
     "source": "https://www.together.ai/models/glm-4-5-air",
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "together_ai/zai-org/GLM-4.6": {
@@ -25248,6 +25264,7 @@
     "source": "https://www.together.ai/models/qwen3-next-80b-a3b-instruct",
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "together_ai/Qwen/Qwen3-Next-80B-A3B-Thinking": {
@@ -25259,6 +25276,7 @@
     "source": "https://www.together.ai/models/qwen3-next-80b-a3b-thinking",
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
+    "supports_response_schema": true,
     "supports_tool_choice": true
   },
   "tts-1": {
@@ -31532,5 +31550,5 @@
     "litellm_provider": "fireworks_ai",
     "mode": "chat"
   },
-  "last_updated": "2025-12-23T11:08:06.822792+00:00"
+  "last_updated": "2025-12-23T12:15:13.068029+00:00"
 }
