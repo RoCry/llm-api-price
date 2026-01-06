@@ -15831,8 +15831,6 @@
     "mode": "embedding"
   },
   "gigachat/GigaChat-2-Lite": {
-    "display_name": "GigaChat 2 Lite",
-    "model_vendor": "sberbank",
     "input_cost_per_token": 0.0,
     "litellm_provider": "gigachat",
     "max_input_tokens": 128000,
@@ -15844,8 +15842,6 @@
     "supports_system_messages": true
   },
   "gigachat/GigaChat-2-Max": {
-    "display_name": "GigaChat 2 Max",
-    "model_vendor": "sberbank",
     "input_cost_per_token": 0.0,
     "litellm_provider": "gigachat",
     "max_input_tokens": 128000,
@@ -15858,8 +15854,6 @@
     "supports_vision": true
   },
   "gigachat/GigaChat-2-Pro": {
-    "display_name": "GigaChat 2 Pro",
-    "model_vendor": "sberbank",
     "input_cost_per_token": 0.0,
     "litellm_provider": "gigachat",
     "max_input_tokens": 128000,
@@ -15872,8 +15866,6 @@
     "supports_vision": true
   },
   "gigachat/Embeddings": {
-    "display_name": "GigaChat Embeddings",
-    "model_vendor": "sberbank",
     "input_cost_per_token": 0.0,
     "litellm_provider": "gigachat",
     "max_input_tokens": 512,
@@ -15883,8 +15875,6 @@
     "output_vector_size": 1024
   },
   "gigachat/Embeddings-2": {
-    "display_name": "GigaChat Embeddings 2",
-    "model_vendor": "sberbank",
     "input_cost_per_token": 0.0,
     "litellm_provider": "gigachat",
     "max_input_tokens": 512,
@@ -15894,8 +15884,6 @@
     "output_vector_size": 1024
   },
   "gigachat/EmbeddingsGigaR": {
-    "display_name": "GigaChat Embeddings GigaR",
-    "model_vendor": "sberbank",
     "input_cost_per_token": 0.0,
     "litellm_provider": "gigachat",
     "max_input_tokens": 4096,
@@ -32209,5 +32197,5 @@
     "litellm_provider": "fireworks_ai",
     "mode": "chat"
   },
-  "last_updated": "2026-01-06T10:09:31.105699+00:00"
+  "last_updated": "2026-01-06T11:08:08.717272+00:00"
 }
