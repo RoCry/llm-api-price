@@ -100,7 +100,11 @@ async function loadData() {
 
 function buildGroups(data) {
   const blacklist = new Set(config.model_blacklist ?? []);
-  const sotaSet = new Set((config.sota_models ?? []).map((name) => name.toLowerCase()));
+  const sotaSet = new Set(
+    (config.sota_models ?? [])
+      .map((name) => normalizeName(name))
+      .filter((name) => name.length > 0),
+  );
   const groups = new Map();
 
   for (const [name, raw] of Object.entries(data)) {
