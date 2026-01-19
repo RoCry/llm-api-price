@@ -7,6 +7,9 @@ export const config = {
     "claude-sonnet-4-5",
     "gemini-3-pro",
     "gemini-3-flash",
+    "glm-4.7",
+    "kimi-k2",
+    "minimax-m2.1",
   ],
   model_blacklist: ["sample_spec"],
 };
