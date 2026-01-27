@@ -8,7 +8,7 @@ export const config = {
     "gemini-3-pro",
     "gemini-3-flash",
     "glm-4.7",
-    "kimi-k2",
+    "kimi-k2.5",
     "minimax-m2.1",
   ],
   model_blacklist: ["sample_spec"],
