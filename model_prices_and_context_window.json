@@ -13521,7 +13521,7 @@
     "supports_vision": true,
     "supports_web_search": true
   },
-  "gemini-robotics-er-1.5-preview": {
+  "gemini/gemini-robotics-er-1.5-preview": {
     "cache_read_input_token_cost": 0,
     "input_cost_per_token": 3e-07,
     "input_cost_per_audio_token": 1e-06,
@@ -34554,5 +34554,5 @@
     "output_cost_per_token": 0,
     "supports_reasoning": true
   },
-  "last_updated": "2026-01-28T13:24:20.821395+00:00"
+  "last_updated": "2026-01-28T16:15:18.395294+00:00"
 }
