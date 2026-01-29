@@ -3130,7 +3130,7 @@
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_system_messages": true,
-    "supports_tool_choice": false,
+    "supports_tool_choice": true,
     "supports_vision": true
   },
   "azure/gpt-5-chat-latest": {
@@ -3162,7 +3162,7 @@
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_system_messages": true,
-    "supports_tool_choice": false,
+    "supports_tool_choice": true,
     "supports_vision": true
   },
   "azure/gpt-5-codex": {
@@ -34656,5 +34656,5 @@
     "output_cost_per_token": 0,
     "supports_reasoning": true
   },
-  "last_updated": "2026-01-29T12:20:04.112021+00:00"
+  "last_updated": "2026-01-29T13:30:54.351319+00:00"
 }
