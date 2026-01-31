@@ -1517,6 +1517,14 @@
     "supports_response_schema": true,
     "supports_tool_choice": true
   },
+  "azure_ai/model_router": {
+    "input_cost_per_token": 1.4e-07,
+    "output_cost_per_token": 0,
+    "litellm_provider": "azure_ai",
+    "mode": "chat",
+    "source": "https://azure.microsoft.com/en-us/pricing/details/ai-services/",
+    "comment": "Flat cost of $0.14 per M input tokens for Azure AI Foundry Model Router infrastructure. Use pattern: azure_ai/model_router/<deployment-name> where deployment-name is your Azure deployment (e.g., azure-model-router)"
+  },
   "azure/eu/gpt-4o-2024-08-06": {
     "deprecation_date": "2026-02-27",
     "cache_read_input_token_cost": 1.375e-06,
@@ -34746,5 +34754,5 @@
     "output_cost_per_token": 0,
     "supports_reasoning": true
   },
-  "last_updated": "2026-01-30T12:19:38.394113+00:00"
+  "last_updated": "2026-01-31T03:00:46.628008+00:00"
 }
