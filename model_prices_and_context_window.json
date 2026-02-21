@@ -8201,6 +8201,7 @@
     "supports_response_schema": true,
     "supports_tool_choice": true,
     "supports_vision": true,
+    "supports_web_search": true,
     "tool_use_system_prompt_tokens": 159
   },
   "claude-sonnet-4-5": {
@@ -37731,5 +37732,5 @@
       "notes": "DuckDuckGo Instant Answer API is free and does not require an API key."
     }
   },
-  "last_updated": "2026-02-20T17:18:56.518163+00:00"
+  "last_updated": "2026-02-21T01:38:59.842362+00:00"
 }
