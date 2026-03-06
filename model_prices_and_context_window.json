@@ -1239,7 +1239,7 @@
     "supports_vision": true,
     "tool_use_system_prompt_tokens": 346
   },
-  "apac.anthropic.claude-sonnet-4-6": {
+  "au.anthropic.claude-sonnet-4-6": {
     "cache_creation_input_token_cost": 4.125e-06,
     "cache_creation_input_token_cost_above_200k_tokens": 8.25e-06,
     "cache_read_input_token_cost": 3.3e-07,
@@ -39276,5 +39276,5 @@
     "supports_response_schema": true,
     "supports_tool_choice": true
   },
-  "last_updated": "2026-03-05T18:44:16.530477+00:00"
+  "last_updated": "2026-03-06T00:49:20.847149+00:00"
 }
