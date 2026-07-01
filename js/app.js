@@ -6,6 +6,12 @@ const PROVIDER_PREFIXES = new Set([
   "openai",
   "google",
   "xai",
+  "global",
+  "us",
+  "eu",
+  "au",
+  "jp",
+  "mistral",
   "azure_ai",
   "bedrock",
   "vertex_ai",
@@ -65,7 +71,6 @@ function bindEvents() {
 
 async function loadData() {
   try {
-    dom.sota.checked = (config.sota_models ?? []).length > 0;
     const response = await fetch("model_prices_and_context_window.json", {
       cache: "no-store",
     });
@@ -84,7 +89,8 @@ async function loadData() {
 
     dom.lastUpdated.textContent = formatDate(data.last_updated);
 
-    state.groups = buildGroups(data);
+    state.groups = applySotaSelection(buildGroups(data));
+    dom.sota.checked = state.groups.some((group) => group.isSota);
     state.providers = uniqueSorted(state.groups.flatMap((group) => group.providers));
     state.modes = uniqueSorted(state.groups.flatMap((group) => group.modes));
 
@@ -100,11 +106,6 @@ async function loadData() {
 
 function buildGroups(data) {
   const blacklist = new Set(config.model_blacklist ?? []);
-  const sotaSet = new Set(
-    (config.sota_models ?? [])
-      .map((name) => normalizeName(name))
-      .filter((name) => name.length > 0),
-  );
   const groups = new Map();
 
   for (const [name, raw] of Object.entries(data)) {
@@ -141,7 +142,7 @@ function buildGroups(data) {
         inputValues: [],
         outputValues: [],
         supportsVision: false,
-        isSota: sotaSet.has(normalized),
+        isSota: false,
       });
     }
 
@@ -168,6 +169,71 @@ function buildGroups(data) {
       variants: group.variants.sort((a, b) => (a.input ?? 0) - (b.input ?? 0)),
     };
   });
+}
+
+function applySotaSelection(groups) {
+  const sotaSet = buildSotaSet(groups);
+  return groups.map((group) => ({
+    ...group,
+    isSota: sotaSet.has(group.name),
+  }));
+}
+
+function buildSotaSet(groups) {
+  const names = new Set(
+    (config.sota_models ?? [])
+      .map((name) => normalizeName(name))
+      .filter((name) => name.length > 0),
+  );
+
+  for (const rule of config.sota_rules ?? []) {
+    const pattern = compileRulePattern(rule);
+    const limit = Number.isInteger(rule.limit) && rule.limit > 0 ? rule.limit : 1;
+    const matches = groups
+      .filter((group) => pattern.test(group.name))
+      .sort((a, b) => compareSotaCandidate(b.name, a.name));
+    matches.slice(0, limit).forEach((group) => names.add(group.name));
+  }
+
+  return names;
+}
+
+function compileRulePattern(rule) {
+  if (!rule?.pattern) {
+    throw new Error("SOTA rule is missing a pattern.");
+  }
+
+  try {
+    return new RegExp(rule.pattern);
+  } catch (error) {
+    throw new Error(`Invalid SOTA rule pattern ${rule.pattern}: ${error.message}`);
+  }
+}
+
+function compareSotaCandidate(left, right) {
+  const versionCompare = compareVersionParts(versionParts(left), versionParts(right));
+  if (versionCompare !== 0) return versionCompare;
+  return left.localeCompare(right);
+}
+
+function versionParts(name) {
+  return [...name.matchAll(/p?\d+(?:\.\d+)?/gi)].flatMap((match) =>
+    match[0]
+      .toLowerCase()
+      .replace(/^p/, "")
+      .split(".")
+      .map((part) => Number.parseInt(part, 10)),
+  );
+}
+
+function compareVersionParts(left, right) {
+  const length = Math.max(left.length, right.length);
+  for (let index = 0; index < length; index += 1) {
+    const leftPart = left[index] ?? 0;
+    const rightPart = right[index] ?? 0;
+    if (leftPart !== rightPart) return leftPart - rightPart;
+  }
+  return 0;
 }
 
 function render() {
@@ -260,14 +326,14 @@ function renderRow(group) {
 
 function normalizeName(rawName) {
   let name = rawName.split("/").pop() ?? rawName;
-  if (name.includes(".")) {
+  while (name.includes(".")) {
     const [prefix, rest] = name.split(/\.(.+)/);
-    if (PROVIDER_PREFIXES.has(prefix)) {
-      name = rest;
-    }
+    if (!PROVIDER_PREFIXES.has(prefix)) break;
+    name = rest;
   }
 
   name = name.replace(/:.*$/, "");
+  name = name.replace(/@.*$/, "");
   name = name.replace(/-v\d+$/i, "");
   name = name.replace(/-\d{4}-\d{2}-\d{2}$/, "");
   name = name.replace(/-\d{8}$/, "");

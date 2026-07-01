@@ -1,20 +1,22 @@
 export const config = {
-  // Curated frontier models for the default SOTA view.
-  sota_models: [
-    "gpt-5.5",
-    "gpt-5.5-pro",
-    "claude-opus-4-8",
-    "claude-sonnet-5",
-    "gemini-3.1-pro",
-    "gemini-3.5-flash",
-    "glm-5.2",
-    "kimi-k2-thinking",
-    "qwen3-max",
-    "deepseek-v4-pro",
-    "grok-4-fast",
-    "llama-4-maverick",
-    "mistral-large-3",
-    "minimax-m2.7",
+  // Optional exact normalized model names to always include.
+  sota_models: [],
+  // Curated frontier families. The app selects the latest priced group per rule.
+  sota_rules: [
+    { pattern: "^gpt-\\d+(?:\\.\\d+)*$" },
+    { pattern: "^gpt-\\d+(?:\\.\\d+)*-pro$" },
+    { pattern: "^claude-opus-\\d+(?:-\\d+)*$" },
+    { pattern: "^claude-sonnet-\\d+(?:-\\d+)*$" },
+    { pattern: "^gemini-\\d+(?:\\.\\d+)*-pro$" },
+    { pattern: "^gemini-\\d+(?:\\.\\d+)*-flash$" },
+    { pattern: "^glm-\\d+(?:\\.\\d+)*$" },
+    { pattern: "^kimi-k\\d+(?:\\.\\d+)?-thinking$" },
+    { pattern: "^qwen\\d+(?:\\.\\d+)?-max$" },
+    { pattern: "^deepseek-v\\d+(?:\\.\\d+)?-pro$" },
+    { pattern: "^grok-\\d+(?:\\.\\d+)*-fast$" },
+    { pattern: "^llama-\\d+-maverick$" },
+    { pattern: "^mistral-large-[1-9](?:\\.\\d+)?$" },
+    { pattern: "^minimax-m\\d+(?:\\.\\d+)?$" },
   ],
   model_blacklist: ["sample_spec"],
 };
