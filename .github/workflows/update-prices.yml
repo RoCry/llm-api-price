@@ -7,27 +7,60 @@ on:
   push:
     branches:
       - master
+    paths:
+      - '.github/scripts/update_prices.py'
+      - '.github/workflows/update-prices.yml'
+      - 'tests/**'
+      - 'pyproject.toml'
+      - 'uv.lock'
+
+concurrency:
+  group: update-llm-prices
+  cancel-in-progress: false
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v8
+
+      - name: Install dependencies
+        run: uv sync --locked
+
+      - name: Run tests
+        run: uv run python -m unittest discover -s tests
+
   check-and-update:
+    needs: test
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v3
-      
+      - uses: actions/checkout@v7
+
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
-          python-version: '3.x'
-          
+          python-version: '3.13'
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v8
+
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests
-          
+        run: uv sync --locked
+
       - name: Check for updates and commit if needed
-        run: |
-          python .github/scripts/update_prices.py
+        run: uv run python .github/scripts/update_prices.py
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
