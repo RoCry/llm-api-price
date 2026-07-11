@@ -1,28 +1,8 @@
+import { applyView, buildCatalog } from "./catalog.js";
 import { config } from "./config.js";
-
-const DROP_TOKENS = new Set(["preview", "experimental", "exp", "latest", "beta", "alpha", "rc"]);
-const PROVIDER_PREFIXES = new Set([
-  "anthropic",
-  "openai",
-  "google",
-  "xai",
-  "global",
-  "us",
-  "eu",
-  "au",
-  "jp",
-  "mistral",
-  "azure_ai",
-  "bedrock",
-  "vertex_ai",
-  "oci",
-]);
 
 const state = {
   groups: [],
-  providers: [],
-  modes: [],
-  sortKey: "name",
   sortDir: "asc",
 };
 
@@ -79,23 +59,17 @@ async function loadData() {
     }
 
     const data = await response.json();
-    if (!data || typeof data !== "object") {
-      throw new Error("Model data is not a JSON object.");
-    }
-
+    const catalog = buildCatalog(data, config);
     if (!data.last_updated) {
       throw new Error("Missing last_updated field in model data.");
     }
 
     dom.lastUpdated.textContent = formatDate(data.last_updated);
-
-    state.groups = applySotaSelection(buildGroups(data));
+    state.groups = catalog.groups;
     dom.sota.checked = state.groups.some((group) => group.isSota);
-    state.providers = uniqueSorted(state.groups.flatMap((group) => group.providers));
-    state.modes = uniqueSorted(state.groups.flatMap((group) => group.modes));
 
-    setSelectOptions(dom.provider, "All providers", state.providers);
-    setSelectOptions(dom.mode, "All modes", state.modes);
+    setSelectOptions(dom.provider, "All providers", catalog.providers);
+    setSelectOptions(dom.mode, "All modes", catalog.modes);
 
     render();
   } catch (error) {
@@ -104,187 +78,26 @@ async function loadData() {
   }
 }
 
-function buildGroups(data) {
-  const blacklist = new Set(config.model_blacklist ?? []);
-  const groups = new Map();
-
-  for (const [name, raw] of Object.entries(data)) {
-    if (name === "last_updated") continue;
-    if (blacklist.has(name)) continue;
-    if (!raw || typeof raw !== "object") {
-      throw new Error(`Invalid model entry for ${name}.`);
-    }
-
-    const input = raw.input_cost_per_token ? raw.input_cost_per_token * 1_000_000 : null;
-    const output = raw.output_cost_per_token ? raw.output_cost_per_token * 1_000_000 : null;
-    if (input === null && output === null) continue;
-
-    const provider = raw.litellm_provider ?? "unknown";
-    const mode = raw.mode ?? "unknown";
-    const normalized = normalizeName(name);
-
-    const variant = {
-      name,
-      nameLower: name.toLowerCase(),
-      provider,
-      mode,
-      input,
-      output,
-      supportsVision: Boolean(raw.supports_vision),
-    };
-
-    if (!groups.has(normalized)) {
-      groups.set(normalized, {
-        name: normalized,
-        providers: new Set(),
-        modes: new Set(),
-        variants: [],
-        inputValues: [],
-        outputValues: [],
-        supportsVision: false,
-        isSota: false,
-      });
-    }
-
-    const group = groups.get(normalized);
-    group.providers.add(provider);
-    group.modes.add(mode);
-    group.variants.push(variant);
-    group.supportsVision ||= variant.supportsVision;
-    if (input !== null) group.inputValues.push(input);
-    if (output !== null) group.outputValues.push(output);
-  }
-
-  return Array.from(groups.values()).map((group) => {
-    const providers = uniqueSorted([...group.providers]);
-    const modes = uniqueSorted([...group.modes]);
-    const inputRange = toRange(group.inputValues);
-    const outputRange = toRange(group.outputValues);
-    return {
-      ...group,
-      providers,
-      modes,
-      inputRange,
-      outputRange,
-      variants: group.variants.sort((a, b) => (a.input ?? 0) - (b.input ?? 0)),
-    };
-  });
-}
-
-function applySotaSelection(groups) {
-  const sotaSet = buildSotaSet(groups);
-  return groups.map((group) => ({
-    ...group,
-    isSota: sotaSet.has(group.name),
-  }));
-}
-
-function buildSotaSet(groups) {
-  const names = new Set(
-    (config.sota_models ?? [])
-      .map((name) => normalizeName(name))
-      .filter((name) => name.length > 0),
-  );
-
-  for (const rule of config.sota_rules ?? []) {
-    const pattern = compileRulePattern(rule);
-    const limit = Number.isInteger(rule.limit) && rule.limit > 0 ? rule.limit : 1;
-    const matches = groups
-      .filter((group) => pattern.test(group.name))
-      .sort((a, b) => compareSotaCandidate(b.name, a.name));
-    matches.slice(0, limit).forEach((group) => names.add(group.name));
-  }
-
-  return names;
-}
-
-function compileRulePattern(rule) {
-  if (!rule?.pattern) {
-    throw new Error("SOTA rule is missing a pattern.");
-  }
-
-  try {
-    return new RegExp(rule.pattern);
-  } catch (error) {
-    throw new Error(`Invalid SOTA rule pattern ${rule.pattern}: ${error.message}`);
-  }
-}
-
-function compareSotaCandidate(left, right) {
-  const versionCompare = compareVersionParts(versionParts(left), versionParts(right));
-  if (versionCompare !== 0) return versionCompare;
-  return left.localeCompare(right);
-}
-
-function versionParts(name) {
-  return [...name.matchAll(/p?\d+(?:\.\d+)?/gi)].flatMap((match) =>
-    match[0]
-      .toLowerCase()
-      .replace(/^p/, "")
-      .split(".")
-      .map((part) => Number.parseInt(part, 10)),
-  );
-}
-
-function compareVersionParts(left, right) {
-  const length = Math.max(left.length, right.length);
-  for (let index = 0; index < length; index += 1) {
-    const leftPart = left[index] ?? 0;
-    const rightPart = right[index] ?? 0;
-    if (leftPart !== rightPart) return leftPart - rightPart;
-  }
-  return 0;
-}
-
 function render() {
-  state.sortKey = dom.sort.value;
+  const visible = applyView(state.groups, readCriteria());
 
-  const filtered = applyFilters(state.groups);
-  const sorted = sortGroups(filtered);
+  dom.rows.innerHTML = visible.map(renderRow).join("");
+  dom.empty.hidden = visible.length > 0;
 
-  dom.rows.innerHTML = sorted.map(renderRow).join("");
-  dom.empty.hidden = sorted.length > 0;
-
-  const variantCount = sorted.reduce((sum, group) => sum + group.variants.length, 0);
-  dom.summary.textContent = `Showing ${sorted.length} models (${variantCount} variants)`;
+  const variantCount = visible.reduce((sum, group) => sum + group.variants.length, 0);
+  dom.summary.textContent = `Showing ${visible.length} models (${variantCount} variants)`;
 }
 
-function applyFilters(groups) {
-  const query = dom.search.value.trim().toLowerCase();
-  const provider = dom.provider.value;
-  const mode = dom.mode.value;
-  const visionOnly = dom.vision.checked;
-  const sotaOnly = dom.sota.checked;
-
-  return groups.filter((group) => {
-    if (sotaOnly && !group.isSota) return false;
-    if (provider && !group.providers.includes(provider)) return false;
-    if (mode && !group.modes.includes(mode)) return false;
-    if (visionOnly && !group.supportsVision) return false;
-    if (!query) return true;
-
-    if (group.name.includes(query)) return true;
-    return group.variants.some((variant) => variant.nameLower.includes(query));
-  });
-}
-
-function sortGroups(groups) {
-  const dir = state.sortDir === "asc" ? 1 : -1;
-  return [...groups].sort((a, b) => {
-    if (state.sortKey === "name") {
-      return dir * a.name.localeCompare(b.name);
-    }
-
-    if (state.sortKey === "input") {
-      return compareNullable(a.inputRange.min, b.inputRange.min, dir);
-    }
-
-    if (state.sortKey === "output") {
-      return compareNullable(a.outputRange.min, b.outputRange.min, dir);
-    }
-
-    return 0;
-  });
+function readCriteria() {
+  return {
+    query: dom.search.value,
+    provider: dom.provider.value,
+    mode: dom.mode.value,
+    visionOnly: dom.vision.checked,
+    sotaOnly: dom.sota.checked,
+    sortKey: dom.sort.value,
+    sortDir: state.sortDir,
+  };
 }
 
 function renderRow(group) {
@@ -324,55 +137,10 @@ function renderRow(group) {
   `;
 }
 
-function normalizeName(rawName) {
-  let name = rawName.split("/").pop() ?? rawName;
-  while (name.includes(".")) {
-    const [prefix, rest] = name.split(/\.(.+)/);
-    if (!PROVIDER_PREFIXES.has(prefix)) break;
-    name = rest;
-  }
-
-  name = name.replace(/:.*$/, "");
-  name = name.replace(/@.*$/, "");
-  name = name.replace(/-v\d+$/i, "");
-  name = name.replace(/-\d{4}-\d{2}-\d{2}$/, "");
-  name = name.replace(/-\d{8}$/, "");
-  name = name.replace(/-20\d{2}$/, "");
-
-  const parts = name.split(/[-@]/).filter(Boolean);
-  while (parts.length > 1) {
-    const last = parts[parts.length - 1].toLowerCase();
-    if (DROP_TOKENS.has(last)) {
-      parts.pop();
-      continue;
-    }
-    break;
-  }
-
-  return parts.join("-").toLowerCase();
-}
-
 function formatRange(range) {
   if (range.min === null || range.max === null) return "-";
   if (range.min === range.max) return currency.format(range.min);
   return `${currency.format(range.min)} - ${currency.format(range.max)}`;
-}
-
-function toRange(values) {
-  if (!values.length) return { min: null, max: null };
-  return {
-    min: Math.min(...values),
-    max: Math.max(...values),
-  };
-}
-
-function compareNullable(a, b, dir) {
-  if (a === null && b === null) return 0;
-  if (a === null) return 1;
-  if (b === null) return -1;
-  if (a < b) return -dir;
-  if (a > b) return dir;
-  return 0;
 }
 
 function formatDate(isoString) {
@@ -395,10 +163,6 @@ function setSelectOptions(select, allLabel, options) {
   select.innerHTML = "";
   select.append(new Option(allLabel, ""));
   options.forEach((option) => select.append(new Option(option, option)));
-}
-
-function uniqueSorted(values) {
-  return [...new Set(values)].filter(Boolean).sort((a, b) => a.localeCompare(b));
 }
 
 function showError(error) {
