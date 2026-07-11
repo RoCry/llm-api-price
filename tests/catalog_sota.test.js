@@ -1,6 +1,7 @@
 import { describe, expect, test } from "bun:test";
 
 import { buildCatalog } from "../js/catalog.js";
+import { config } from "../js/config.js";
 import { fixtureData, pricedVariant } from "./helpers/catalog.js";
 
 function syntheticData(names) {
@@ -16,10 +17,35 @@ function selectedNames(data, config) {
 
 const VERSION_CASES = [
   {
-    name: "4.20 sorts after 4.6",
+    // Flipped by #5: dotted tokens are decimal fractions, so 4.20 = 4.2 < 4.6.
+    name: "4.6 sorts after 4.20 under dotted-decimal order",
     data: syntheticData(["frontier-4.6", "frontier-4.20"]),
     pattern: "^frontier-\\d+(?:\\.\\d+)?$",
-    expected: "frontier-4.20",
+    expected: "frontier-4.6",
+  },
+  {
+    name: "dotted-decimal order across 4.20, 4.3, 4.5",
+    data: syntheticData(["frontier-4.20", "frontier-4.3", "frontier-4.5"]),
+    pattern: "^frontier-\\d+(?:\\.\\d+)?$",
+    expected: "frontier-4.5",
+  },
+  {
+    name: "4.3 sorts after 4.20",
+    data: syntheticData(["frontier-4.20", "frontier-4.3"]),
+    pattern: "^frontier-\\d+(?:\\.\\d+)?$",
+    expected: "frontier-4.3",
+  },
+  {
+    name: "dash-separated tokens stay integer sequences",
+    data: syntheticData(["frontier-4-8", "frontier-4-10"]),
+    pattern: "^frontier-\\d+(?:-\\d+)*$",
+    expected: "frontier-4-10",
+  },
+  {
+    name: "dotted version sorts after its bare whole number",
+    data: syntheticData(["frontier-4", "frontier-4.5"]),
+    pattern: "^frontier-\\d+(?:\\.\\d+)?$",
+    expected: "frontier-4.5",
   },
   {
     name: "5 sorts after 4.20",
@@ -63,6 +89,19 @@ describe("SOTA selection", () => {
         sota_rules: [{ pattern: "^gpt-\\d+(?:\\.\\d+)*$", limit: 2 }],
       }),
     ).toEqual(["gpt-5.5", "gpt-5.6"]);
+  });
+
+  test("frontier families from #5 select against the fixture", () => {
+    const names = selectedNames(fixtureData(), config);
+
+    expect(names).toContain("claude-fable-5");
+    expect(names).toContain("grok-4.5");
+    expect(names).toContain("grok-4.1-fast");
+    expect(names).toContain("gpt-5.6");
+    expect(names).not.toContain("grok-4.20");
+    expect(names).not.toContain("gpt-5.6-sol");
+    expect(names).not.toContain("gpt-5.6-terra");
+    expect(names).not.toContain("gpt-5.6-luna");
   });
 
   test("exact model inclusion is additive to rule selection", () => {

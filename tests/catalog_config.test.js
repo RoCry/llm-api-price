@@ -5,6 +5,7 @@ import { config } from "../js/config.js";
 import { fixture, fixtureData } from "./helpers/catalog.js";
 
 const EXPECTED_SOTA = [
+  "claude-fable-5",
   "claude-opus-4-8",
   "claude-sonnet-5",
   "deepseek-v4-pro",
@@ -14,6 +15,7 @@ const EXPECTED_SOTA = [
   "gpt-5.5-pro",
   "gpt-5.6",
   "grok-4.1-fast",
+  "grok-4.5",
   "kimi-k2-thinking",
   "llama-4-maverick",
   "minimax-m3",
@@ -32,7 +34,7 @@ describe("shipped Catalog config", () => {
   test("uses a non-empty snapshot of the checked-in price data", () => {
     expect(fixture.source).toBe("model_prices_and_context_window.json");
     expect(fixture.captured_last_updated).toBe("2026-07-09T20:52:02.466510+00:00");
-    expect(Object.keys(fixture.variants)).toHaveLength(37);
+    expect(Object.keys(fixture.variants)).toHaveLength(44);
   });
 
   for (const rule of config.sota_rules) {

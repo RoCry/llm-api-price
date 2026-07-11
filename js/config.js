@@ -5,6 +5,7 @@ export const config = {
   sota_rules: [
     { pattern: "^gpt-\\d+(?:\\.\\d+)*$" },
     { pattern: "^gpt-\\d+(?:\\.\\d+)*-pro$" },
+    { pattern: "^claude-fable-\\d+(?:-\\d+)*$" },
     { pattern: "^claude-opus-\\d+(?:-\\d+)*$" },
     { pattern: "^claude-sonnet-\\d+(?:-\\d+)*$" },
     { pattern: "^gemini-\\d+(?:\\.\\d+)*-pro$" },
@@ -13,6 +14,7 @@ export const config = {
     { pattern: "^kimi-k\\d+(?:\\.\\d+)?-thinking$" },
     { pattern: "^qwen\\d+(?:\\.\\d+)?-max$" },
     { pattern: "^deepseek-v\\d+(?:\\.\\d+)?-pro$" },
+    { pattern: "^grok-\\d+(?:\\.\\d+)*$" },
     { pattern: "^grok-\\d+(?:\\.\\d+)*-fast$" },
     { pattern: "^llama-\\d+-maverick$" },
     { pattern: "^mistral-large-[1-9](?:\\.\\d+)?$" },

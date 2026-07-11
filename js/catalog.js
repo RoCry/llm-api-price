@@ -185,14 +185,15 @@ function compareSotaCandidate(left, right) {
   return left.localeCompare(right);
 }
 
+// Version order (CONTEXT.md): dotted tokens are decimal fractions (4.20 = 4.2 < 4.5);
+// dash-separated tokens arrive as separate matches and stay integer sequences (4-10 > 4-8).
 function versionParts(name) {
-  return [...name.matchAll(/p?\d+(?:\.\d+)?/gi)].flatMap((match) =>
-    match[0]
-      .toLowerCase()
-      .replace(/^p/, "")
-      .split(".")
-      .map((part) => Number.parseInt(part, 10)),
-  );
+  return [...name.matchAll(/p?\d+(?:\.\d+)?/gi)].flatMap((match) => {
+    const [whole, fraction] = match[0].toLowerCase().replace(/^p/, "").split(".");
+    const parts = [Number.parseInt(whole, 10)];
+    if (fraction !== undefined) parts.push(Number.parseFloat(`0.${fraction}`));
+    return parts;
+  });
 }
 
 function compareVersionParts(left, right) {
