@@ -15,6 +15,8 @@ const PROVIDER_PREFIXES = new Set([
   "vertex_ai",
   "oci",
 ]);
+const SORT_KEYS = new Set(["name", "input", "output"]);
+const SORT_DIRECTIONS = new Set(["asc", "desc"]);
 
 export function buildCatalog(data, config = {}) {
   if (!data || typeof data !== "object" || Array.isArray(data)) {
@@ -41,6 +43,13 @@ export function applyView(groups, criteria = {}) {
   const sotaOnly = criteria.sotaOnly ?? false;
   const sortKey = criteria.sortKey ?? "name";
   const sortDir = criteria.sortDir ?? "asc";
+
+  if (!SORT_KEYS.has(sortKey)) {
+    throw new Error(`Unsupported sort key: ${sortKey}`);
+  }
+  if (!SORT_DIRECTIONS.has(sortDir)) {
+    throw new Error(`Unsupported sort direction: ${sortDir}`);
+  }
 
   const filtered = groups.filter((group) => {
     if (sotaOnly && !group.isSota) return false;

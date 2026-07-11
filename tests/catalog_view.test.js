@@ -144,4 +144,16 @@ describe("view criteria", () => {
 
     expect(descending).toEqual([...ascending].reverse());
   });
+
+  test("unknown sort keys fail fast", () => {
+    expect(() => applyView(groups, { sortKey: "latency" })).toThrow(
+      "Unsupported sort key: latency",
+    );
+  });
+
+  test("unknown sort directions fail fast", () => {
+    expect(() => applyView(groups, { sortDir: "sideways" })).toThrow(
+      "Unsupported sort direction: sideways",
+    );
+  });
 });
