@@ -1,24 +1,9 @@
 import { describe, expect, test } from "bun:test";
 
 import * as catalog from "../js/catalog.js";
+import { pricedVariant } from "./helpers/catalog.js";
 
 const { applyView, buildCatalog } = catalog;
-
-function pricedVariant({
-  provider,
-  input,
-  output,
-  mode = "chat",
-  supportsVision = false,
-}) {
-  return {
-    litellm_provider: provider,
-    input_cost_per_token: input,
-    output_cost_per_token: output,
-    mode,
-    supports_vision: supportsVision,
-  };
-}
 
 describe("Catalog interface", () => {
   test("exports only the two public operations", () => {

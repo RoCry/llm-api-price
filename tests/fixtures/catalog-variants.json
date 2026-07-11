@@ -1,0 +1,265 @@
+{
+  "source": "model_prices_and_context_window.json",
+  "captured_last_updated": "2026-07-09T20:52:02.466510+00:00",
+  "variants": {
+    "anthropic.claude-opus-4-7": {
+      "litellm_provider": "bedrock_converse",
+      "mode": "chat",
+      "input_cost_per_token": 0.000005,
+      "output_cost_per_token": 0.000025,
+      "supports_vision": true
+    },
+    "anthropic.claude-opus-4-8": {
+      "litellm_provider": "bedrock_converse",
+      "mode": "chat",
+      "input_cost_per_token": 0.000005,
+      "output_cost_per_token": 0.000025,
+      "supports_vision": true
+    },
+    "claude-sonnet-4-6": {
+      "litellm_provider": "anthropic",
+      "mode": "chat",
+      "input_cost_per_token": 0.000003,
+      "output_cost_per_token": 0.000015,
+      "supports_vision": true
+    },
+    "claude-sonnet-5": {
+      "litellm_provider": "anthropic",
+      "mode": "chat",
+      "input_cost_per_token": 0.000002,
+      "output_cost_per_token": 0.00001,
+      "supports_vision": true
+    },
+    "deepseek-v4-pro": {
+      "litellm_provider": "deepseek",
+      "mode": "chat",
+      "input_cost_per_token": 4.35E-7,
+      "output_cost_per_token": 8.7E-7,
+      "supports_vision": false
+    },
+    "gemini-3-pro-preview": {
+      "litellm_provider": "vertex_ai-language-models",
+      "mode": "chat",
+      "input_cost_per_token": 0.000002,
+      "output_cost_per_token": 0.000012,
+      "supports_vision": true
+    },
+    "gemini-3.1-pro-preview": {
+      "litellm_provider": "vertex_ai-language-models",
+      "mode": "chat",
+      "input_cost_per_token": 0.000002,
+      "output_cost_per_token": 0.000012,
+      "supports_vision": true
+    },
+    "gemini-3-flash-preview": {
+      "litellm_provider": "vertex_ai-language-models",
+      "mode": "chat",
+      "input_cost_per_token": 5E-7,
+      "output_cost_per_token": 0.000003,
+      "supports_vision": true
+    },
+    "gemini-3.5-flash": {
+      "litellm_provider": "vertex_ai-language-models",
+      "mode": "chat",
+      "input_cost_per_token": 0.0000015,
+      "output_cost_per_token": 0.000009,
+      "supports_vision": true
+    },
+    "cloudflare/@cf/zai-org/glm-5.2": {
+      "litellm_provider": "cloudflare",
+      "mode": "chat",
+      "input_cost_per_token": 0.0000014,
+      "output_cost_per_token": 0.0000044,
+      "supports_vision": null
+    },
+    "gpt-5.4": {
+      "litellm_provider": "openai",
+      "mode": "chat",
+      "input_cost_per_token": 0.0000025,
+      "output_cost_per_token": 0.000015,
+      "supports_vision": true
+    },
+    "gpt-5.5": {
+      "litellm_provider": "openai",
+      "mode": "chat",
+      "input_cost_per_token": 0.000005,
+      "output_cost_per_token": 0.00003,
+      "supports_vision": true
+    },
+    "gpt-5.6": {
+      "litellm_provider": "openai",
+      "mode": "chat",
+      "input_cost_per_token": 0.000005,
+      "output_cost_per_token": 0.00003,
+      "supports_vision": true
+    },
+    "gpt-5.4-pro": {
+      "litellm_provider": "openai",
+      "mode": "responses",
+      "input_cost_per_token": 0.00003,
+      "output_cost_per_token": 0.00018,
+      "supports_vision": true
+    },
+    "gpt-5.5-pro": {
+      "litellm_provider": "openai",
+      "mode": "responses",
+      "input_cost_per_token": 0.00003,
+      "output_cost_per_token": 0.00018,
+      "supports_vision": true
+    },
+    "oci/xai.grok-4.1-fast": {
+      "litellm_provider": "oci",
+      "mode": "chat",
+      "input_cost_per_token": 0.000005,
+      "output_cost_per_token": 0.000025,
+      "supports_vision": null
+    },
+    "moonshot/kimi-k2-thinking": {
+      "litellm_provider": "moonshot",
+      "mode": "chat",
+      "input_cost_per_token": 6E-7,
+      "output_cost_per_token": 0.0000025,
+      "supports_vision": null
+    },
+    "vercel_ai_gateway/meta/llama-4-maverick": {
+      "litellm_provider": "vercel_ai_gateway",
+      "mode": "chat",
+      "input_cost_per_token": 2E-7,
+      "output_cost_per_token": 6E-7,
+      "supports_vision": null
+    },
+    "minimax/MiniMax-M3": {
+      "litellm_provider": "minimax",
+      "mode": "chat",
+      "input_cost_per_token": 3E-7,
+      "output_cost_per_token": 0.0000012,
+      "supports_vision": true
+    },
+    "mistral/mistral-large-3": {
+      "litellm_provider": "mistral",
+      "mode": "chat",
+      "input_cost_per_token": 5E-7,
+      "output_cost_per_token": 0.0000015,
+      "supports_vision": true
+    },
+    "novita/qwen/qwen3-max": {
+      "litellm_provider": "novita",
+      "mode": "chat",
+      "input_cost_per_token": 0.00000211,
+      "output_cost_per_token": 0.00000845,
+      "supports_vision": null
+    },
+    "anthropic.claude-opus-4-20250514-v1:0": {
+      "litellm_provider": "bedrock_converse",
+      "mode": "chat",
+      "input_cost_per_token": 0.000015,
+      "output_cost_per_token": 0.000075,
+      "supports_vision": true
+    },
+    "us.anthropic.claude-opus-4-8": {
+      "litellm_provider": "bedrock_converse",
+      "mode": "chat",
+      "input_cost_per_token": 0.0000055,
+      "output_cost_per_token": 0.0000275,
+      "supports_vision": true
+    },
+    "eu.anthropic.claude-opus-4-8": {
+      "litellm_provider": "bedrock_converse",
+      "mode": "chat",
+      "input_cost_per_token": 0.0000055,
+      "output_cost_per_token": 0.0000275,
+      "supports_vision": true
+    },
+    "vertex_ai/gemini-3.1-pro-preview": {
+      "litellm_provider": "vertex_ai",
+      "mode": "chat",
+      "input_cost_per_token": 0.000002,
+      "output_cost_per_token": 0.000012,
+      "supports_vision": true
+    },
+    "azure/gpt-5.5-2026-04-23": {
+      "litellm_provider": "azure",
+      "mode": "chat",
+      "input_cost_per_token": 0.000005,
+      "output_cost_per_token": 0.00003,
+      "supports_vision": true
+    },
+    "anyscale/HuggingFaceH4/zephyr-7b-beta": {
+      "litellm_provider": "anyscale",
+      "mode": "chat",
+      "input_cost_per_token": 1.5E-7,
+      "output_cost_per_token": 1.5E-7,
+      "supports_vision": null
+    },
+    "azure/gpt-5-chat-latest": {
+      "litellm_provider": "azure",
+      "mode": "chat",
+      "input_cost_per_token": 0.00000125,
+      "output_cost_per_token": 0.00001,
+      "supports_vision": true
+    },
+    "deepinfra/nvidia/NVIDIA-Nemotron-Nano-9B-v2": {
+      "litellm_provider": "deepinfra",
+      "mode": "chat",
+      "input_cost_per_token": 4E-8,
+      "output_cost_per_token": 1.6E-7,
+      "supports_vision": null
+    },
+    "vertex_ai/claude-opus-4-8@default": {
+      "litellm_provider": "vertex_ai-anthropic_models",
+      "mode": "chat",
+      "input_cost_per_token": 0.000005,
+      "output_cost_per_token": 0.000025,
+      "supports_vision": true
+    },
+    "amazon.nova-lite-v1:0": {
+      "litellm_provider": "bedrock_converse",
+      "mode": "chat",
+      "input_cost_per_token": 6e-08,
+      "output_cost_per_token": 2.4e-07,
+      "supports_vision": true
+    },
+    "moonshot/kimi-k2.5": {
+      "litellm_provider": "moonshot",
+      "mode": "chat",
+      "input_cost_per_token": 6E-7,
+      "output_cost_per_token": 0.000003,
+      "supports_vision": true
+    },
+    "moonshot/kimi-k2.6": {
+      "litellm_provider": "moonshot",
+      "mode": "chat",
+      "input_cost_per_token": 9.5E-7,
+      "output_cost_per_token": 0.000004,
+      "supports_vision": true
+    },
+    "fireworks_ai/accounts/fireworks/models/glm-4p5": {
+      "litellm_provider": "fireworks_ai",
+      "mode": "chat",
+      "input_cost_per_token": 5.5E-7,
+      "output_cost_per_token": 0.00000219,
+      "supports_vision": null
+    },
+    "fireworks_ai/accounts/fireworks/models/glm-4p6": {
+      "litellm_provider": "fireworks_ai",
+      "mode": "chat",
+      "input_cost_per_token": 5.5E-7,
+      "output_cost_per_token": 0.00000219,
+      "supports_vision": null
+    },
+    "twelvelabs.pegasus-1-2-v1:0": {
+      "litellm_provider": "bedrock",
+      "mode": "chat",
+      "input_cost_per_token": null,
+      "output_cost_per_token": 0.0000075,
+      "supports_vision": null
+    },
+    "mistral/mistral-embed": {
+      "litellm_provider": "mistral",
+      "mode": "embedding",
+      "input_cost_per_token": 1E-7,
+      "output_cost_per_token": null,
+      "supports_vision": null
+    }
+  }
+}
