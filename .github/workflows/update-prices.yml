@@ -8,7 +8,7 @@ on:
     branches:
       - master
     paths:
-      - '.github/scripts/update_prices.py'
+      - 'update_prices.py'
       - '.github/workflows/update-prices.yml'
       - 'tests/**'
       - 'pyproject.toml'
@@ -61,6 +61,6 @@ jobs:
         run: uv sync --locked
 
       - name: Check for updates and commit if needed
-        run: uv run python .github/scripts/update_prices.py
+        run: uv run python update_prices.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

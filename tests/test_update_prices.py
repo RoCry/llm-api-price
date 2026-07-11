@@ -1,4 +1,3 @@
-import importlib.util
 import json
 import tempfile
 import unittest
@@ -6,11 +5,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from unittest import mock
 
-SCRIPT_PATH = Path(__file__).resolve().parents[1] / ".github" / "scripts" / "update_prices.py"
-SPEC = importlib.util.spec_from_file_location("update_prices", SCRIPT_PATH)
-update_prices = importlib.util.module_from_spec(SPEC)
-assert SPEC.loader is not None
-SPEC.loader.exec_module(update_prices)
+import update_prices
 
 
 class GenerateDiffMessageTest(unittest.TestCase):
