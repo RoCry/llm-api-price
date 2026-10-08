@@ -53255,7 +53255,7 @@
     ]
   },
   "azure/sora-2": {
-    "deprecation_date": "2026-10-15",
+    "deprecation_date": "2026-11-02",
     "litellm_provider": "azure",
     "mode": "video_generation",
     "output_cost_per_video_per_second": 0.1,
@@ -81686,5 +81686,5 @@
     "prompt_cache_min_tokens": 512,
     "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
   },
-  "last_updated": "2026-10-08T10:21:44.040402+00:00"
+  "last_updated": "2026-10-08T17:48:55.958569+00:00"
 }
