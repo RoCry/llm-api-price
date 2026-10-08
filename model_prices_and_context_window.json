@@ -34542,7 +34542,8 @@
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/batch",
-      "/v1/responses"
+      "/v1/responses",
+      "/v1/decisions"
     ],
     "supported_modalities": [
       "text",
@@ -58397,6 +58398,7 @@
     "supports_max_reasoning_effort": true,
     "supports_minimal_reasoning_effort": false,
     "supports_prompt_caching": true,
+    "supports_prompt_cache_breakpoint": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
@@ -58440,6 +58442,7 @@
     "supports_max_reasoning_effort": true,
     "supports_minimal_reasoning_effort": false,
     "supports_prompt_caching": true,
+    "supports_prompt_cache_breakpoint": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
@@ -58472,6 +58475,7 @@
     "supports_function_calling": true,
     "supports_minimal_reasoning_effort": false,
     "supports_prompt_caching": true,
+    "supports_prompt_cache_breakpoint": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
@@ -58548,6 +58552,7 @@
     "supports_max_reasoning_effort": true,
     "supports_minimal_reasoning_effort": false,
     "supports_prompt_caching": true,
+    "supports_prompt_cache_breakpoint": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
@@ -58935,6 +58940,7 @@
     "supports_minimal_reasoning_effort": false,
     "supports_none_reasoning_effort": false,
     "supports_prompt_caching": true,
+    "supports_prompt_cache_breakpoint": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
@@ -58973,6 +58979,7 @@
     "supports_minimal_reasoning_effort": false,
     "supports_none_reasoning_effort": false,
     "supports_prompt_caching": true,
+    "supports_prompt_cache_breakpoint": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
@@ -59011,6 +59018,7 @@
     "supports_minimal_reasoning_effort": false,
     "supports_none_reasoning_effort": false,
     "supports_prompt_caching": true,
+    "supports_prompt_cache_breakpoint": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
@@ -80484,6 +80492,7 @@
     "supports_minimal_reasoning_effort": false,
     "supports_none_reasoning_effort": false,
     "supports_prompt_caching": true,
+    "supports_prompt_cache_breakpoint": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
@@ -81677,5 +81686,5 @@
     "prompt_cache_min_tokens": 512,
     "source": "https://cloud.google.com/vertex-ai/generative-ai/pricing"
   },
-  "last_updated": "2026-10-08T02:39:24.367262+00:00"
+  "last_updated": "2026-10-08T10:21:44.040402+00:00"
 }
