@@ -21936,6 +21936,7 @@
     ],
     "supports_function_calling": true,
     "supports_reasoning": true,
+    "supports_sampling_params": false,
     "supports_tool_choice": true,
     "supports_vision": true
   },
@@ -21960,6 +21961,7 @@
     ],
     "supports_function_calling": true,
     "supports_reasoning": true,
+    "supports_sampling_params": false,
     "supports_tool_choice": true,
     "supports_vision": true
   },
@@ -21991,6 +21993,7 @@
     "supports_function_calling": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
+    "supports_sampling_params": false,
     "supports_tool_choice": true,
     "supports_vision": true
   },
@@ -22054,6 +22057,7 @@
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
+    "supports_sampling_params": false,
     "supports_tool_choice": true,
     "supports_vision": true
   },
@@ -29478,6 +29482,7 @@
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
+    "supports_sampling_params": false,
     "supports_system_messages": true,
     "supports_tool_choice": true,
     "supports_url_context": true,
@@ -30248,6 +30253,7 @@
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
+    "supports_sampling_params": false,
     "supports_system_messages": true,
     "supports_tool_choice": true,
     "supports_url_context": true,
@@ -30313,6 +30319,7 @@
     "supports_reasoning": true,
     "supports_minimal_reasoning_effort": false,
     "supports_response_schema": true,
+    "supports_sampling_params": false,
     "supports_system_messages": true,
     "supports_tool_choice": true,
     "supports_url_context": true,
@@ -30393,6 +30400,7 @@
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
+    "supports_sampling_params": false,
     "supports_system_messages": true,
     "supports_tool_choice": true,
     "supports_url_context": true,
@@ -30442,6 +30450,7 @@
     "supports_reasoning": true,
     "supports_minimal_reasoning_effort": false,
     "supports_response_schema": true,
+    "supports_sampling_params": false,
     "supports_system_messages": true,
     "supports_tool_choice": false,
     "supports_url_context": false,
@@ -31924,6 +31933,7 @@
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
+    "supports_sampling_params": false,
     "supports_system_messages": true,
     "supports_tool_choice": true,
     "supports_url_context": true,
@@ -32120,6 +32130,7 @@
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
+    "supports_sampling_params": false,
     "supports_system_messages": true,
     "supports_tool_choice": true,
     "supports_url_context": true,
@@ -32186,6 +32197,7 @@
     "supports_reasoning": true,
     "supports_minimal_reasoning_effort": false,
     "supports_response_schema": true,
+    "supports_sampling_params": false,
     "supports_system_messages": true,
     "supports_tool_choice": true,
     "supports_url_context": true,
@@ -32252,6 +32264,7 @@
     "supports_reasoning": true,
     "supports_minimal_reasoning_effort": false,
     "supports_response_schema": true,
+    "supports_sampling_params": false,
     "supports_system_messages": true,
     "supports_tool_choice": true,
     "supports_url_context": true,
@@ -32645,6 +32658,7 @@
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
+    "supports_sampling_params": false,
     "supports_system_messages": true,
     "supports_tool_choice": true,
     "supports_url_context": true,
@@ -32710,6 +32724,7 @@
     "supports_reasoning": true,
     "supports_minimal_reasoning_effort": false,
     "supports_response_schema": true,
+    "supports_sampling_params": false,
     "supports_system_messages": true,
     "supports_tool_choice": true,
     "supports_url_context": true,
@@ -32790,6 +32805,7 @@
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
+    "supports_sampling_params": false,
     "supports_system_messages": true,
     "supports_tool_choice": true,
     "supports_url_context": true,
@@ -32839,6 +32855,7 @@
     "supports_reasoning": true,
     "supports_minimal_reasoning_effort": false,
     "supports_response_schema": true,
+    "supports_sampling_params": false,
     "supports_system_messages": true,
     "supports_tool_choice": false,
     "supports_url_context": false,
@@ -33433,6 +33450,7 @@
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
     "supports_reasoning": true,
+    "supports_sampling_params": false,
     "supports_vision": true
   },
   "github_copilot/gemini-3.8-flash": {
@@ -33451,6 +33469,7 @@
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
     "supports_reasoning": true,
+    "supports_sampling_params": false,
     "supports_vision": true
   },
   "github_copilot/gpt-3.5-turbo": {
@@ -52850,6 +52869,7 @@
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
+    "supports_sampling_params": false,
     "supports_system_messages": true,
     "supports_tool_choice": true,
     "supports_url_context": true,
@@ -66218,6 +66238,7 @@
     "supports_tool_choice": true,
     "supports_response_schema": true,
     "supports_reasoning": true,
+    "supports_sampling_params": false,
     "supports_vision": true,
     "source": "https://deepinfra.com/pricing",
     "supports_audio_input": true
@@ -69659,6 +69680,7 @@
   "perplexity/google/gemini-3.5-flash-lite": {
     "litellm_provider": "perplexity",
     "mode": "responses",
+    "supports_sampling_params": false,
     "supports_web_search": true,
     "supports_function_calling": true,
     "input_cost_per_token": 3e-07,
@@ -69669,6 +69691,7 @@
   "perplexity/google/gemini-3.6-flash": {
     "litellm_provider": "perplexity",
     "mode": "responses",
+    "supports_sampling_params": false,
     "supports_web_search": true,
     "supports_function_calling": true,
     "input_cost_per_token": 1.5e-06,
@@ -69679,6 +69702,7 @@
   "perplexity/google/gemini-3.7-flash": {
     "litellm_provider": "perplexity",
     "mode": "responses",
+    "supports_sampling_params": false,
     "supports_web_search": true,
     "supports_function_calling": true,
     "input_cost_per_token": 7.5e-07,
@@ -71770,6 +71794,7 @@
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
+    "supports_sampling_params": false,
     "supports_vision": true,
     "supports_web_search": true
   },
@@ -71787,6 +71812,7 @@
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
+    "supports_sampling_params": false,
     "supports_vision": true,
     "supports_web_search": true
   },
@@ -74719,6 +74745,7 @@
   "perplexity/google/gemini-3.8-flash": {
     "litellm_provider": "perplexity",
     "mode": "responses",
+    "supports_sampling_params": false,
     "input_cost_per_token": 7.5e-07,
     "output_cost_per_token": 3.75e-06,
     "cache_read_input_token_cost": 7.5e-08,
@@ -77381,5 +77408,63 @@
     "supports_tool_choice": true,
     "supports_vision": true
   },
-  "last_updated": "2026-10-20T23:45:42.846373+00:00"
+  "wandb/reflection/Beam-1.0-501B-A23B": {
+    "cache_read_input_token_cost": 1e-07,
+    "input_cost_per_token": 1e-06,
+    "litellm_provider": "wandb",
+    "max_input_tokens": 1049000,
+    "mode": "chat",
+    "output_cost_per_token": 3e-06,
+    "source": "https://www.coreweave.com/products/coreweave-forge/serverless-inference",
+    "supports_function_calling": true,
+    "supports_prompt_caching": true,
+    "supports_reasoning": true,
+    "supports_response_schema": true,
+    "supports_tool_choice": true,
+    "supports_vision": false
+  },
+  "wandb/zai-org/GLM-5.3": {
+    "cache_read_input_token_cost": 1.9e-07,
+    "input_cost_per_token": 1.2e-06,
+    "litellm_provider": "wandb",
+    "max_input_tokens": 1049000,
+    "mode": "chat",
+    "output_cost_per_token": 4e-06,
+    "source": "https://www.coreweave.com/products/coreweave-forge/serverless-inference",
+    "supports_function_calling": true,
+    "supports_prompt_caching": true,
+    "supports_reasoning": true,
+    "supports_response_schema": true,
+    "supports_tool_choice": true,
+    "supports_vision": false
+  },
+  "azure_ai/MAI-Code-1.1-Flash": {
+    "cache_read_input_token_cost": 2e-08,
+    "deprecation_date": "2026-12-09",
+    "input_cost_per_token": 2e-07,
+    "litellm_provider": "azure_ai",
+    "max_input_tokens": 256000,
+    "max_output_tokens": 64000,
+    "max_tokens": 64000,
+    "mode": "chat",
+    "output_cost_per_token": 1.2e-06,
+    "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
+    "supported_endpoints": [
+      "/v1/chat/completions",
+      "/v1/responses"
+    ],
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "text"
+    ],
+    "supports_function_calling": true,
+    "supports_prompt_caching": true,
+    "supports_reasoning": true,
+    "supports_tool_choice": true,
+    "supports_vision": true
+  },
+  "last_updated": "2026-10-21T04:26:08.160409+00:00"
 }
