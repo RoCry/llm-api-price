@@ -12159,16 +12159,19 @@
   },
   "azure/tts-1": {
     "deprecation_date": "2026-12-15",
+    "deprecation_source": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule",
     "input_cost_per_character": 1.5e-05,
     "litellm_provider": "azure",
-    "mode": "audio_speech"
+    "mode": "audio_speech",
+    "source": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
   },
   "azure/tts-1-hd": {
     "deprecation_date": "2026-12-15",
+    "deprecation_source": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule",
     "input_cost_per_character": 3.3e-05,
     "litellm_provider": "azure",
     "mode": "audio_speech",
-    "source": "https://azure.microsoft.com/en-us/pricing/details/azure-openai/"
+    "source": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule"
   },
   "azure/us/gpt-4.1-2025-04-14": {
     "deprecation_date": "2027-04-14",
@@ -12921,11 +12924,13 @@
     "supports_vision": true
   },
   "azure/whisper-1": {
-    "deprecation_date": "2026-12-15",
+    "deprecation_date": "2027-02-26",
+    "deprecation_source": "https://management.azure.com/subscriptions/a88257a5-3323-4ef9-95bf-5681a46c9624/providers/Microsoft.CognitiveServices/locations/eastus/models?api-version=2024-10-01",
     "input_cost_per_second": 0.0001,
     "litellm_provider": "azure",
     "mode": "audio_transcription",
-    "output_cost_per_second": 0.0001
+    "output_cost_per_second": 0.0001,
+    "source": "https://management.azure.com/subscriptions/a88257a5-3323-4ef9-95bf-5681a46c9624/providers/Microsoft.CognitiveServices/locations/eastus/models?api-version=2024-10-01"
   },
   "azure_ai/Cohere-embed-v3-english": {
     "deprecation_date": "2027-02-15",
@@ -13899,12 +13904,12 @@
   "azure_ai/jais-30b-chat": {
     "deprecation_date": "2026-01-30",
     "deprecation_source": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/retired-models",
-    "input_cost_per_token": 0.0032,
+    "input_cost_per_token": 3.2e-06,
     "litellm_provider": "azure_ai",
     "max_input_tokens": 8192,
     "max_output_tokens": 8192,
     "mode": "chat",
-    "output_cost_per_token": 0.00971,
+    "output_cost_per_token": 9.71e-06,
     "source": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/retired-models",
     "supports_pdf_input": false
   },
@@ -31832,7 +31837,7 @@
     "input_cost_per_audio_token_batches": 2.5e-07
   },
   "gemini/gemini-embedding-2-preview": {
-    "deprecation_date": "2026-08-10",
+    "deprecation_date": "2026-11-06",
     "deprecation_source": "https://ai.google.dev/gemini-api/docs/deprecations",
     "input_cost_per_audio_token": 6.5e-06,
     "input_cost_per_audio_token_batches": 3.25e-06,
@@ -55444,8 +55449,8 @@
   "watsonx/core42/jais-13b-chat": {
     "max_input_tokens": 8192,
     "max_output_tokens": 8192,
-    "input_cost_per_token": 0.0005,
-    "output_cost_per_token": 0.002,
+    "input_cost_per_token": 1.8e-06,
+    "output_cost_per_token": 1.8e-06,
     "litellm_provider": "watsonx",
     "mode": "chat",
     "supports_function_calling": false,
@@ -64646,6 +64651,39 @@
     "supports_tool_choice": true,
     "supports_vision": false
   },
+  "tencent/hy4": {
+    "cache_read_input_token_cost": 4.2e-08,
+    "comment": "TokenHub bills Hy4 at 50% of list until 2026-12-31 23:59:59 Beijing time; these are the list rates.",
+    "input_cost_per_token": 8.34e-07,
+    "input_cost_per_token_cache_hit": 4.2e-08,
+    "litellm_provider": "tencent",
+    "max_input_tokens": 960000,
+    "max_output_tokens": 64000,
+    "mode": "chat",
+    "output_cost_per_token": 2.501e-06,
+    "source": "https://www.tencentcloud.com/document/product/1300/78937",
+    "supports_function_calling": true,
+    "supports_prompt_caching": true,
+    "supports_reasoning": true,
+    "supports_response_schema": true,
+    "supports_vision": true
+  },
+  "tencent/hy4-preview": {
+    "cache_read_input_token_cost": 4.2e-08,
+    "comment": "TokenHub bills Hy4 preview at 50% of list until 2026-12-31 23:59:59 Beijing time; these are the list rates.",
+    "input_cost_per_token": 8.34e-07,
+    "input_cost_per_token_cache_hit": 4.2e-08,
+    "litellm_provider": "tencent",
+    "max_input_tokens": 960000,
+    "max_output_tokens": 64000,
+    "mode": "chat",
+    "output_cost_per_token": 2.501e-06,
+    "source": "https://www.tencentcloud.com/document/product/1300/78937",
+    "supports_function_calling": true,
+    "supports_prompt_caching": true,
+    "supports_reasoning": true,
+    "supports_response_schema": true
+  },
   "tencent/minimax-m3": {
     "cache_creation_input_token_cost": 0.0,
     "cache_read_input_token_cost": 6e-08,
@@ -71372,6 +71410,7 @@
     "cache_read_input_token_cost": 5e-07,
     "input_cost_per_token_above_272k_tokens": 1e-05,
     "output_cost_per_token_above_272k_tokens": 4.5e-05,
+    "cache_read_input_token_cost_above_272k_tokens": 1e-06,
     "source": "https://docs.perplexity.ai/docs/agent-api/models"
   },
   "perplexity/openai/gpt-5.4": {
@@ -77542,13 +77581,13 @@
     "supports_vision": true
   },
   "azure/whisper": {
-    "deprecation_date": "2026-12-15",
-    "deprecation_source": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule",
+    "deprecation_date": "2027-02-26",
+    "deprecation_source": "https://management.azure.com/subscriptions/a88257a5-3323-4ef9-95bf-5681a46c9624/providers/Microsoft.CognitiveServices/locations/eastus/models?api-version=2024-10-01",
     "input_cost_per_second": 0.0001,
     "litellm_provider": "azure",
     "mode": "audio_transcription",
     "output_cost_per_second": 0.0001,
-    "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'"
+    "source": "https://management.azure.com/subscriptions/a88257a5-3323-4ef9-95bf-5681a46c9624/providers/Microsoft.CognitiveServices/locations/eastus/models?api-version=2024-10-01"
   },
   "gemini/gemini-nano-banana-2.1": {
     "input_cost_per_token": 1.5e-06,
@@ -83669,13 +83708,16 @@
     "mode": "chat",
     "max_input_tokens": 1000000,
     "max_output_tokens": 393216,
-    "input_cost_per_token": 3e-07,
-    "output_cost_per_token": 1.2e-06,
+    "input_cost_per_token": 2e-07,
+    "output_cost_per_token": 8e-07,
     "supports_system_messages": true,
     "supports_vision": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/deepseek-v4-1-flash-1017"
+    "source": "https://empiriolabs.ai/models/deepseek-v4-1-flash-1017",
+    "cache_read_input_token_cost": 2e-08,
+    "supports_prompt_caching": true,
+    "supports_function_calling": true
   },
   "empiriolabs/deepseek-v4-flash-0731": {
     "litellm_provider": "empiriolabs",
@@ -83687,7 +83729,8 @@
     "supports_system_messages": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/deepseek-v4-flash-0731"
+    "source": "https://empiriolabs.ai/models/deepseek-v4-flash-0731",
+    "supports_function_calling": true
   },
   "empiriolabs/deepseek-v4-flash-0731:variant1": {
     "litellm_provider": "empiriolabs",
@@ -83699,7 +83742,8 @@
     "supports_system_messages": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/deepseek-v4-flash-0731"
+    "source": "https://empiriolabs.ai/models/deepseek-v4-flash-0731",
+    "supports_function_calling": true
   },
   "empiriolabs/deepseek-v4-pro": {
     "litellm_provider": "empiriolabs",
@@ -83711,7 +83755,8 @@
     "supports_system_messages": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/deepseek-v4-pro"
+    "source": "https://empiriolabs.ai/models/deepseek-v4-pro",
+    "supports_function_calling": true
   },
   "empiriolabs/deepseek-v4-pro-0813": {
     "litellm_provider": "empiriolabs",
@@ -83723,7 +83768,8 @@
     "supports_system_messages": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/deepseek-v4-pro-0813"
+    "source": "https://empiriolabs.ai/models/deepseek-v4-pro-0813",
+    "supports_function_calling": true
   },
   "empiriolabs/deepseek-v4-pro:variant1": {
     "litellm_provider": "empiriolabs",
@@ -83741,7 +83787,8 @@
       "search_context_size_high": 0.02
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/deepseek-v4-pro"
+    "source": "https://empiriolabs.ai/models/deepseek-v4-pro",
+    "supports_function_calling": true
   },
   "empiriolabs/deepseek-v4-pro:variant2": {
     "litellm_provider": "empiriolabs",
@@ -83761,7 +83808,8 @@
     },
     "supports_prompt_caching": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/deepseek-v4-pro"
+    "source": "https://empiriolabs.ai/models/deepseek-v4-pro",
+    "supports_function_calling": true
   },
   "empiriolabs/deepseek-v4-pro:variant3": {
     "litellm_provider": "empiriolabs",
@@ -83773,7 +83821,8 @@
     "supports_system_messages": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/deepseek-v4-pro"
+    "source": "https://empiriolabs.ai/models/deepseek-v4-pro",
+    "supports_function_calling": true
   },
   "empiriolabs/fugu-max": {
     "litellm_provider": "empiriolabs",
@@ -83971,7 +84020,8 @@
     },
     "supports_prompt_caching": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/glm-5-2"
+    "source": "https://empiriolabs.ai/models/glm-5-2",
+    "supports_function_calling": true
   },
   "empiriolabs/glm-5-2:variant2": {
     "litellm_provider": "empiriolabs",
@@ -83989,7 +84039,8 @@
       "search_context_size_high": 0.013
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/glm-5-2"
+    "source": "https://empiriolabs.ai/models/glm-5-2",
+    "supports_function_calling": true
   },
   "empiriolabs/glm-5-3": {
     "litellm_provider": "empiriolabs",
@@ -84043,7 +84094,8 @@
     "supports_reasoning": true,
     "supports_prompt_caching": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/kimi-k2-6"
+    "source": "https://empiriolabs.ai/models/kimi-k2-6",
+    "supports_function_calling": true
   },
   "empiriolabs/kimi-k2-7-code": {
     "litellm_provider": "empiriolabs",
@@ -84062,7 +84114,8 @@
       "search_context_size_high": 0.015
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/kimi-k2-7-code"
+    "source": "https://empiriolabs.ai/models/kimi-k2-7-code",
+    "supports_function_calling": true
   },
   "empiriolabs/kimi-k2-7-code-highspeed": {
     "litellm_provider": "empiriolabs",
@@ -84081,7 +84134,8 @@
       "search_context_size_high": 0.015
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/kimi-k2-7-code-highspeed"
+    "source": "https://empiriolabs.ai/models/kimi-k2-7-code-highspeed",
+    "supports_function_calling": true
   },
   "empiriolabs/kimi-k2-7-code:variant1": {
     "litellm_provider": "empiriolabs",
@@ -84102,7 +84156,8 @@
     },
     "supports_prompt_caching": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/kimi-k2-7-code"
+    "source": "https://empiriolabs.ai/models/kimi-k2-7-code",
+    "supports_function_calling": true
   },
   "empiriolabs/kimi-k3": {
     "litellm_provider": "empiriolabs",
@@ -84121,7 +84176,8 @@
       "search_context_size_high": 0.015
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/kimi-k3"
+    "source": "https://empiriolabs.ai/models/kimi-k3",
+    "supports_function_calling": true
   },
   "empiriolabs/kimi-k3-1-pro": {
     "litellm_provider": "empiriolabs",
@@ -84163,7 +84219,8 @@
     },
     "supports_response_schema": true,
     "supports_audio_input": true,
-    "source": "https://empiriolabs.ai/models/mimo-v2-6-flash"
+    "source": "https://empiriolabs.ai/models/mimo-v2-6-flash",
+    "supports_function_calling": true
   },
   "empiriolabs/mimo-v2-6-pro": {
     "litellm_provider": "empiriolabs",
@@ -84183,7 +84240,8 @@
     },
     "supports_response_schema": true,
     "supports_audio_input": true,
-    "source": "https://empiriolabs.ai/models/mimo-v2-6-pro"
+    "source": "https://empiriolabs.ai/models/mimo-v2-6-pro",
+    "supports_function_calling": true
   },
   "empiriolabs/mimo-v2-6-pro-ultraspeed": {
     "litellm_provider": "empiriolabs",
@@ -84197,7 +84255,8 @@
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_audio_input": true,
-    "source": "https://empiriolabs.ai/models/mimo-v2-6-pro-ultraspeed"
+    "source": "https://empiriolabs.ai/models/mimo-v2-6-pro-ultraspeed",
+    "supports_function_calling": true
   },
   "empiriolabs/minimax-m2-7": {
     "litellm_provider": "empiriolabs",
@@ -84312,7 +84371,8 @@
       "search_context_size_high": 0.14
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/mistral-small-4"
+    "source": "https://empiriolabs.ai/models/mistral-small-4",
+    "supports_function_calling": true
   },
   "empiriolabs/muse-glimmer-30b": {
     "litellm_provider": "empiriolabs",
@@ -84327,7 +84387,8 @@
     "supports_reasoning": true,
     "supports_prompt_caching": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/muse-glimmer-30b"
+    "source": "https://empiriolabs.ai/models/muse-glimmer-30b",
+    "supports_function_calling": true
   },
   "empiriolabs/muse-spark-1-1": {
     "litellm_provider": "empiriolabs",
@@ -84393,7 +84454,8 @@
     "supports_system_messages": true,
     "supports_vision": true,
     "supports_prompt_caching": true,
-    "source": "https://empiriolabs.ai/models/nova-lite-1-0"
+    "source": "https://empiriolabs.ai/models/nova-lite-1-0",
+    "supports_function_calling": true
   },
   "empiriolabs/nova-lite-2": {
     "litellm_provider": "empiriolabs",
@@ -84407,7 +84469,8 @@
     "supports_vision": true,
     "supports_reasoning": true,
     "supports_prompt_caching": true,
-    "source": "https://empiriolabs.ai/models/nova-lite-2"
+    "source": "https://empiriolabs.ai/models/nova-lite-2",
+    "supports_function_calling": true
   },
   "empiriolabs/nova-micro-1-0": {
     "litellm_provider": "empiriolabs",
@@ -84419,7 +84482,8 @@
     "cache_read_input_token_cost": 2.24e-08,
     "supports_system_messages": true,
     "supports_prompt_caching": true,
-    "source": "https://empiriolabs.ai/models/nova-micro-1-0"
+    "source": "https://empiriolabs.ai/models/nova-micro-1-0",
+    "supports_function_calling": true
   },
   "empiriolabs/nova-pro-1-0": {
     "litellm_provider": "empiriolabs",
@@ -84430,7 +84494,8 @@
     "output_cost_per_token": 9.6e-06,
     "supports_system_messages": true,
     "supports_vision": true,
-    "source": "https://empiriolabs.ai/models/nova-pro-1-0"
+    "source": "https://empiriolabs.ai/models/nova-pro-1-0",
+    "supports_function_calling": true
   },
   "empiriolabs/perplexity-advanced-deep-research": {
     "litellm_provider": "empiriolabs",
@@ -84530,7 +84595,8 @@
       "search_context_size_high": 0.01
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-5-122b-a10b"
+    "source": "https://empiriolabs.ai/models/qwen3-5-122b-a10b",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-5-27b": {
     "litellm_provider": "empiriolabs",
@@ -84551,7 +84617,8 @@
       "search_context_size_high": 0.01
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-5-27b"
+    "source": "https://empiriolabs.ai/models/qwen3-5-27b",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-5-35b-a3b": {
     "litellm_provider": "empiriolabs",
@@ -84572,7 +84639,8 @@
       "search_context_size_high": 0.01
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-5-35b-a3b"
+    "source": "https://empiriolabs.ai/models/qwen3-5-35b-a3b",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-5-397b-a17b": {
     "litellm_provider": "empiriolabs",
@@ -84593,7 +84661,8 @@
       "search_context_size_high": 0.01
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-5-397b-a17b"
+    "source": "https://empiriolabs.ai/models/qwen3-5-397b-a17b",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-5-4b": {
     "litellm_provider": "empiriolabs",
@@ -84644,7 +84713,8 @@
       "search_context_size_high": 0.015
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-5-flash"
+    "source": "https://empiriolabs.ai/models/qwen3-5-flash",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-5-flash:variant1": {
     "litellm_provider": "empiriolabs",
@@ -84667,7 +84737,8 @@
       "search_context_size_high": 0.01
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-5-flash"
+    "source": "https://empiriolabs.ai/models/qwen3-5-flash",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-5-omni-flash": {
     "litellm_provider": "empiriolabs",
@@ -84685,7 +84756,8 @@
       "search_context_size_high": 0.015
     },
     "supports_audio_input": true,
-    "source": "https://empiriolabs.ai/models/qwen3-5-omni-flash"
+    "source": "https://empiriolabs.ai/models/qwen3-5-omni-flash",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-5-omni-plus": {
     "litellm_provider": "empiriolabs",
@@ -84704,7 +84776,8 @@
     },
     "supports_response_schema": true,
     "supports_audio_input": true,
-    "source": "https://empiriolabs.ai/models/qwen3-5-omni-plus"
+    "source": "https://empiriolabs.ai/models/qwen3-5-omni-plus",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-5-plus": {
     "litellm_provider": "empiriolabs",
@@ -84713,8 +84786,8 @@
     "max_output_tokens": 65536,
     "input_cost_per_token": 3.6e-07,
     "output_cost_per_token": 2.21e-06,
-    "input_cost_per_token_above_256k_tokens": 1.08e-06,
-    "output_cost_per_token_above_256k_tokens": 6.62e-06,
+    "input_cost_per_token_above_256k_tokens": 4.5e-07,
+    "output_cost_per_token_above_256k_tokens": 2.76e-06,
     "supports_system_messages": true,
     "supports_vision": true,
     "supports_reasoning": true,
@@ -84725,7 +84798,8 @@
       "search_context_size_high": 0.015
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-5-plus"
+    "source": "https://empiriolabs.ai/models/qwen3-5-plus",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-5-plus:variant1": {
     "litellm_provider": "empiriolabs",
@@ -84748,7 +84822,8 @@
       "search_context_size_high": 0.01
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-5-plus"
+    "source": "https://empiriolabs.ai/models/qwen3-5-plus",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-6-27b": {
     "litellm_provider": "empiriolabs",
@@ -84767,7 +84842,8 @@
       "search_context_size_high": 0.01
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-6-27b"
+    "source": "https://empiriolabs.ai/models/qwen3-6-27b",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-6-35b-a3b": {
     "litellm_provider": "empiriolabs",
@@ -84781,7 +84857,8 @@
     "supports_reasoning": true,
     "supports_prompt_caching": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-6-35b-a3b"
+    "source": "https://empiriolabs.ai/models/qwen3-6-35b-a3b",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-6-flash": {
     "litellm_provider": "empiriolabs",
@@ -84802,7 +84879,8 @@
       "search_context_size_high": 0.02
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-6-flash"
+    "source": "https://empiriolabs.ai/models/qwen3-6-flash",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-6-flash:variant1": {
     "litellm_provider": "empiriolabs",
@@ -84823,7 +84901,8 @@
       "search_context_size_high": 0.01
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-6-flash"
+    "source": "https://empiriolabs.ai/models/qwen3-6-flash",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-6-plus": {
     "litellm_provider": "empiriolabs",
@@ -84844,7 +84923,8 @@
       "search_context_size_high": 0.026
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-6-plus"
+    "source": "https://empiriolabs.ai/models/qwen3-6-plus",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-6-plus:variant1": {
     "litellm_provider": "empiriolabs",
@@ -84865,7 +84945,8 @@
       "search_context_size_high": 0.01
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-6-plus"
+    "source": "https://empiriolabs.ai/models/qwen3-6-plus",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-7-flash": {
     "litellm_provider": "empiriolabs",
@@ -84892,7 +84973,8 @@
     },
     "supports_prompt_caching": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-7-flash"
+    "source": "https://empiriolabs.ai/models/qwen3-7-flash",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-7-flash:variant1": {
     "litellm_provider": "empiriolabs",
@@ -84919,7 +85001,8 @@
     },
     "supports_prompt_caching": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-7-flash"
+    "source": "https://empiriolabs.ai/models/qwen3-7-flash",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-7-max": {
     "litellm_provider": "empiriolabs",
@@ -84937,7 +85020,8 @@
       "search_context_size_high": 0.02
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-7-max"
+    "source": "https://empiriolabs.ai/models/qwen3-7-max",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-7-max:variant1": {
     "litellm_provider": "empiriolabs",
@@ -84955,7 +85039,8 @@
       "search_context_size_high": 0.01
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-7-max"
+    "source": "https://empiriolabs.ai/models/qwen3-7-max",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-7-plus": {
     "litellm_provider": "empiriolabs",
@@ -84976,7 +85061,8 @@
       "search_context_size_high": 0.03
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-7-plus"
+    "source": "https://empiriolabs.ai/models/qwen3-7-plus",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-7-plus:variant1": {
     "litellm_provider": "empiriolabs",
@@ -85000,7 +85086,8 @@
     },
     "supports_prompt_caching": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-7-plus"
+    "source": "https://empiriolabs.ai/models/qwen3-7-plus",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-8-27b": {
     "litellm_provider": "empiriolabs",
@@ -85035,7 +85122,8 @@
       "search_context_size_high": 0.02
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-8-flash"
+    "source": "https://empiriolabs.ai/models/qwen3-8-flash",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-8-max": {
     "litellm_provider": "empiriolabs",
@@ -85054,7 +85142,8 @@
       "search_context_size_high": 0.02
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-8-max"
+    "source": "https://empiriolabs.ai/models/qwen3-8-max",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-8-max-0902": {
     "litellm_provider": "empiriolabs",
@@ -85073,7 +85162,8 @@
       "search_context_size_high": 0.02
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-8-max-0902"
+    "source": "https://empiriolabs.ai/models/qwen3-8-max-0902",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-8-max:variant1": {
     "litellm_provider": "empiriolabs",
@@ -85092,7 +85182,8 @@
       "search_context_size_high": 0.01
     },
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/qwen3-8-max"
+    "source": "https://empiriolabs.ai/models/qwen3-8-max",
+    "supports_function_calling": true
   },
   "empiriolabs/qwen3-8-omni-flash": {
     "litellm_provider": "empiriolabs",
@@ -85112,7 +85203,8 @@
     },
     "supports_response_schema": true,
     "supports_audio_input": true,
-    "source": "https://empiriolabs.ai/models/qwen3-8-omni-flash"
+    "source": "https://empiriolabs.ai/models/qwen3-8-omni-flash",
+    "supports_function_calling": true
   },
   "empiriolabs/seed-2-0-code": {
     "litellm_provider": "empiriolabs",
@@ -85126,7 +85218,8 @@
     "supports_system_messages": true,
     "supports_vision": true,
     "supports_reasoning": true,
-    "source": "https://empiriolabs.ai/models/seed-2-0-code"
+    "source": "https://empiriolabs.ai/models/seed-2-0-code",
+    "supports_function_calling": true
   },
   "empiriolabs/seed-2-0-lite": {
     "litellm_provider": "empiriolabs",
@@ -85141,7 +85234,8 @@
     "supports_vision": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/seed-2-0-lite"
+    "source": "https://empiriolabs.ai/models/seed-2-0-lite",
+    "supports_function_calling": true
   },
   "empiriolabs/seed-2-0-mini": {
     "litellm_provider": "empiriolabs",
@@ -85156,7 +85250,8 @@
     "supports_vision": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/seed-2-0-mini"
+    "source": "https://empiriolabs.ai/models/seed-2-0-mini",
+    "supports_function_calling": true
   },
   "empiriolabs/seed-2-0-pro": {
     "litellm_provider": "empiriolabs",
@@ -85171,7 +85266,8 @@
     "supports_vision": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/seed-2-0-pro"
+    "source": "https://empiriolabs.ai/models/seed-2-0-pro",
+    "supports_function_calling": true
   },
   "empiriolabs/seed-2-1-turbo": {
     "litellm_provider": "empiriolabs",
@@ -85184,7 +85280,8 @@
     "supports_vision": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
-    "source": "https://empiriolabs.ai/models/seed-2-1-turbo"
+    "source": "https://empiriolabs.ai/models/seed-2-1-turbo",
+    "supports_function_calling": true
   },
   "empiriolabs/skylark-embedding-vision": {
     "litellm_provider": "empiriolabs",
@@ -87178,5 +87275,5 @@
     "supports_vision": true,
     "token_count_framing": 100.0
   },
-  "last_updated": "2026-11-06T17:52:55.756340+00:00"
+  "last_updated": "2026-11-06T22:58:10.861000+00:00"
 }
