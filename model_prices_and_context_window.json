@@ -33276,6 +33276,7 @@
     "input_cost_per_token_flex": 1e-06,
     "output_cost_per_token_flex": 6e-06,
     "cache_read_input_token_cost_above_200k_tokens_batches": 4e-07,
+    "cache_read_input_token_cost_above_200k_tokens_flex": 4e-07,
     "input_cost_per_token_above_200k_tokens_batches": 2e-06,
     "input_cost_per_token_above_200k_tokens_flex": 2e-06,
     "output_cost_per_token_above_200k_tokens_batches": 9e-06,
@@ -33348,6 +33349,7 @@
     "input_cost_per_token_flex": 1e-06,
     "output_cost_per_token_flex": 6e-06,
     "cache_read_input_token_cost_above_200k_tokens_batches": 4e-07,
+    "cache_read_input_token_cost_above_200k_tokens_flex": 4e-07,
     "input_cost_per_token_above_200k_tokens_batches": 2e-06,
     "input_cost_per_token_above_200k_tokens_flex": 2e-06,
     "output_cost_per_token_above_200k_tokens_batches": 9e-06,
@@ -87920,5 +87922,5 @@
     "supports_system_messages": true,
     "supports_tool_choice": true
   },
-  "last_updated": "2026-11-07T20:46:09.881101+00:00"
+  "last_updated": "2026-11-08T07:08:05.492489+00:00"
 }
