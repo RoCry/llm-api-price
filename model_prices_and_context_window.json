@@ -44592,6 +44592,10 @@
     "max_output_tokens": 262144,
     "mode": "chat",
     "output_cost_per_token": 7.5e-06,
+    "reasoning_effort_levels": [
+      "none",
+      "high"
+    ],
     "source": "https://docs.mistral.ai/models/model-cards/mistral-medium-3-5-26-04",
     "supports_assistant_prefill": true,
     "supports_function_calling": true,
@@ -44608,6 +44612,10 @@
     "max_output_tokens": 262144,
     "mode": "chat",
     "output_cost_per_token": 6e-07,
+    "reasoning_effort_levels": [
+      "none",
+      "high"
+    ],
     "source": "https://docs.mistral.ai/models/model-cards/mistral-small-4-0-26-03",
     "supports_assistant_prefill": true,
     "supports_function_calling": true,
@@ -103392,5 +103400,5 @@
     "supports_reasoning": true,
     "supports_vision": true
   },
-  "last_updated": "2026-11-14T03:00:37.074220+00:00"
+  "last_updated": "2026-11-14T11:20:39.340238+00:00"
 }
