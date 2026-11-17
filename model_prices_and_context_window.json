@@ -13314,8 +13314,12 @@
     "mode": "chat",
     "output_cost_per_token": 1.5e-05,
     "reasoning_effort_levels": [
+      "none",
+      "minimal",
       "low",
+      "medium",
       "high",
+      "xhigh",
       "max"
     ],
     "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
@@ -13775,6 +13779,11 @@
     "max_output_tokens": 384000,
     "mode": "chat",
     "output_cost_per_token": 3.48e-06,
+    "reasoning_effort_levels": [
+      "none",
+      "high",
+      "max"
+    ],
     "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
     "supports_function_calling": true,
     "supports_pdf_input": false,
@@ -13796,6 +13805,11 @@
     "max_output_tokens": 384000,
     "mode": "chat",
     "output_cost_per_token": 5.1e-07,
+    "reasoning_effort_levels": [
+      "none",
+      "high",
+      "max"
+    ],
     "source": "https://prices.azure.com/api/retail/prices?$filter=serviceName%20eq%20'Foundry%20Models'%20and%20armRegionName%20eq%20'eastus'%20and%20priceType%20eq%20'Consumption'",
     "supports_function_calling": true,
     "supports_pdf_input": false,
@@ -13817,6 +13831,11 @@
     "max_output_tokens": 384000,
     "mode": "chat",
     "output_cost_per_token": 1.32e-06,
+    "reasoning_effort_levels": [
+      "none",
+      "high",
+      "max"
+    ],
     "source": "https://learn.microsoft.com/en-us/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure",
     "supports_function_calling": true,
     "supports_pdf_input": false,
@@ -19025,6 +19044,23 @@
     "supports_response_schema": true,
     "supports_tool_choice": true,
     "supports_vision": true
+  },
+  "dashscope/qwen4-max": {
+    "input_cost_per_token": 1.5e-06,
+    "litellm_provider": "dashscope",
+    "max_input_tokens": 991808,
+    "max_output_tokens": 131072,
+    "mode": "chat",
+    "output_cost_per_token": 4.5e-06,
+    "source": "https://www.alibabacloud.com/help/en/model-studio/qwen4-max",
+    "supports_function_calling": true,
+    "supports_parallel_function_calling": true,
+    "supports_prompt_caching": true,
+    "supports_reasoning": true,
+    "supports_response_schema": true,
+    "supports_video_input": true,
+    "supports_vision": true,
+    "supports_web_search": true
   },
   "dashscope/qwen-max-latest": {
     "alias_of": "dashscope/qwen3.8-max"
@@ -34308,6 +34344,7 @@
     "cache_creation_input_token_cost": 6.25e-06,
     "cache_read_input_token_cost": 5e-07,
     "deprecation_date": "2026-11-16",
+    "deprecation_source": "https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026",
     "input_cost_per_token": 5e-06,
     "litellm_provider": "github_copilot",
     "max_input_tokens": 200000,
@@ -34315,6 +34352,7 @@
     "mode": "chat",
     "output_cost_per_token": 2.5e-05,
     "source": "https://raw.githubusercontent.com/github/docs/main/data/tables/copilot/models-and-pricing.yml",
+    "successor_model": "github_copilot/claude-opus-5.5",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/messages"
@@ -34352,6 +34390,7 @@
     "cache_creation_input_token_cost": 6.25e-06,
     "cache_read_input_token_cost": 5e-07,
     "deprecation_date": "2026-11-16",
+    "deprecation_source": "https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026",
     "input_cost_per_token": 5e-06,
     "litellm_provider": "github_copilot",
     "max_input_tokens": 200000,
@@ -34359,6 +34398,7 @@
     "mode": "chat",
     "output_cost_per_token": 2.5e-05,
     "source": "https://raw.githubusercontent.com/github/docs/main/data/tables/copilot/models-and-pricing.yml",
+    "successor_model": "github_copilot/claude-opus-5.5",
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/messages"
@@ -34748,6 +34788,7 @@
     "cache_read_input_token_cost": 2e-07,
     "cache_read_input_token_cost_above_272k_tokens": 4e-07,
     "deprecation_date": "2026-11-16",
+    "deprecation_source": "https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026",
     "input_cost_per_token": 2e-06,
     "input_cost_per_token_above_272k_tokens": 4e-06,
     "litellm_provider": "github_copilot",
@@ -35037,6 +35078,7 @@
     "supports_minimal_reasoning_effort": false,
     "supports_none_reasoning_effort": true,
     "supports_reasoning": true,
+    "supports_max_reasoning_effort": true,
     "supports_xhigh_reasoning_effort": true
   },
   "chatgpt/gpt-5.6-sol": {
@@ -35056,6 +35098,7 @@
     "supports_minimal_reasoning_effort": false,
     "supports_none_reasoning_effort": true,
     "supports_reasoning": true,
+    "supports_max_reasoning_effort": true,
     "supports_xhigh_reasoning_effort": true
   },
   "chatgpt/gpt-5.6-terra": {
@@ -35075,6 +35118,7 @@
     "supports_minimal_reasoning_effort": false,
     "supports_none_reasoning_effort": true,
     "supports_reasoning": true,
+    "supports_max_reasoning_effort": true,
     "supports_xhigh_reasoning_effort": true
   },
   "chatgpt/gpt-5.4": {
@@ -62151,6 +62195,138 @@
       "/v1/responses"
     ]
   },
+  "us.openai.gpt-daybreak-blue-5.6-sol": {
+    "supports_bedrock_runtime_chat_completions_response_format": true,
+    "input_cost_per_token": 4.4e-06,
+    "input_cost_per_token_above_272k_tokens": 8.8e-06,
+    "cache_creation_input_token_cost": 5.5e-06,
+    "cache_creation_input_token_cost_above_272k_tokens": 1.1e-05,
+    "cache_read_input_token_cost": 4.4e-07,
+    "cache_read_input_token_cost_above_272k_tokens": 8.8e-07,
+    "output_cost_per_token": 2.2e-05,
+    "output_cost_per_token_above_272k_tokens": 3.3e-05,
+    "litellm_provider": "bedrock_converse",
+    "supports_bedrock_converse_tool_result_images": false,
+    "max_input_tokens": 922000,
+    "max_output_tokens": 128000,
+    "mode": "chat",
+    "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-daybreak-blue-56-sol.html",
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "text"
+    ],
+    "supports_function_calling": true,
+    "supports_minimal_reasoning_effort": false,
+    "supports_tool_choice": true,
+    "supports_reasoning": true,
+    "supports_xhigh_reasoning_effort": true,
+    "supports_vision": true,
+    "supports_sampling_params": false,
+    "supported_endpoints": [
+      "/v1/chat/completions",
+      "/v1/responses"
+    ]
+  },
+  "global.openai.gpt-daybreak-blue-5.6-sol": {
+    "supports_bedrock_runtime_chat_completions_response_format": true,
+    "input_cost_per_token": 4e-06,
+    "input_cost_per_token_above_272k_tokens": 8e-06,
+    "cache_creation_input_token_cost": 5e-06,
+    "cache_creation_input_token_cost_above_272k_tokens": 1e-05,
+    "cache_read_input_token_cost": 4e-07,
+    "cache_read_input_token_cost_above_272k_tokens": 8e-07,
+    "output_cost_per_token": 2e-05,
+    "output_cost_per_token_above_272k_tokens": 3e-05,
+    "litellm_provider": "bedrock_converse",
+    "supports_bedrock_converse_tool_result_images": false,
+    "max_input_tokens": 922000,
+    "max_output_tokens": 128000,
+    "mode": "chat",
+    "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-daybreak-blue-56-sol.html",
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "text"
+    ],
+    "supports_function_calling": true,
+    "supports_minimal_reasoning_effort": false,
+    "supports_tool_choice": true,
+    "supports_reasoning": true,
+    "supports_xhigh_reasoning_effort": true,
+    "supports_vision": true,
+    "supports_sampling_params": false,
+    "supported_endpoints": [
+      "/v1/chat/completions",
+      "/v1/responses"
+    ]
+  },
+  "us.openai.gpt-5.6-cyber": {
+    "supports_bedrock_runtime_chat_completions_response_format": true,
+    "input_cost_per_token": 1.375e-05,
+    "cache_creation_input_token_cost": 1.71875e-05,
+    "cache_read_input_token_cost": 1.375e-06,
+    "output_cost_per_token": 8.25e-05,
+    "litellm_provider": "bedrock_converse",
+    "supports_bedrock_converse_tool_result_images": false,
+    "max_input_tokens": 922000,
+    "max_output_tokens": 128000,
+    "mode": "chat",
+    "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-56-cyber.html",
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "text"
+    ],
+    "supports_function_calling": true,
+    "supports_minimal_reasoning_effort": false,
+    "supports_tool_choice": true,
+    "supports_reasoning": true,
+    "supports_xhigh_reasoning_effort": true,
+    "supports_vision": true,
+    "supports_sampling_params": false,
+    "supported_endpoints": [
+      "/v1/chat/completions",
+      "/v1/responses"
+    ]
+  },
+  "global.openai.gpt-5.6-cyber": {
+    "supports_bedrock_runtime_chat_completions_response_format": true,
+    "input_cost_per_token": 1.25e-05,
+    "cache_creation_input_token_cost": 1.5625e-05,
+    "cache_read_input_token_cost": 1.25e-06,
+    "output_cost_per_token": 7.5e-05,
+    "litellm_provider": "bedrock_converse",
+    "supports_bedrock_converse_tool_result_images": false,
+    "max_input_tokens": 922000,
+    "max_output_tokens": 128000,
+    "mode": "chat",
+    "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-56-cyber.html",
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "text"
+    ],
+    "supports_function_calling": true,
+    "supports_minimal_reasoning_effort": false,
+    "supports_tool_choice": true,
+    "supports_reasoning": true,
+    "supports_xhigh_reasoning_effort": true,
+    "supports_vision": true,
+    "supports_sampling_params": false,
+    "supported_endpoints": [
+      "/v1/chat/completions",
+      "/v1/responses"
+    ]
+  },
   "us.openai.gpt-5.6-terra": {
     "supports_bedrock_runtime_chat_completions_response_format": true,
     "input_cost_per_token": 2.2e-06,
@@ -72233,6 +72409,210 @@
     "supports_vision": true,
     "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json"
   },
+  "azure/us-gov/gpt-4.1": {
+    "cache_read_input_token_cost": 6.88e-07,
+    "input_cost_per_token": 2.75e-06,
+    "output_cost_per_token": 1.1e-05,
+    "litellm_provider": "azure",
+    "max_input_tokens": 128000,
+    "max_output_tokens": 32768,
+    "mode": "chat",
+    "supported_endpoints": [
+      "/v1/chat/completions",
+      "/v1/batch",
+      "/v1/responses"
+    ],
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "text"
+    ],
+    "supports_function_calling": true,
+    "supports_native_streaming": true,
+    "supports_parallel_function_calling": true,
+    "supports_prompt_caching": true,
+    "supports_response_schema": true,
+    "supports_system_messages": true,
+    "supports_tool_choice": true,
+    "supports_vision": true,
+    "source": "https://prices.azure.com/api/retail/prices?$filter=armRegionName%20eq%20'usgovvirginia'%20and%20contains(productName,'OpenAI')"
+  },
+  "azure/us-gov/gpt-4.1-mini": {
+    "cache_read_input_token_cost": 1.38e-07,
+    "input_cost_per_token": 5.5e-07,
+    "output_cost_per_token": 2.2e-06,
+    "litellm_provider": "azure",
+    "max_input_tokens": 128000,
+    "max_output_tokens": 32768,
+    "mode": "chat",
+    "supported_endpoints": [
+      "/v1/chat/completions",
+      "/v1/batch",
+      "/v1/responses"
+    ],
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "text"
+    ],
+    "supports_function_calling": true,
+    "supports_native_streaming": true,
+    "supports_parallel_function_calling": true,
+    "supports_prompt_caching": true,
+    "supports_response_schema": true,
+    "supports_system_messages": true,
+    "supports_tool_choice": true,
+    "supports_vision": true,
+    "source": "https://prices.azure.com/api/retail/prices?$filter=armRegionName%20eq%20'usgovvirginia'%20and%20contains(productName,'OpenAI')"
+  },
+  "azure/us-gov/gpt-4o": {
+    "cache_read_input_token_cost": 1.719e-06,
+    "input_cost_per_token": 3.438e-06,
+    "output_cost_per_token": 1.375e-05,
+    "litellm_provider": "azure",
+    "max_input_tokens": 128000,
+    "max_output_tokens": 16384,
+    "mode": "chat",
+    "supports_function_calling": true,
+    "supports_parallel_function_calling": true,
+    "supports_prompt_caching": true,
+    "supports_response_schema": true,
+    "supports_tool_choice": true,
+    "supports_vision": true,
+    "source": "https://prices.azure.com/api/retail/prices?$filter=armRegionName%20eq%20'usgovvirginia'%20and%20contains(productName,'OpenAI')"
+  },
+  "azure/us-gov/gpt-5.6-luna": {
+    "cache_creation_input_token_cost": 3.4375e-07,
+    "cache_creation_input_token_cost_above_272k_tokens": 6.875e-07,
+    "cache_read_input_token_cost": 2.75e-08,
+    "cache_read_input_token_cost_above_272k_tokens": 5.5e-08,
+    "input_cost_per_token": 2.75e-07,
+    "input_cost_per_token_above_272k_tokens": 5.5e-07,
+    "output_cost_per_token": 1.65e-06,
+    "output_cost_per_token_above_272k_tokens": 2.475e-06,
+    "litellm_provider": "azure",
+    "max_input_tokens": 922000,
+    "max_output_tokens": 128000,
+    "mode": "chat",
+    "supported_endpoints": [
+      "/v1/chat/completions",
+      "/v1/batch",
+      "/v1/responses"
+    ],
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "text"
+    ],
+    "supports_function_calling": true,
+    "supports_native_streaming": true,
+    "supports_parallel_function_calling": true,
+    "supports_pdf_input": true,
+    "supports_prompt_caching": true,
+    "supports_reasoning": true,
+    "supports_response_schema": true,
+    "supports_system_messages": true,
+    "supports_tool_choice": true,
+    "supports_vision": true,
+    "supports_none_reasoning_effort": true,
+    "supports_xhigh_reasoning_effort": true,
+    "supports_minimal_reasoning_effort": false,
+    "source": "https://prices.azure.com/api/retail/prices?$filter=armRegionName%20eq%20'usgovvirginia'%20and%20contains(productName,'OpenAI')"
+  },
+  "azure/us-gov/gpt-5.6-sol": {
+    "cache_creation_input_token_cost": 6.875e-06,
+    "cache_creation_input_token_cost_above_272k_tokens": 1.375e-05,
+    "cache_read_input_token_cost": 5.5e-07,
+    "cache_read_input_token_cost_above_272k_tokens": 1.1e-06,
+    "input_cost_per_token": 5.5e-06,
+    "input_cost_per_token_above_272k_tokens": 1.1e-05,
+    "output_cost_per_token": 2.75e-05,
+    "output_cost_per_token_above_272k_tokens": 4.125e-05,
+    "litellm_provider": "azure",
+    "max_input_tokens": 922000,
+    "max_output_tokens": 128000,
+    "mode": "chat",
+    "supported_endpoints": [
+      "/v1/chat/completions",
+      "/v1/batch",
+      "/v1/responses"
+    ],
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "text"
+    ],
+    "supports_function_calling": true,
+    "supports_native_streaming": true,
+    "supports_parallel_function_calling": true,
+    "supports_pdf_input": true,
+    "supports_prompt_caching": true,
+    "supports_reasoning": true,
+    "supports_response_schema": true,
+    "supports_system_messages": true,
+    "supports_tool_choice": true,
+    "supports_vision": true,
+    "supports_none_reasoning_effort": true,
+    "supports_xhigh_reasoning_effort": true,
+    "supports_minimal_reasoning_effort": false,
+    "source": "https://prices.azure.com/api/retail/prices?$filter=armRegionName%20eq%20'usgovvirginia'%20and%20contains(productName,'OpenAI')"
+  },
+  "azure/us-gov/gpt-5.6-terra": {
+    "cache_creation_input_token_cost": 3.4375e-06,
+    "cache_creation_input_token_cost_above_272k_tokens": 6.875e-06,
+    "cache_read_input_token_cost": 2.75e-07,
+    "cache_read_input_token_cost_above_272k_tokens": 5.5e-07,
+    "input_cost_per_token": 2.75e-06,
+    "input_cost_per_token_above_272k_tokens": 5.5e-06,
+    "output_cost_per_token": 1.65e-05,
+    "output_cost_per_token_above_272k_tokens": 2.475e-05,
+    "litellm_provider": "azure",
+    "max_input_tokens": 922000,
+    "max_output_tokens": 128000,
+    "mode": "chat",
+    "supported_endpoints": [
+      "/v1/chat/completions",
+      "/v1/batch",
+      "/v1/responses"
+    ],
+    "supported_modalities": [
+      "text",
+      "image"
+    ],
+    "supported_output_modalities": [
+      "text"
+    ],
+    "supports_function_calling": true,
+    "supports_native_streaming": true,
+    "supports_parallel_function_calling": true,
+    "supports_pdf_input": true,
+    "supports_prompt_caching": true,
+    "supports_reasoning": true,
+    "supports_response_schema": true,
+    "supports_system_messages": true,
+    "supports_tool_choice": true,
+    "supports_vision": true,
+    "supports_none_reasoning_effort": true,
+    "supports_xhigh_reasoning_effort": true,
+    "supports_minimal_reasoning_effort": false,
+    "source": "https://prices.azure.com/api/retail/prices?$filter=armRegionName%20eq%20'usgovvirginia'%20and%20contains(productName,'OpenAI')"
+  },
+  "azure/us-gov/text-embedding-ada-002": {
+    "input_cost_per_token": 1.25e-07,
+    "litellm_provider": "azure",
+    "max_input_tokens": 8192,
+    "mode": "embedding",
+    "output_cost_per_token": 0.0,
+    "source": "https://prices.azure.com/api/retail/prices?$filter=armRegionName%20eq%20'usgovvirginia'%20and%20contains(productName,'OpenAI')"
+  },
   "azure/us-gov/gpt-5.1": {
     "cache_read_input_token_cost": 1.71875e-07,
     "default_reasoning_effort": "none",
@@ -76012,6 +76392,7 @@
     "output_cost_per_token_priority": 2.8875e-05,
     "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-east-1/index.json",
     "supports_audio_input": false,
+    "supports_bedrock_converse_cache_point": false,
     "supports_function_calling": true,
     "supports_prompt_cache_breakpoint": false,
     "supports_prompt_caching": true,
@@ -76043,6 +76424,7 @@
     "output_cost_per_token_priority": 2.625e-05,
     "source": "https://aws.amazon.com/bedrock/pricing/",
     "supports_audio_input": false,
+    "supports_bedrock_converse_cache_point": false,
     "supports_function_calling": true,
     "supports_prompt_cache_breakpoint": false,
     "supports_prompt_caching": true,
@@ -76077,6 +76459,7 @@
     "output_cost_per_token_priority": 2.8875e-05,
     "source": "https://aws.amazon.com/bedrock/pricing/",
     "supports_audio_input": false,
+    "supports_bedrock_converse_cache_point": false,
     "supports_function_calling": true,
     "supports_prompt_cache_breakpoint": false,
     "supports_prompt_caching": true,
@@ -79003,6 +79386,7 @@
     "output_cost_per_token_priority": 2.8875e-05,
     "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-moonshot-ai-kimi-k3.md",
     "supports_audio_input": false,
+    "supports_bedrock_converse_cache_point": false,
     "supports_function_calling": true,
     "supports_prompt_cache_breakpoint": false,
     "supports_prompt_caching": true,
@@ -88278,7 +88662,7 @@
     "cache_read_input_token_cost": 2e-07,
     "input_cost_per_token": 2e-06,
     "litellm_provider": "baseten",
-    "max_input_tokens": 1000000,
+    "max_input_tokens": 1048576,
     "max_output_tokens": 1048576,
     "mode": "chat",
     "output_cost_per_token": 1e-05,
@@ -88353,6 +88737,7 @@
     "output_cost_per_token_priority": 3.465e-05,
     "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-gov-east-1/index.json",
     "supports_audio_input": false,
+    "supports_bedrock_converse_cache_point": false,
     "supports_function_calling": true,
     "supports_prompt_cache_breakpoint": false,
     "supports_prompt_caching": true,
@@ -88386,6 +88771,7 @@
     "output_cost_per_token_priority": 3.465e-05,
     "source": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonBedrock/current/us-gov-west-1/index.json",
     "supports_audio_input": false,
+    "supports_bedrock_converse_cache_point": false,
     "supports_function_calling": true,
     "supports_prompt_cache_breakpoint": false,
     "supports_prompt_caching": true,
@@ -88657,6 +89043,7 @@
     ],
     "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-moonshot-ai-kimi-k3-1-highspeed.md",
     "supports_audio_input": false,
+    "supports_bedrock_converse_cache_point": false,
     "supports_function_calling": true,
     "supports_none_reasoning_effort": true,
     "supports_prompt_cache_breakpoint": false,
@@ -88695,6 +89082,7 @@
     ],
     "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-moonshot-ai-kimi-k3-1-highspeed.md",
     "supports_audio_input": false,
+    "supports_bedrock_converse_cache_point": false,
     "supports_function_calling": true,
     "supports_none_reasoning_effort": true,
     "supports_prompt_cache_breakpoint": false,
@@ -88733,6 +89121,7 @@
     ],
     "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-moonshot-ai-kimi-k3-1-highspeed.md",
     "supports_audio_input": false,
+    "supports_bedrock_converse_cache_point": false,
     "supports_function_calling": true,
     "supports_none_reasoning_effort": true,
     "supports_prompt_cache_breakpoint": false,
@@ -88771,6 +89160,7 @@
     ],
     "source": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-moonshot-ai-kimi-k3-1-highspeed.md",
     "supports_audio_input": false,
+    "supports_bedrock_converse_cache_point": false,
     "supports_function_calling": true,
     "supports_none_reasoning_effort": true,
     "supports_prompt_cache_breakpoint": false,
@@ -104225,5 +104615,5 @@
     "output_cost_per_token": 0.0,
     "source": "https://developers.openai.com/api/docs/guides/csam-classifier"
   },
-  "last_updated": "2026-11-16T20:54:43.483858+00:00"
+  "last_updated": "2026-11-17T03:39:22.600814+00:00"
 }
