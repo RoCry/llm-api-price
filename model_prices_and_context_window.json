@@ -81569,6 +81569,8 @@
     ],
     "cache_read_input_token_cost": 2e-07,
     "cache_read_input_token_cost_above_200k_tokens": 4e-07,
+    "deprecation_date": "2026-05-15",
+    "deprecation_source": "https://docs.x.ai/developers/migration/may-15-retirement",
     "input_cost_per_image_token": 1e-06,
     "input_cost_per_token": 1e-06,
     "input_cost_per_token_above_200k_tokens": 2e-06,
@@ -81579,6 +81581,7 @@
     "output_cost_per_token": 2e-06,
     "output_cost_per_token_above_200k_tokens": 4e-06,
     "source": "https://api.x.ai/v1/language-models",
+    "successor_model": "xai/grok-build-0.1",
     "supports_function_calling": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
@@ -81620,6 +81623,8 @@
     ],
     "cache_read_input_token_cost": 2e-07,
     "cache_read_input_token_cost_above_200k_tokens": 4e-07,
+    "deprecation_date": "2026-05-15",
+    "deprecation_source": "https://docs.x.ai/developers/migration/may-15-retirement",
     "input_cost_per_image_token": 1e-06,
     "input_cost_per_token": 1e-06,
     "input_cost_per_token_above_200k_tokens": 2e-06,
@@ -81630,6 +81635,7 @@
     "output_cost_per_token": 2e-06,
     "output_cost_per_token_above_200k_tokens": 4e-06,
     "source": "https://api.x.ai/v1/language-models",
+    "successor_model": "xai/grok-build-0.1",
     "supports_function_calling": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
@@ -129501,5 +129507,5 @@
     "supports_vision": true,
     "token_count_framing": 100.0
   },
-  "last_updated": "2026-11-28T01:51:22.235939+00:00"
+  "last_updated": "2026-11-28T10:07:33.923787+00:00"
 }
